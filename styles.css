@@ -317,16 +317,28 @@ body {
 }
 
 .more-button {
-    background-color: #FFFFFF;
-    color: #FF5420;
-    padding: 10px 20px;
-    font-size: 20px;
-    border-radius: 5px;
-    margin-top: 40px; /* 이미지 아래에서 40px 떨어진 위치 */
-    text-decoration: none;
-    display: inline-block;
+    background-color: transparent; /* 배경색 투명으로 설정 */
+    color: white; /* 글자 색상 설정 */
+    padding: 10px 20px; /* 여백 설정 */
+    font-size: 30px; /* 글자 크기 설정 */
+    border-radius: 5px; /* 모서리 둥글게 설정 */
+    position: relative; /* 위치 설정 */
+    text-decoration: none; /* 밑줄 제거 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* 드롭 섀도우 효과 추가 */
+    display: inline-flex; /* 인라인 플렉스 설정 */
+    align-items: center; /* 수직 중앙 정렬 */
 }
-
+.more-button::after {
+    content: "➔"; /* 화살표 기호 추가 */
+    color: #FF5420;
+    background-color: white; /* 화살표 뒷배경 흰색 */
+    border-radius: 50%; /* 동그란 형태로 설정 */
+    padding: 8px; /* 내부 여백 설정 */
+    margin-left: 20px; /* 텍스트와 화살표 간격 설정 */
+    display: inline-flex; /* 인라인 플렉스 설정 */
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+}
 .other-books {
     display: flex;
     padding-left: 150px;
@@ -542,7 +554,7 @@ body {
     height: 100%;
     position: absolute;
     left: 0;
-    top: 0;
+    margin-top: 50px;
     z-index: 1; /* 배경의 z-index는 낮게 설정 */
 }
 
@@ -551,6 +563,7 @@ body {
     font-family: 'Pretendard', sans-serif; /* 사용할 폰트 */
     font-size: 70px; /* 적절한 크기로 조정 */
     margin: 0; /* 기본 마진 제거 */
+    margin-top:51px;
     z-index: 2; /* 글자들이 배경 위에 표시되도록 설정 */
 }
 .footer-subtitle {
@@ -558,12 +571,12 @@ body {
     font-family: 'Pretendard', sans-serif; /* 사용할 폰트 */
     font-size: 17px; /* 적절한 크기로 조정 */
     margin: 0; /* 기본 마진 제거 */
-    margin-top: 30px;
+    margin-top: -80px;
     margin-bottom: 60px;
     z-index: 2; /* 글자들이 배경 위에 표시되도록 설정 */
 }
 .footer-line {
-    width: calc(100% - 420px); /* 좌우 여백 210px을 제외한 폭 */
+    width: calc(100% - 360px); /* 좌우 여백 210px을 제외한 폭 */
     height: 1px; /* 선의 높이 */
     background-color: rgba(255, 255, 255, 1); /* 흰색 */
     margin: 20px 0px; /* 상단 여백 및 좌우 여백 */
@@ -577,9 +590,6 @@ body {
     z-index: 2; /* 글자들이 배경 위에 표시되도록 설정 */
 }
 
-.footer-links {
-    margin-top: 0px; /* 링크 위 여백 */
-}
 
 .footer-links {
     color: rgba(255, 255, 255, 1); /* 글자색 흰색 */
@@ -588,7 +598,10 @@ body {
     margin: 0 10px; /* 좌우 간격 조정 */
     z-index: 2;
     margin-left: auto; /* 오른쪽 정렬 */
-    margin-right: 430px; /* 오른쪽 여백 */
+    margin-right: 360px; /* 오른쪽 여백 */
+}
+.footer-terms{
+    margin: 0 30px; /* 좌우 간격 조정 */
 }
 .footer-name {
     color: rgba(255, 255, 255, 1); /* 흰색으로 설정 */
@@ -599,16 +612,26 @@ body {
 }
 
 .social-icons {
-    margin-top: 20px; /* 아이콘 위 여백 */
     display: flex; /* 아이콘을 수평으로 배치 */
-    justify-content: center; /* 가운데 정렬 */
+    justify-content: flex-end; /* 오른쪽 정렬 */
+    margin-right: 360px;
+    margin-top: 10px; /* 아이콘 위 여백 조정 */
+    margin-bottom: 30px; /* 아이콘 아래 여백 조정 */
+    z-index: 2;
+    position: relative; /* 푸터 내에서 상대 위치 설정 */
+    top: -30px; /* 위치 조정 */
 }
 
 .social-icon {
+    margin: 0 10px; /* 아이콘 사이의 간격 조정 */
+}
+
+.social-icon img {
     width: 48px; /* 아이콘 크기 */
     height: 48px; /* 아이콘 크기 */
-    margin-left: 10px; /* 간격 조정 */
 }
+
+
 
 @media (max-width: 768px) {
     .featured-book {
@@ -627,5 +650,70 @@ body {
 
     .other-books img {
         width: 80px;
+    }
+}
+/* 반응형 디자인 */
+@media (max-width: 1200px) {
+    .navbar {
+        flex-direction: column; /* 내비게이션 바 세로로 배치 */
+        align-items: flex-start; /* 왼쪽 정렬 */
+    }
+    .nav-links {
+        gap: 50px; /* 간격 조정 */
+    }
+    .featured-book {
+        flex-direction: column; /* 추천 도서 세로로 배치 */
+        align-items: center; /* 중앙 정렬 */
+    }
+    .text-container {
+        flex-direction: column; /* 텍스트 세로로 배치 */
+        align-items: center; /* 중앙 정렬 */
+        padding-left: 0; /* 왼쪽 여백 제거 */
+    }
+    .left-desc, .right-desc {
+        width: 100%; /* 너비를 100%로 설정 */
+        margin: 10px 0; /* 상하 여백 조정 */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* 내비게이션 바 세로로 배치 */
+        align-items: flex-start; /* 왼쪽 정렬 */
+    }
+    .nav-links {
+        flex-direction: column; /* 내비게이션 링크 세로로 배치 */
+        gap: 10px; /* 간격 조정 */
+    }
+    .main-banner {
+        padding-left: 20px; /* 여백 조정 */
+    }
+    .title {
+        font-size: 3rem; /* 제목 크기 조정 */
+    }
+    .subtitle {
+        font-size: 2rem; /* 부제목 크기 조정 */
+    }
+    .playlist-title {
+        font-size: 2.5rem; /* 플레이리스트 타이틀 크기 조정 */
+    }
+    .playlist-subtitle {
+        font-size: 1.2rem; /* 플레이리스트 서브타이틀 크기 조정 */
+    }
+    .author-card-container {
+        flex-direction: column; /* 작가 카드 세로로 배치 */
+        align-items: center; /* 중앙 정렬 */
+    }
+    .author-card {
+        width: 90%; /* 카드 너비 조정 */
+        margin-bottom: 20px; /* 하단 여백 추가 */
+    }
+    .footer {
+        flex-direction: column; /* 푸터 요소 세로로 배치 */
+        align-items: center; /* 중앙 정렬 */
+    }
+    .social-icons {
+        margin-top: 10px; /* 아이콘 위 여백 */
+        margin-bottom: 10px; /* 아이콘 아래 여백 */
     }
 }
