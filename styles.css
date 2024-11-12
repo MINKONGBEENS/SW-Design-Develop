@@ -630,9 +630,6 @@ body {
     width: 48px; /* 아이콘 크기 */
     height: 48px; /* 아이콘 크기 */
 }
-
-
-
 @media (max-width: 768px) {
     .featured-book {
         flex-direction: column;

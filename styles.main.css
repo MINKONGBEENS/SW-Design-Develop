@@ -1,0 +1,542 @@
+/* 기본 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* 좌우 스크롤 방지 */
+}
+
+/* 고정 헤더 스타일 */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    padding: 1rem 2rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 120px;
+}
+
+.nav-links li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.auth-links a {
+    color: black;
+    margin-left: 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* 검색창 및 배너 스타일 */
+.search-banner {
+    position: relative;
+    margin-top: 80px; /* 헤더와 배너 간 간격 */
+    padding: 20px;
+    background-color: #f4f4f400;
+    text-align: center;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    width: 50%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+}
+
+/* 메인 배너 스타일 */
+.main-banner {
+    position: relative;
+    margin-top: 80px; /* 헤더와 배너 간 간격 */
+    width: 1116px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 112px; /* 메인 배너와 웹툰 실시간 랭킹 사이 여백 추가 */
+}
+.banner-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.banner-content {
+    display: flex;
+    width: 100%; /* 배너 이미지를 가로로 배열 */
+}
+
+.banner-img {
+    min-width: 1116px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.button-container {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 20; /* 버튼을 배너보다 위에 위치시킴 */
+}
+
+.prev-btn, .next-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 30; /* 버튼이 다른 요소들 위에 오도록 설정 */
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* 슬라이더 배너 스타일 */
+.content {
+    margin-top: 100px; /* 헤더 높이만큼 여백 추가 */
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider .slider-item {
+    width: 100%;
+}
+
+.slider .slider-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.slider-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 버튼을 고정시키는 스타일 */
+.button-container {
+    position: absolute; /* absolute로 배너 안에서 고정 */
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 20; /* 버튼을 배너보다 위에 위치시킴 */
+    width: 100%; /* 버튼이 배너 전체 너비에 맞게 배치 */
+}
+
+.prev-btn, .next-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 30; /* 버튼이 다른 요소들 위에 오도록 설정 */
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+/* 웹툰 실시간 랭킹 스타일 */
+.ranking {
+    position: relative;
+    padding: 2rem;
+    width: 1170px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #f5f5f500;
+}
+
+.ranking h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.ranking-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3열로 나누기 */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.ranking-item {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ranking-img {
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.ranking-info {
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+.ranking-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ranking-details {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.ranking-rating {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ff8c00;
+}
+
+.ranking-rating span {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.ranking-more {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: #ff8c00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ranking-more:hover {
+    background-color: #e07b00;
+}
+.today-books {
+    margin-top: 40px; /* 랭킹 도서 아래 여백 40px */
+    text-align: center;
+}
+
+.today-books h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.days-of-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7개 열로 나누기 */
+    gap: 10px;
+    justify-items: center;
+}
+
+.day-item {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* 각 도서 항목의 너비 */
+    padding: 10px;
+}
+
+.book-img {
+    width: 100%;
+    height: 261px;
+    object-fit: cover;
+}
+
+.book-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.book-author {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.book-rating {
+    font-size: 13px;
+    font-weight: bold;
+    color: #787878;
+    margin-top: 1px;
+}
+/* 오늘의 도서 섹션 스타일 */
+.today-books {
+    margin-top: 40px;
+    padding: 20px;
+    width: 1170px;
+    height: 459px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.today-books h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.see-more {
+    font-size: 1rem;
+    color: #888;
+    text-decoration: none;
+}
+
+.see-more:hover {
+    color: #333;
+}
+
+/* 요일별 도서 그리드 */
+.days-of-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7개 열로 나누기 */
+    gap: 6px;
+    justify-items: center;
+}
+
+.day-item {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0);
+    width: 180px;
+    height: 355px;
+    padding: 10px;
+    text-align: left;
+    position: relative;
+}
+
+
+/* 도서 이미지 */
+.book-img {
+    width: 100%;
+    height: 261px;  /* 이미지 높이를 261px로 변경 */
+    object-fit: cover; /* 이미지가 지정된 영역에 맞게 비율을 유지하며 크기 조정 */
+}
+
+/* 도서 제목 */
+.book-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* 도서 저자 */
+.book-author {
+    font-size: 12px;
+    color: #777;
+}
+
+/* 별 평점 스타일 */
+.book-rating {
+    display: flex;
+    align-items: center;
+    margin-top: 1px;
+}
+
+.star {
+    color: red; /* 별 색 */
+    font-size: 13px;
+    margin-right: 1px; /* 별과 숫자 사이 간격 */
+}
+
+.rating-text {
+    font-size: 13px;
+    color: red;
+    position: relative;  /* position을 relative로 설정 */
+    top: 3.5px;  /* 원하는 만큼 조정 */
+}
+
+/* 숫자 색 변경 */
+.rating-text span {
+    color: #787878; /* 회색으로 변경 */
+}
+/* 회색 더보기 버튼 스타일 */
+.see-more {
+    color: #888;
+    font-size: 16px;
+    text-decoration: none;
+    margin-right: 40px;
+    margin-top: 40px;
+}
+
+.see-more:hover {
+    color: #333;
+}
+
+/* 웹툰 검색 섹션 스타일 */
+.webtoon-search {
+    margin-top: 40px;
+    padding: 20px;
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* 19금 스위치 스타일 */
+.adult-switch {
+    margin-right: 16px; /* 여백 16px 설정 */
+    
+}
+
+/* 스위치 배경 */
+.switch-container {
+    top: 20px;  /* 상단에서 50px 만큼 떨어진 위치 */
+    right: 70px;
+    width: 50px;
+    height: 15px; /* 높이를 그대로 두고 */
+    background-color: #D3D3D3; /* 기본 배경 회색 */
+    border-radius: 25px; /* 둥근 테두리 */
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* 배경색 변환 */
+}
+
+/* 19 텍스트 (하얀 원 배경) */
+.toggle-text {
+    position: absolute;
+    top: 50%;
+    left: 0px; /* 왼쪽 위치 */
+    transform: translateY(-50%); /* 수직 중앙 정렬 */
+    font-size: 12px;
+    font-weight: bold;
+    color: black; /* 검정색 텍스트 */
+    background-color: white; /* 하얀 원 배경 */
+    border-radius: 50%; /* 원 모양 */
+    width: 26px; /* 원 크기 */
+    height: 26px; /* 원 크기 */
+    display: flex;
+    align-items: center; /* 수평 중앙 정렬 */
+    border: 2px solid red; /* 원 테두리 빨간색 */
+    justify-content: center; /* 수직 중앙 정렬 */
+    transition: transform 0.3s ease, left 0.3s ease; /* 텍스트 이동 효과 */
+}
+
+/* 클릭 시 배경색 빨간색으로 변경하고 텍스트 오른쪽으로 이동 */
+.switch-container.active {
+    background-color: #ff4d4d; /* 빨간색 배경 */
+}
+
+.switch-container.active .toggle-text {
+    left: 24px; /* 텍스트 오른쪽으로 이동 */
+}
+
+
+.webtoon-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 1줄에 3개 */
+    gap: 20px;
+}
+
+.webtoon-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.webtoon-img {
+    width: 80px;
+    height: 166px;
+    object-fit: cover;
+}
+
+.webtoon-info {
+    margin-top: 10px;
+}
+
+.webtoon-ranking {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.webtoon-title {
+    font-size: 1rem;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.webtoon-author {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 5px;
+}
+
+.webtoon-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.star {
+    font-size: 1.2rem;
+    color: #ff8c00;
+    margin-right: 3px;
+}
+
+.rating-text {
+    font-size: 1rem;
+    color: #ff8c00;
+}
+
