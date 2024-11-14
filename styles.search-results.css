@@ -1,0 +1,571 @@
+/* 기본 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* 좌우 스크롤 방지 */
+}
+
+/* 고정 헤더 스타일 */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    padding: 1rem 2rem;
+    border: 1px solid lightgray;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: lighter;
+    letter-spacing: 10px
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 120px;
+}
+
+.nav-links li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.auth-links a {
+    color: black;
+    margin-left: 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/************** 검색창 및 배너 스타일 ************/
+.search-banner {
+    position: relative;
+    margin-top: 80px; /* 헤더와 배너 간 간격 */
+    padding: 20px;
+    background-color: #f4f4f400;
+    text-align: center;
+}
+
+/* 검색창 크기스타일 */
+
+.search-box {
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* 검색어 입력칸 */
+
+.search-box input {
+    width: 50%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: 1px solid darkgray;
+}
+
+/************* 검색결과제목 및 연관검색어 ********/
+
+.search-results {
+    display: flex;
+    gap: 10px;
+    margin-left: 25%;
+}
+
+/* 연관검색 제목 컨테이너 */
+
+.related-search-terms{
+    padding: 5px;
+    color: #555;
+    font-size: 18px;
+}
+/* 연관검색결과 제목 */
+.search-results h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+/* 연관검색결과 제목*/
+
+.search-results h1 span {
+    color: rgb(0, 185, 0);
+    font-weight: bold;
+}
+
+/*연관 검색 컨테이너 스타일 */
+
+.related-search {
+    
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+
+}
+
+/* 연관 검색 버튼 스타일 */
+
+.related-search button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor: pointer;
+    color: #555;
+}
+
+
+/************* 배너 **************/
+/* 배너 컨테이너 */
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100; /* Full width of the viewport */
+    padding: 20px 0; /* Optional padding for spacing */
+    box-sizing: border-box;
+}
+
+/* 배너 이미지 */
+
+.banner img {
+    width: 1000px;
+    max-width: 1000px; 
+    height: auto; 
+}
+
+/* 검색결과 구별 라인 */
+
+.search-line {
+    width: 80%; 
+    width: 1140px;
+    max-width: 1140px; 
+    margin: 20px auto; 
+    border: 2;
+    
+}
+
+/************** 프로필 **************/
+
+/* 프로필 컨테이너 스타일 */
+.profile-container {
+    display: grid;
+    grid-template-columns: 0.1fr 0.1fr; /* Two equal columns */
+    gap: 50px;
+    padding: 50px;
+    justify-content: center; /* Centers the grid horizontally */
+    align-items: center; /* Centers the grid items vertically if needed */
+}
+
+/* 프로필 스타일 */
+.profile {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 100px;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 20px solid #f1e0e0 ;
+    width: 550px;
+    height: 250px;
+    margin: auto;
+}
+
+/* 프로필 이미지 */
+.profile img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-right: 20px; /* Increased space between image and text */
+    object-fit: cover;
+}
+
+/* 프로필 제목 */
+.profile-content {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* 프로필 이름 */
+.profile-content .name {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Reduced space below name */
+}
+
+/* 프로필 설명 */
+
+.profile-content .description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #666;
+    margin-top: 5px;
+}
+
+/**************** 오디오북 *****************/
+
+.audiobook-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    margin-top: 150px;
+    text-align: center;
+    
+}
+
+/* 오디오북 라인 */
+
+.custom-line {
+    width: 80%; /* Set width as a percentage for responsiveness */
+    width: 1140px;
+    max-width: 1140px; /* Maximum width to prevent it from stretching too wide */
+    border: 2;
+
+}
+
+/* 오디오북 더보기 */
+
+.audiobook-header {
+    max-width: 1135px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+/* 오디오북 헤더 */
+
+.audiobook-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* 오디오북 더보기 */
+
+.view-more {
+    font-size: 14px;
+    color: #666;
+    text-decoration: none;
+}
+
+
+/* 오디오북 그리드 */
+.audiobook-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px;
+    margin-top: 100px;
+    justify-content: center; /* Center the grid */
+}
+
+/* 오디오북 항목 */
+.audiobook-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #c7c6c6;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 550px;
+    height: 200px;
+    box-shadow: 1px 1px 2px;
+}
+
+/* 오디오북 이미지 */
+
+.audiobook-img {
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+/* 오디오북 정보 */
+
+.audiobook-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* 오디오북 작가 */
+
+.audiobook-info .author {
+    text-align: left;
+    font-weight: bold;
+    font-size: 15px;
+    color: #000000;
+    margin-bottom: 4px; /* Closer spacing to the title */
+    margin-left: 40px;
+    
+}
+
+/* 오디오북 제목 */
+
+.audiobook-info .title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px; /* Space between title and details */
+    line-height: 1.3; /* Adjusted line spacing */
+}
+
+/* 오디오북 세부정보 */
+
+.audiobook-info .details {
+    font-size: 13px;
+    color: #000000;
+    text-align: left;
+    margin-left: 40px;
+}
+
+/* 버튼 동작 스타일링 */
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px; /* Space between the buttons */
+}
+
+/* 찜, 구매 스타일 */
+
+.wishlist, .purchase {
+    font-size: 13px;
+    padding: 4px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+/* 찜 */
+
+.wishlist {
+    color: #ff66b2;
+    border-color: #ff66b2;
+    text-decoration-line:none;
+}
+
+/*구입*/
+
+.purchase {
+    color: #007bff;
+    border-color: #007bff;
+    width: 56px;
+    text-decoration-line:none;
+}
+
+/************* e북 ************/
+
+/* E북 목록 */
+.ebook-list {
+    border-top: 2px solid #ccc;
+    max-width: 1200px;
+    margin-top: 150px;
+    margin-left: 18%;
+}
+
+/* e북 항목 */
+
+.ebook-item {
+    display: flex;
+    padding: 50px;
+    border-bottom: 2px solid #ccc;
+    border-width: 1140;
+}
+
+/* e북 항목 이미지 */
+
+.ebook-item img {
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+    margin-right: 50px;
+}
+
+/* e북 세부정보 */
+
+.ebook-details {
+    display: flex;
+    flex-direction: column;
+}
+
+/* e북 제목 */
+
+.ebook-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/*e북 저자, 출판사, 날짜*/
+
+.ebook-author, .ebook-publisher, .ebook-date {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+/*e북 설명*/
+
+.ebook-description {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+    line-height: 1.5;
+    max-width: 600px;
+}
+
+/* C-PL */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: 20px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+/* 화살표 스타일링 */
+.pagination .arrow {
+    font-size: 25px;
+    color: #888;
+    cursor: pointer;
+    text-decoration-line:none;
+}
+
+/* 페이지 번호 스타일링 */
+.pagination .page-number {
+    color: #000;
+    cursor: pointer;
+    text-decoration-line:none;
+}
+
+/* 활성 페이지 번호 스타일 지정 */
+.pagination .page-number.active {
+    color: orange;
+    font-weight: bold;
+}
+
+/* 푸터 */
+.footer {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    display: flex; /* Flexbox 사용 */
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 230px; /* 왼쪽 여백 230px 추가 */
+}
+
+.footer-background {
+    background-color: rgba(72, 72, 72, 1); /* 배경색 지정 */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    margin-top: 50px;
+    z-index: 1; /* 배경의 z-index는 낮게 설정 */
+}
+
+.footer-title {
+    color: rgba(255, 255, 255, 1); /* 흰색으로 설정 */
+    font-family: 'Pretendard', sans-serif; /* 사용할 폰트 */
+    font-size: 70px; /* 적절한 크기로 조정 */
+    margin: 0; /* 기본 마진 제거 */
+    margin-top:51px;
+    z-index: 2; /* 글자들이 배경 위에 표시되도록 설정 */
+}
+.footer-subtitle {
+    color: rgba(255, 255, 255, 1); /* 흰색으로 설정 */
+    font-family: 'Pretendard', sans-serif; /* 사용할 폰트 */
+    font-size: 17px; /* 적절한 크기로 조정 */
+    margin: 0; /* 기본 마진 제거 */
+    margin-top: -80px;
+    margin-bottom: 60px;
+    z-index: 2; /* 글자들이 배경 위에 표시되도록 설정 */
+}
+.footer-line {
+    width: calc(100% - 360px); /* 좌우 여백 210px을 제외한 폭 */
+    height: 1px; /* 선의 높이 */
+    background-color: rgba(255, 255, 255, 1); /* 흰색 */
+    margin: 20px 0px; /* 상단 여백 및 좌우 여백 */
+    z-index: 2;
+}
+.footer-details {
+    color: rgba(255, 255, 255, 1); /* 흰색으로 설정 */
+    font-family: 'Pretendard', sans-serif; /* 사용할 폰트 */
+    font-size: 17px; /* 글자 크기 설정 */
+    margin-top: 20px; /* 상단 여백 조정 */
+    z-index: 2; /* 글자들이 배경 위에 표시되도록 설정 */
+}
+
+
+.footer-links {
+    color: rgba(255, 255, 255, 1); /* 글자색 흰색 */
+    font-family: 'NanumSquareRound', sans-serif; /* 사용할 폰트 */
+    font-size: 20px; /* 글자 크기 설정 */
+    margin: 0 10px; /* 좌우 간격 조정 */
+    z-index: 2;
+    margin-left: auto; /* 오른쪽 정렬 */
+    margin-right: 360px; /* 오른쪽 여백 */
+}
+.footer-terms{
+    margin: 0 30px; /* 좌우 간격 조정 */
+}
+.footer-name {
+    color: rgba(255, 255, 255, 1); /* 흰색으로 설정 */
+    font-family: 'Pretendard', sans-serif; /* 사용할 폰트 */
+    font-size: 70px; /* 글자 크기 설정 */
+    margin-top: 20px; /* 여백 조정 */
+    z-index: 2; /* 글자들이 배경 위에 표시되도록 설정 */
+}
+
+.social-icons {
+    display: flex; /* 아이콘을 수평으로 배치 */
+    justify-content: flex-end; /* 오른쪽 정렬 */
+    margin-right: 360px;
+    margin-top: 10px; /* 아이콘 위 여백 조정 */
+    margin-bottom: 30px; /* 아이콘 아래 여백 조정 */
+    z-index: 2;
+    position: relative; /* 푸터 내에서 상대 위치 설정 */
+    top: -30px; /* 위치 조정 */
+}
+
+.social-icon {
+    margin: 0 10px; /* 아이콘 사이의 간격 조정 */
+}
+
+.social-icon img {
+    width: 48px; /* 아이콘 크기 */
+    height: 48px; /* 아이콘 크기 */
+}
+
