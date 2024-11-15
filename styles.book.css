@@ -1,0 +1,655 @@
+/* 기본 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* 좌우 스크롤 방지 */
+}
+
+/* 고정 헤더 스타일 */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    padding: 1rem 2rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 120px;
+}
+
+.nav-links li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.auth-links a {
+    color: black;
+    margin-left: 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+/* 전체 컨테이너 */
+.book-detail-container {
+    display: flex;
+    width: 1438px;
+    height: 510px;
+    background-color: #fff;
+    margin: 0 auto; /* 중앙 배치 */
+    margin-top: 80px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-left: 1px solid #ccc; /* 좌측 회색 선 추가 */
+    border-right: 1px solid #ccc; /* 우측 회색 선 추가 */
+    border-bottom: 4px solid #ccc;
+}
+
+
+/* 왼쪽 도서 이미지 컨테이너 */
+.book-image-container {
+    width: 571px;
+    height: 432px;
+    position: relative;
+    padding: 24px 24px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* 중앙 배치 */
+}
+
+.book-cover-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.book-cover {
+    width: 160px;
+    height: 233px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px; /* 아이콘 간격 24px */
+    gap: 8px; /* 아이콘 간격 좁히기 */
+    margin-right: 40px;
+}
+
+.icon {
+    width: 64px;
+    height: 64px;
+    background-color: #ccc;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* 오른쪽 텍스트 컨테이너 */
+.book-info-container {
+    width: 795px;
+    height: 432px;
+    padding: 24px;
+    margin-top: 0px;
+    border-radius: 8px;
+    border-left: 1px solid #333;
+    border-top: 1px solid #333; /* 위쪽 선 추가 */
+    border-right: 1px solid #333; /* 오른쪽 선 추가 */
+    display: flex;
+    flex-direction: column;
+}
+
+.book-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.book-subtitle {
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.book-author {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+/* 회색 선 */
+.divider {
+    border-top: 1px solid #ccc;
+    margin: 16px 0;
+    margin-top: 80px;
+}
+
+.book-rating {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+.star {
+    color: #FFD700;
+}
+
+.publisher {
+    display: inline-block;
+}
+
+.book-storage {
+    font-size: 16px;
+    color: #555;
+}
+
+/* 버튼 위 간격 추가 */
+.button-space {
+    height: 20px; /* 버튼 위 간격 추가 */
+}
+
+.book-actions {
+    display: flex;
+    gap: 0; /* 버튼 간 간격을 0으로 설정 */
+}
+
+button {
+    width: 361px; /* 원래 버튼 크기로 되돌리기 */
+    height: 64px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #333;
+    color: white;
+}
+
+.add-to-library-button {
+    background-color: white;
+    color: black;
+}
+
+.add-to-library-button:hover {
+    background-color: #333;
+    color: white;
+}
+
+.heart-button {
+    width: 72px; /* 하트 버튼 크기 수정 */
+    height: 64px;
+    background-color: white;
+    color: black;
+}
+
+.heart-button:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* 다운로드 아이콘 */
+.download-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: -25px; /* 다운로드 아이콘을 버튼들 위로 올리기 */
+    margin-left: auto;
+    margin-left: 620px;
+}
+
+.download-icon {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 8px;
+    background-size: contain; /* 이미지 비율 유지하면서 요소 내에 맞게 배치 */
+    background-position: center;
+    background-repeat: no-repeat; /* 이미지 반복 방지 */
+}
+
+.dabin {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* 추가된 컨테이너 스타일 */
+.ranking-container {
+    display: flex;
+    margin: 0 auto; /* 중앙 배치 */
+    width: 1038px;
+    height: 47px;
+    background-color: #fff;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 4px solid #ccc; /* 아래 4px 회색 선 */
+    position: relative;
+}
+
+.ranking-image {
+    width: 21px;
+    height: 21px;
+    background-color: #ccc;
+    border-radius: 50%; /* 이미지 칸을 둥글게 */
+    margin-left: 10px;
+    background-size: cover;
+    background-position: center;
+}
+
+.ranking-text {
+    font-weight: bold;
+    font-size: 12px;
+    color: #333;
+    margin-left: 10px;
+}
+
+/* "성별·연령별 인기 분포" 텍스트와 물음표 스타일 */
+.graph-title-container {
+    display: flex;
+    align-items: center; /* 텍스트와 물음표를 수평으로 정렬 */
+}
+
+.graph-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: black; /* 검은색 */
+    margin-right: 10px; /* 물음표와의 간격 */
+    margin-left: 10px;
+}
+
+/* 물음표 테두리만 */
+.question-mark {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ccc; /* 회색 테두리 */
+    border-radius: 50%; /* 원형으로 만듦 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.question-mark span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ccc; /* 물음표를 하얀색으로 */
+}
+
+/* 전체 도서 상세 컨테이너 */
+.book-details-container {
+    display: flex;
+    justify-content: flex-start;  /* 왼쪽 정렬 */
+    width: 1038px;
+    height: 319px;
+    margin: 20px auto;
+}
+
+/* 왼쪽 그래프 이미지 */
+.book-details-left {
+    width: 487px;
+    height: 254px; /* 그래프 이미지 크기 */
+    margin-right: 40px;
+}
+
+.graph-image {
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* 오른쪽 텍스트 박스들 */
+.book-details-right {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* 위아래 박스 간격 0 */
+    width: 487px;
+    font-weight: bold;
+    align-items: stretch; /* 텍스트 박스들이 전체 너비를 채우도록 */
+    margin-top: 45px; /* 불필요한 상단 여백 제거 */
+}
+
+
+/* 텍스트 박스 */
+.book-details-box {
+    margin-top: 40px;
+    width: 487px;
+    height: 125px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    flex-direction: column; /* 텍스트가 여러 줄로 나올 수 있도록 수정 */
+    margin: 0; /* 내부 margin 초기화 */
+    box-sizing: border-box; /* padding과 border가 박스 크기에 영향을 미치지 않도록 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
+}
+
+.book-details-boxs {
+    margin-top: 40px;
+    width: 487px;
+    height: 117px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    flex-direction: column; /* 텍스트가 여러 줄로 나올 수 있도록 수정 */
+    margin: 0; /* 내부 margin 초기화 */
+    box-sizing: border-box; /* padding과 border가 박스 크기에 영향을 미치지 않도록 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
+}
+
+/* 순위 정보 */
+.ranking {
+    font-size: 15px;
+    color: black; /* 1위, 2위 텍스트 검은색 */
+    margin-top: 5px; /* 간격 추가 */
+}
+.book-details-title{
+    color: gray;
+}
+/* 장르 정보 */
+.genre-info {
+    font-size: 15px;
+    color: #6F6F6F; /* 회색 */
+    margin-top: 5px; /* 간격 추가 */
+}
+
+/* 30대 여성, 20대 여성 (연한 검정) */
+.ranking-30s, .ranking-20s {
+    font-size: 15px;
+    color: #555; /* 연한 검은색 */
+}
+
+/* 소설 분야 텍스트 */
+.genre-field {
+    font-size: 15px;
+    color: black; /* 검은색 */
+    font-weight: bold;
+}
+
+/* 20대 여성 (특정 색) */
+.ranking-20s-specific {
+    font-size: 15px;
+    color: grey; /* 검은색 */
+}
+
+.detail-20s-specific{
+    font-size: 15px;
+    color: black;
+}
+
+/* 회색 선을 전체 박스 기준으로 하단에 배치 */
+.book-details-container {
+    border-bottom: 4px solid #ccc;
+}
+
+
+/* 책 추천, 책 소개, 리뷰(327) 섹션 */
+.book-recommend-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1038px;
+    height: 45px;
+    margin: 12px auto 0;
+    font-size: 15px;
+    color: black;
+    position: relative;
+}
+
+.book-recommend-container div {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    gap: 300px; /* 텍스트 간격 */
+}
+
+/* 텍스트 선택 시 간격 12px */
+.book-recommend-container div span {
+    margin-right: 12px; /* 텍스트 선택 시 간격 추가 */
+    cursor: pointer; /* 클릭 가능한 요소처럼 보이게 */
+}
+
+/* 회색 줄 아래 추가 */
+.book-recommend-container {
+    border-bottom: 1px solid #ccc; /* 1px 회색 줄 */
+    padding-bottom: 12px; /* 아래 간격 추가 */
+}
+
+/* 선택된 텍스트 스타일 (검은색 줄 추가) */
+.book-recommend-container div span.selected {
+    color: black; /* 텍스트 검은색 */
+    border-bottom: 2px solid black; /* 선택 시 아래에 검은 줄 */
+}
+
+/* 기본 텍스트 색상 */
+.book-recommend-container div span:hover {
+    color: #333; /* 텍스트 색상 */
+}
+
+/* 전체 컨테이너 */
+.book-selection-container {
+    width: 1038px;
+    height: 315px;
+    margin: 0 auto;
+    padding-top: 40px; /* 회색 배경과 텍스트의 간격을 위해 상단 패딩 추가 */
+}
+
+/* '오늘의 단 한 권' 선정 도서 */
+.book-selection-title {
+    margin: 0 auto;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 18.6px; /* 텍스트 아래로 18.6px 내려줌 */
+}
+
+/* 왼쪽 이미지 및 텍스트 */
+.book-selection-header {
+    display: flex;
+    flex: 1;
+    background-color: #f5f5f5; /* 전체 회색 배경 */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.book-selection-image {
+    width: 48px;
+    height: 48px;
+    margin-top: 16px;
+    margin-bottom: 2px;
+    background-color: #ccc;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+}
+/* 이미지 컨테이너 */
+.book-selection-images {
+    position: relative; /* 자식 요소에 위치 조정을 위한 기준점 */
+}
+
+/* 첫 번째 이미지 */
+.book-selection-image-item1 {
+    position: absolute;
+    bottom: 37px; /* 상단에서 10px */
+    left:-20px; /* 왼쪽에서 20px */
+    width: 24px; /* 이미지 너비 */
+    height: auto;
+    object-fit: cover; /* 이미지 비율 유지 */
+}
+
+/* 두 번째 이미지 */
+.book-selection-image-item2 {
+    position: absolute;
+    bottom: 20px; /* 상단에서 10px */
+    right: 10px;/* 오른쪽에서 20px */
+    width: 24px; /* 이미지 너비 */
+    height: auto;
+    object-fit: cover; /* 이미지 비율 유지 */
+}
+
+
+.book-selection-manager {
+    font-size: 13px;
+    margin-left: 12px;
+    margin-top: 21.45px;
+    color: #333;
+    font-weight: bold;
+}
+
+.book-selection-subtitle {
+    margin-left: 12px;
+    font-size: 11px;
+    margin-bottom: 21.47px;
+    color: #6F6F6F;
+}
+
+.book-selection-description {
+    width: 940px;
+    margin-left: 12px;
+    margin-bottom: 26px;
+    font-size: 12px;
+    color: #555555;
+}
+/* 2024 톨스토이 문학상 수상작, 일제강점기 용감했던 선조들의 이야기 */
+.book-selection-footer-last {
+    font-size: 13px;
+    color: #6F6F6F;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.book-selection-footer-lastt {
+    font-size: 13px;
+    color: #6F6F6F;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+}
+
+/* 보라색 체크 아이콘 */
+.book-selection-check {
+    display: inline-block;
+    width: 16px; /* 체크 아이콘 크기 */
+    height: 16px; /* 체크 아이콘 크기 */
+    border-radius: 3px; /* 모서리 둥글게 */
+    position: relative;
+}
+
+.book-selection-check::before {
+    content: "\2713"; /* 체크 문양 (✔) */
+    position: absolute;
+    font-size: 12px;
+    color: #800080; /* 보라색 체크 */
+}
+
+/* 회색 선 추가 - 2024 톨스토이 문학상 수상작 위 */
+.book-selection-footer-last {
+    border-top: 1px solid #ccc;
+    padding-top: 17px; /* 위쪽 간격 17px */
+}
+
+
+/* 회색 선을 전체 박스 기준으로 하단에 배치 */
+.book-selection-container {
+    border-bottom: 4px solid #ccc;
+    padding-top: 24px;
+}
+
+/* 책 소개 전체 컨테이너 */
+.book-introduction-container {
+    width: 1038px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+}
+
+/* 제목과 부제목 */
+.book-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.book-subtitle {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* 책 설명 */
+.book-description {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* 책 소개 제목 */
+.book-about-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* 책 소개 내용 */
+.book-about-description {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+/* 책 소개 내용에서 강조 텍스트 */
+.book-about-description strong {
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* 줄 간격과 글자 크기 조절 */
+.book-description br {
+    display: block;
+    margin-bottom: 5px;
+}
+
