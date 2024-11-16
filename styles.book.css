@@ -597,7 +597,7 @@ button:hover {
 /* 책 소개 전체 컨테이너 */
 .book-introduction-container {
     width: 1038px;
-    margin: 0 auto;
+    margin:26px auto;
     background-color: #fff;
     padding: 20px;
 }
@@ -607,13 +607,14 @@ button:hover {
     font-size: 18px;
     font-weight: bold;
     color: #333;
-    margin-bottom: 12px;
+    margin-bottom: 2px;
 }
 
 .book-subtitle {
     font-size: 16px;
+    font-weight: bold;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
 /* 책 설명 */
@@ -621,23 +622,28 @@ button:hover {
     font-size: 14px;
     color: #333;
     line-height: 1.6;
-    margin-bottom: 30px;
+    margin-bottom: 51px;
 }
 
 /* 책 소개 제목 */
 .book-about-title {
     font-size: 16px;
     font-weight: bold;
+    flex-direction: column;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 14.6px;
 }
 
 /* 책 소개 내용 */
 .book-about-description {
-    font-size: 14px;
+    font-size: 14px; /* 텍스트 크기 */
     color: #333;
-    line-height: 1.6;
-    margin-top: 10px;
+    line-height: 1.6; /* 줄 간격을 1.6배로 설정 */
+    margin-bottom: 12px; /* 아래 여백 추가 */
+}
+
+.book-about-description br {
+    margin-bottom: 4px; /* 줄바꿈 후 4px 간격 추가 */
 }
 
 /* 책 소개 내용에서 강조 텍스트 */
@@ -653,3 +659,251 @@ button:hover {
     margin-bottom: 5px;
 }
 
+/* 전체 정보 박스 */
+.book-details-wrapper {
+    width: 1038px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5; /* 회색 배경 */
+    border-radius: 8px;
+    box-sizing: border-box;
+    position: relative;
+    height: auto; /* 높이는 자동으로 조정 */
+}
+
+/* 더보기 버튼 */
+.more-info-btn {
+    position: absolute;
+    bottom: 80px; /* 부모 요소로부터 아래로 80px 떨어진 위치 */
+    left: 800px;  /* 부모 요소로부터 왼쪽으로 800px 떨어진 위치 */
+    background-color: transparent;
+    color: #800080; /* 보라색 글씨 */
+    cursor: pointer;
+}
+.more-info-btn:hover {
+    background-color: transparent; /* 마우스 올려도 배경색이 변하지 않도록 */
+    color: #800080; /* 보라색 글씨 유지 */
+}
+.parent-element {
+    position: relative; /* 부모 요소에 상대 위치 설정 */
+}
+
+/* 책 세부 항목을 위한 컨테이너 */
+.book-detail-info {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7개 항목을 균등하게 나눔 */
+}
+
+
+/* 각 항목 */
+.book-detail-item {
+    display: flex;
+    flex-direction: column; /* 레이블과 값을 세로로 배치 */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* 레이블 스타일 */
+.book-detail-label {
+    font-size: 13px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* 값 스타일 */
+.book-detail-value {
+    font-size: 13px;
+    color: #555;
+    margin-top: 20px; /* 값과 레이블 간격 */
+}
+
+/* 항목들 사이에 구분선 */
+.book-detail-item:not(:last-child) {
+    border-right: 1px solid #ccc; /* 회색 구분선 */
+}
+
+/* book-detail-section 스타일 */
+.book-detail-section {
+    width: 1038px;
+    height: 208.59px;
+    margin: 0 auto;
+    margin-bottom: 29.87px; /* 항목 간 간격 */
+    padding: 20px;
+    border-radius: 8px;
+    position: relative; /* 부모 요소 기준으로 가상 요소가 위치하도록 설정 */
+}
+
+/* 제목 스타일 */
+.book-detail-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 14.59px; /* 제목과 본문 간의 간격 */
+}
+
+/* 본문 텍스트 */
+.book-detail-content {
+    color: #555555;
+    font-size: 12.15px;
+    line-height: 1.6;
+    z-index: 1; /* 텍스트가 흐림 효과 위에 오도록 설정 */
+}
+
+/* 저자 소개 부분에 흐림 효과 추가 */
+.book-detail-section.author-intro .book-detail-content::after {
+    content: "";
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    width: 100%;
+    height: 30px; /* 흐림 효과 높이 설정 */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); /* 흐림 효과 */
+    z-index: 1; /* 흐림 효과가 텍스트 아래로 오도록 설정 */
+}
+
+/* book-item 스타일 */
+.book-item {
+    color: #555555;
+    margin-bottom: 14.59px;
+}
+/* 더보기 버튼 */
+.book-detail-more-btn {
+    position: absolute;
+    font-size: 13px;
+    bottom:25px; /* 부모 요소로부터 아래로 80px 떨어진 위치 */
+    left: 800px;  /* 부모 요소로부터 왼쪽으로 800px 떨어진 위치 */
+    background-color: transparent;
+    color: #800080; /* 보라색 글씨 */
+    cursor: pointer;
+}
+
+/* 버튼 Hover 효과 제거 */
+.book-detail-more-btn:hover {
+    background-color: transparent;
+    color: #800080; /* Hover 시에도 보라색 유지 */
+}
+.book-detail-section:not(:last-child) {
+    border-bottom: 1px solid #ccc; /* 회색 구분선 */
+}
+
+
+/* 키워드 섹션 */
+.keyword-section {
+    width: 1038px;
+    height: 377.88;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* 제목 스타일 */
+.keyword-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* 키워드 태그 스타일 */
+.keyword-tags {
+    color: #666;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.keyword-tag {
+    border: 1px solid #555555;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.keyword-tag:hover {
+    background-color: #b0b0b0;
+}
+
+
+/* 책 카드 스타일 */
+.book-cards {
+    border-bottom: 4px solid #ccc; /* 아래 4px 회색 선 */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* 책들 간의 간격 */
+}
+
+.book-card {
+    width: 100px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-image {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.book-info {
+    text-align: left;
+    margin-top: 5px;
+}
+
+.book-title {
+    font-size: 14.25px;
+    font-weight: bold;
+    margin-bottom: 5px; /* 제목과 저자 간 간격 */
+}
+
+.book-author {
+    font-size: 12.58px;
+    color: #777;
+}
+
+/* 버튼 전체 컨테이너 */
+.button-container {
+    display: flex;
+    justify-content: space-between; /* 텍스트와 링크를 양 끝에 배치 */
+    align-items: center; /* 수직 중앙 정렬 */
+    padding: 10px 20px;
+    border-bottom: 4px solid #e0e0e0; /* 구분선 추가 */
+}
+
+/* 왼쪽 버튼 영역 (아이콘과 텍스트) */
+.button-left {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* 아이콘과 텍스트 간 간격 */
+}
+
+/* 아이콘 이미지 */
+.iconss {
+    width: 89.13px; /* 아이콘 크기 */
+    height: 32.39px; /* 아이콘 크기 */
+    object-fit: contain; /* 이미지가 영역 안에 맞게 비율을 유지하면서 크기 조정 */
+    border-radius: 0px; /* 사각형 이미지의 모서리를 둥글게 설정 */
+}
+
+/* 버튼 텍스트 */
+.button-text {
+    margin-left: -20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 오른쪽 링크 */
+.button-right {
+    font-size: 14px;
+    color: #777;
+    text-decoration: none; /* 링크 밑줄 제거 */
+    font-weight: 500;
+}
+
+/* 오른쪽 링크 호버 상태 */
+.button-right:hover {
+    color: #333;
+}
