@@ -1,108 +1,109 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자료목록 상세페이지</title>
-    <link rel="stylesheet" href="styles.datalist.css">
-    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta charset="UTF-8"> <!-- 문자 인코딩 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 반응형 웹을 위한 뷰포트 설정 -->
+    <title>자료목록 상세페이지</title> <!-- 페이지 제목 -->
+    <link rel="stylesheet" href="styles.datalist.css"> <!-- 외부 CSS 파일 연결 -->
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- 구글 폰트 불러오기 -->
 </head>
 <body>
 
 <!-- 헤더 -->
 <header>
-    <nav class="navbar">
-        <h1 class="logo">SOZE</h1>
-        <ul class="nav-links">
-        <li><a href="#">웹소설</a></li>
-        <li><a href="#">소설</a></li>
-        <li><a href="#">오디오북</a></li>
-        <li><a href="#">서비스</a></li>
+    <nav class="navbar"> <!-- 네비게이션 바 -->
+        <h1 class="logo">SOZE</h1> <!-- 로고 -->
+        <ul class="nav-links"> <!-- 네비게이션 메뉴 -->
+            <li><a href="#">웹소설</a></li>
+            <li><a href="#">소설</a></li>
+            <li><a href="#">오디오북</a></li>
+            <li><a href="#">서비스</a></li>
         </ul>
-        <div class="auth-links">
-        <a href="#">LOGIN</a>
-        <a href="#">SIGN IN</a>
+        <div class="auth-links"> <!-- 로그인 및 회원가입 링크 -->
+            <a href="#">LOGIN</a>
+            <a href="#">SIGN IN</a>
         </div>
     </nav>
 </header>
 
 <!-- 배너 -->
-<div class="banner">
-    <h1>자료목록</h1>
+<div class="banner"> <!-- 배너 영역 -->
+    <h1>자료목록</h1> <!-- 배너 제목 -->
 </div>
 
-
-<!--자료목록상세-->
-
-<div class="datalist-detail">
+<!-- 자료목록 상세 페이지 -->
+<div class="datalist-detail"> <!-- 자료 목록 상세 영역 -->
     <!-- 제목 섹션 -->
-    <div class="datalist-info">
-        <h1>전자책 분야 폰트 오류 해결을 위한 폰트 공유 📎</h1>
+    <div class="datalist-info"> <!-- 제목 정보 -->
+        <h1>전자책 분야 폰트 오류 해결을 위한 폰트 공유 📎</h1> <!-- 상세 페이지 제목 -->
     </div>
-    <!-- 작성자와 등록일 -->
-    <div class="info-section">
+
+    <!-- 작성자와 등록일 섹션 -->
+    <div class="info-section"> <!-- 작성자 및 등록일 정보 -->
         <div class="info-row">
-            <div class="label">작성자명</div>
-            <div class="value">관리자</div>
-            <div class="label">등록일자</div>
-            <div class="value">2024-10-20 12:54</div>
+            <div class="label">작성자명</div> <!-- 작성자 라벨 -->
+            <div class="value">관리자</div> <!-- 작성자 이름 -->
+            <div class="label">등록일자</div> <!-- 등록일자 라벨 -->
+            <div class="value">2024-10-20 12:54</div> <!-- 등록일자 -->
         </div>
     </div>
-    <!-- 내용 -->
-    <div class="content">
-        <p>폰트가 적용이 안되어 글자가 깨져보이시는 분들은 해당 폰트를 다운받으신 후 아래와 같이 적용해주시면 해결 가능합니다.</p>
-        <ol>
-            <li>첨부된 파일 또는 아래의 링크로 접속하여 폰트를 다운받아주세요.</li>
+
+    <!-- 상세 내용 -->
+    <div class="content"> <!-- 내용 영역 -->
+        <p>폰트가 적용이 안되어 글자가 깨져보이시는 분들은 해당 폰트를 다운받으신 후 아래와 같이 적용해주시면 해결 가능합니다.</p> <!-- 설명 텍스트 -->
+        <ol> <!-- 단계별 목록 -->
+            <li>첨부된 파일 또는 아래의 링크로 접속하여 폰트를 다운받아주세요.</li> <!-- 첫 번째 단계 -->
             <li>다운받은 파일을 열어, 해당 폰트를 설치해주세요.
-                <ul>
-                    <li>OTF, TTF 타입을 꼭 확인해주세요. Variable과 개별 설치도 확인하신 후 설치하세요.</li>
+                <ul> <!-- 서브 항목 -->
+                    <li>OTF, TTF 타입을 꼭 확인해주세요. Variable과 개별 설치도 확인하신 후 설치하세요.</li> <!-- 서브 항목 내용 -->
                 </ul>
             </li>
-            <li>뷰어로 이동하여 설정 > 폰트 옵션에서 다운받은 폰트를 적용해주세요.</li>
+            <li>뷰어로 이동하여 설정 > 폰트 옵션에서 다운받은 폰트를 적용해주세요.</li> <!-- 세 번째 단계 -->
         </ol>
     </div>
 </div>
-    <!-- 버튼 -->
-    <div class="button-container">
-        <a href="#"><button>목록보기</button></a>
+
+<!-- 버튼 -->
+<div class="button-container"> <!-- 목록 보기 버튼 컨테이너 -->
+    <a href="#"><button>목록보기</button></a> <!-- 목록 보기 버튼 -->
+</div>
+
+<!-- 푸터 -->
+<div class="footer"> <!-- 푸터 영역 -->
+    <div class="footer-background"></div> <!-- 푸터 배경 -->
+    <span class="footer-title">S O Z E</span> <!-- 푸터 제목 -->
+
+    <div class="social-icons"> <!-- 소셜 미디어 아이콘들 -->
+        <div class="social-icon">
+            <img src="img/Facebook.png" alt="Facebook" /> <!-- Facebook 아이콘 -->
+        </div>
+        <div class="social-icon">
+            <img src="img/Twitter.png" alt="Twitter" /> <!-- Twitter 아이콘 -->
+        </div>
+        <div class="social-icon">
+            <img src="img/Instagram.png" alt="Instagram" /> <!-- Instagram 아이콘 -->
+        </div>
+        <div class="social-icon">
+            <img src="img/Youtube.png" alt="LinkedIn" /> <!-- LinkedIn 아이콘 -->
+        </div>
     </div>
 
-    
-<!--푸터-->
-<div class="footer">
-        <div class="footer-background"></div>
-        <span class="footer-title">S O Z E</span>
-        
-        <div class="social-icons">
-            <div class="social-icon">
-                <img src="img/Facebook.png" alt="Facebook" />
-            </div>
-            <div class="social-icon">
-                <img src="img/Twitter.png" alt="Twitter" />
-            </div>
-            <div class="social-icon">
-                <img src="img/Instagram.png" alt="Instagram" />
-            </div>
-            <div class="social-icon">
-                <img src="img/Youtube.png" alt="LinkedIn" />
-            </div>
-        </div>
-        
-        <span class="footer-subtitle">2024 TEAM SOZE</span>
-        
-        <span class="footer-details">
-            TEL. 010-9876-5432 | FAX. 02-3456-9876 | sozeteams@weon.me<br>
-            주소: 서울특별시 강남구 역삼동 98-7 6층 543호 | 사업자 등록번호: 14-725-83690 | 대표자: 김망고<br>
-            업태: 정보통신업 | 업종: 소프트웨어 개발 및 공급업
-        </span>
-        <span class="footer-hosting">Hosting By AWS</span>
-        <div class="footer-line"></div>
-        <div class="footer-links">
-            <span class="footer-terms">이용약관</span>
-            <span class="footer-privacy">개인정보 처리방침</span>
-        </div>
-      </div>
-        <script src="script.js"></script>
+    <span class="footer-subtitle">2024 TEAM SOZE</span> <!-- 푸터 서브타이틀 -->
+
+    <span class="footer-details">
+        TEL. 010-9876-5432 | FAX. 02-3456-9876 | sozeteams@weon.me<br>
+        주소: 서울특별시 강남구 역삼동 98-7 6층 543호 | 사업자 등록번호: 14-725-83690 | 대표자: 김망고<br>
+        업태: 정보통신업 | 업종: 소프트웨어 개발 및 공급업
+    </span>
+    <span class="footer-hosting">Hosting By AWS</span> <!-- 호스팅 정보 -->
+    <div class="footer-line"></div> <!-- 구분선 -->
+    <div class="footer-links"> <!-- 푸터 링크 -->
+        <span class="footer-terms">이용약관</span> <!-- 이용약관 링크 -->
+        <span class="footer-privacy">개인정보 처리방침</span> <!-- 개인정보 처리방침 링크 -->
+    </div>
+</div>
+
+<script src="script.js"></script> <!-- 외부 자바스크립트 파일 연결 -->
 
 </body>
 </html>
