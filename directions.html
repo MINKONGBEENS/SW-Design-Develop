@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABOUT US TO SOZE</title>
-    <link rel="stylesheet" href="styles.directions.css">
+    <meta charset="UTF-8"> <!-- 문자 인코딩 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 반응형 웹을 위한 뷰포트 설정 -->
+    <title>ABOUT US TO SOZE</title> <!-- 페이지 제목 -->
+    <link rel="stylesheet" href="styles.directions.css"> <!-- 외부 CSS 파일 연결 -->
 </head>
 <body>
     <!-- 헤더 -->
     <header>
-        <nav class="navbar">
-            <h1 class="logo">SOZE</h1>
-            <ul class="nav-links">
+        <nav class="navbar"> <!-- 네비게이션 바 -->
+            <h1 class="logo">SOZE</h1> <!-- 로고 -->
+            <ul class="nav-links"> <!-- 네비게이션 링크 -->
                 <li><a href="#">웹소설</a></li>
                 <li><a href="#">소설</a></li>
                 <li><a href="#">오디오북</a></li>
                 <li><a href="#">서비스</a></li>
             </ul>
-            <div class="auth-links">
+            <div class="auth-links"> <!-- 로그인 및 회원가입 링크 -->
                 <a href="#">LOGIN</a>
                 <a href="#">SIGN IN</a>
             </div>
@@ -25,84 +25,86 @@
     </header>
 
     <!-- 배너 -->
-    <div class="banner">
-        <h1>ABOUT US TO SOZE</h1>
+    <div class="banner"> <!-- 배너 영역 -->
+        <h1>ABOUT US TO SOZE</h1> <!-- 배너 제목 -->
     </div>
 
-<div class="header-title">
+    <!-- 제목 영역 -->
+    <div class="header-title"> <!-- 찾아오시는 길 제목 -->
         <h1>찾아 오시는 길</h1>
     </div>
-<!-- * 카카오맵 - 지도퍼가기 -->
-<!-- 1. 지도 노드 -->
-<div id="daumRoughmapContainer1613788870358" class="root_daum_roughmap root_daum_roughmap_landing"></div>
 
-<!--2. 설치 스크립트-->
-<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+    <!-- 카카오맵 - 지도퍼가기 -->
+    <!-- 1. 지도 노드 -->
+    <div id="daumRoughmapContainer1613788870358" class="root_daum_roughmap root_daum_roughmap_landing"></div>
 
-<!-- 3. 실행 스크립트 -->
-<script charset="UTF-8">
-	new daum.roughmap.Lander({
-		"timestamp" : "1613788870358",
-		"key" : "24iif",
-		"mapWidth" : "1920",
-		"mapHeight" : "360"
-	}).render();
-    
-</script>
+    <!-- 2. 설치 스크립트 -->
+    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
 
-<!-- CONTACT SECTION -->
-<div class="contact-container">
-    <div class="contact-item">
-        <div class="icon">➤</div>
-        <h3>ADDRESS</h3>
-        <p>서울특별시 강남구 테헤란로 98-7<br>6층 543호 SOZE COMPANY</p>
-    </div>
-    <div class="contact-item">
-        <div class="icon">☎️</div>
-        <h3>CONTACT</h3>
-        <p>PHONE : 010 - 9876 - 5432<br>FAX : 02 - 987 - 3456</p>
-    </div>
-    <div class="contact-item">
-        <div class="icon">✉</div>
-        <h3>E-MAIL</h3>
-        <p>BUSINESS : sozeteams@weon.me<br>REP : gnoknim@gmail.com</p>
-    </div>
-</div>
+    <!-- 3. 실행 스크립트 -->
+    <script charset="UTF-8">
+        new daum.roughmap.Lander({
+            "timestamp" : "1613788870358", <!-- 타임스탬프 -->
+            "key" : "24iif", <!-- 지도 표시를 위한 키 -->
+            "mapWidth" : "1920", <!-- 지도 너비 -->
+            "mapHeight" : "360" <!-- 지도 높이 -->
+        }).render();
+    </script>
 
-<!-- 푸터 -->
-<div class="footer">
-    <div class="footer-background"></div>
-    <span class="footer-title">S O Z E</span>
-    
-    <div class="social-icons">
-        <div class="social-icon">
-            <img src="img/Facebook.png" alt="Facebook" />
+    <!-- 연락처 섹션 -->
+    <div class="contact-container"> <!-- 연락처 정보를 담는 컨테이너 -->
+        <div class="contact-item"> <!-- 각 연락처 항목 -->
+            <div class="icon">➤</div> <!-- 아이콘 표시 -->
+            <h3>ADDRESS</h3> <!-- 주소 제목 -->
+            <p>서울특별시 강남구 테헤란로 98-7<br>6층 543호 SOZE COMPANY</p> <!-- 주소 -->
         </div>
-        <div class="social-icon">
-            <img src="img/Twitter.png" alt="Twitter" />
+        <div class="contact-item">
+            <div class="icon">☎️</div> <!-- 아이콘 표시 -->
+            <h3>CONTACT</h3> <!-- 연락처 제목 -->
+            <p>PHONE : 010 - 9876 - 5432<br>FAX : 02 - 987 - 3456</p> <!-- 전화번호 및 팩스 -->
         </div>
-        <div class="social-icon">
-            <img src="img/Instagram.png" alt="Instagram" />
-        </div>
-        <div class="social-icon">
-            <img src="img/Youtube.png" alt="LinkedIn" />
+        <div class="contact-item">
+            <div class="icon">✉</div> <!-- 아이콘 표시 -->
+            <h3>E-MAIL</h3> <!-- 이메일 제목 -->
+            <p>BUSINESS : sozeteams@weon.me<br>REP : gnoknim@gmail.com</p> <!-- 이메일 주소 -->
         </div>
     </div>
-    
-    <span class="footer-subtitle">2024 TEAM SOZE</span>
-    
-    <span class="footer-details">
-        TEL. 010-9876-5432 | FAX. 02-3456-9876 | sozeteams@weon.me<br>
-        주소: 서울특별시 강남구 역삼동 98-7 6층 543호 | 사업자 등록번호: 14-725-83690 | 대표자: 김망고<br>
-        업태: 정보통신업 | 업종: 소프트웨어 개발 및 공급업
-    </span>
-    <span class="footer-hosting">Hosting By AWS</span>
-    <div class="footer-line"></div>
-    <div class="footer-links">
-        <span class="footer-terms">이용약관</span>
-        <span class="footer-privacy">개인정보 처리방침</span>
+
+    <!-- 푸터 -->
+    <div class="footer"> <!-- 푸터 영역 -->
+        <div class="footer-background"></div> <!-- 푸터 배경 -->
+        <span class="footer-title">S O Z E</span> <!-- 푸터 제목 -->
+
+        <div class="social-icons"> <!-- 소셜 미디어 아이콘들 -->
+            <div class="social-icon">
+                <img src="img/Facebook.png" alt="Facebook" /> <!-- Facebook 아이콘 -->
+            </div>
+            <div class="social-icon">
+                <img src="img/Twitter.png" alt="Twitter" /> <!-- Twitter 아이콘 -->
+            </div>
+            <div class="social-icon">
+                <img src="img/Instagram.png" alt="Instagram" /> <!-- Instagram 아이콘 -->
+            </div>
+            <div class="social-icon">
+                <img src="img/Youtube.png" alt="LinkedIn" /> <!-- LinkedIn 아이콘 -->
+            </div>
+        </div>
+
+        <span class="footer-subtitle">2024 TEAM SOZE</span> <!-- 푸터 서브타이틀 -->
+
+        <span class="footer-details">
+            TEL. 010-9876-5432 | FAX. 02-3456-9876 | sozeteams@weon.me<br>
+            주소: 서울특별시 강남구 역삼동 98-7 6층 543호 | 사업자 등록번호: 14-725-83690 | 대표자: 김망고<br>
+            업태: 정보통신업 | 업종: 소프트웨어 개발 및 공급업
+        </span>
+        <span class="footer-hosting">Hosting By AWS</span> <!-- 호스팅 정보 -->
+        <div class="footer-line"></div> <!-- 구분선 -->
+        <div class="footer-links"> <!-- 푸터 링크 -->
+            <span class="footer-terms">이용약관</span> <!-- 이용약관 링크 -->
+            <span class="footer-privacy">개인정보 처리방침</span> <!-- 개인정보 처리방침 링크 -->
+        </div>
     </div>
-  </div>
-    <script src="script.js"></script>
-  </body>
+
+    <script src="script.js"></script> <!-- 외부 자바스크립트 파일 연결 -->
+</body>
 </html>
