@@ -1,132 +1,134 @@
 /* 기본 스타일 초기화 */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* 모든 요소의 기본 마진 제거 */
+    padding: 0; /* 모든 요소의 기본 패딩 제거 */
+    box-sizing: border-box; /* 요소의 크기 계산 시 padding과 border 포함 */
 }
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* 본문 글꼴을 Arial로 설정 */
     overflow-x: hidden; /* 좌우 스크롤 방지 */
 }
 
 .weekly-books-title {
-    font-size: 26px !important;
+    font-size: 26px !important; /* 도서 제목 크기 설정, !important로 우선 적용 */
 }
 
 /* 고정 헤더 스타일 */
 header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    background-color: rgba(0, 0, 0, 0);
-    color: black;
-    padding: 1rem 2rem;
+    position: fixed; /* 헤더를 화면 상단에 고정 */
+    width: 100%; /* 전체 너비 사용 */
+    top: 0; /* 화면 상단에 위치 */
+    left: 0; /* 화면 좌측에 위치 */
+    z-index: 10; /* 다른 요소들보다 위에 위치하도록 설정 */
+    background-color: rgba(0, 0, 0, 0); /* 투명한 배경 */
+    color: black; /* 글자 색을 검은색으로 설정 */
+    padding: 1rem 2rem; /* 헤더 내부 여백 */
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Flexbox 레이아웃 사용 */
+    justify-content: space-between; /* 좌우 간격 균등 분배 */
+    align-items: center; /* 세로 중앙 정렬 */
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
+    font-size: 1.8rem; /* 로고 글자 크기 설정 */
+    font-weight: bold; /* 로고 글자 두껍게 설정 */
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 120px;
+    list-style: none; /* 리스트 스타일 제거 */
+    display: flex; /* Flexbox로 배치 */
+    gap: 120px; /* 항목 간 간격 설정 */
 }
 
 .nav-links li a {
-    color: black;
-    text-decoration: none;
-    font-size: 1.2rem;
+    color: black; /* 링크 색상 검정 */
+    text-decoration: none; /* 링크 밑줄 제거 */
+    font-size: 1.2rem; /* 링크 텍스트 크기 설정 */
 }
 
 .auth-links a {
-    color: black;
-    margin-left: 1rem;
-    text-decoration: none;
-    font-size: 1rem;
+    color: black; /* 로그인/회원가입 링크 색상 */
+    margin-left: 1rem; /* 왼쪽 여백 추가 */
+    text-decoration: none; /* 밑줄 제거 */
+    font-size: 1rem; /* 글자 크기 설정 */
 }
 
 /* 검색창 및 배너 스타일 */
 .search-banner {
-    position: relative;
+    position: relative; /* 내부 요소 배치를 위한 상대 위치 */
     margin-top: 80px; /* 헤더와 배너 간 간격 */
-    margin-bottom: 40px;
-    padding: 20px;
-    background-color: #f4f4f400;
-    text-align: center;
+    margin-bottom: 40px; /* 배너와 다른 요소 간 간격 */
+    padding: 20px; /* 배너 내부 여백 */
+    background-color: #f4f4f400; /* 배경 색상 (투명도 있음) */
+    text-align: center; /* 텍스트 중앙 정렬 */
 }
 
 .search-box {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+    display: flex; /* Flexbox로 배치 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    margin-bottom: 20px; /* 아래쪽 여백 */
 }
 
 .search-box input {
-    width: 50%;
-    padding: 10px;
-    font-size: 1rem;
-    border-radius: 25px;
-    border: 1px solid #ddd;
+    width: 50%; /* 검색창 너비를 50%로 설정 */
+    padding: 10px; /* 입력창 내부 여백 */
+    font-size: 1rem; /* 글자 크기 설정 */
+    border-radius: 25px; /* 둥근 모서리 */
+    border: 1px solid #ddd; /* 연한 회색 테두리 */
 }
 
 /* 메인 배너 스타일 */
 .main-banner {
-    position: relative;
+    position: relative; /* 배너의 위치 설정 */
     margin-top: 40px; /* 헤더와 배너 간 간격 */
-    width: 1170px;
-    height: 400px;
-    margin: 0 auto;
-    overflow: hidden;
-    margin-bottom: 40px; /* 메인 배너와 웹툰 실시간 랭킹 사이 여백 추가 */
+    width: 1170px; /* 배너 너비 설정 */
+    height: 400px; /* 배너 높이 설정 */
+    margin: 0 auto; /* 수평 중앙 정렬 */
+    overflow: hidden; /* 배너 영역 밖의 콘텐츠 숨기기 */
+    margin-bottom: 40px; /* 메인 배너와 다른 요소 간 간격 */
 }
+
 .banner-container {
-    display: flex;
-    transition: transform 0.5s ease;
+    display: flex; /* Flexbox로 배너 내부 요소 배치 */
+    transition: transform 0.5s ease; /* 배너 슬라이드 애니메이션 효과 */
 }
 
 .banner-content {
-    display: flex;
-    width: 100%; /* 배너 이미지를 가로로 배열 */
+    display: flex; /* 배너 이미지를 가로로 배열 */
+    width: 100%; /* 배너 너비 설정 */
 }
 
 .banner-img {
-    min-width: 1170px;
-    height: 400px;
-    object-fit: cover;
+    min-width: 1170px; /* 각 배너 이미지의 최소 너비 설정 */
+    height: 400px; /* 이미지의 높이 설정 */
+    object-fit: cover; /* 이미지 비율을 유지하며 영역을 채움 */
 }
 
 .button-container {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    z-index: 20; /* 버튼을 배너보다 위에 위치시킴 */
+    position: absolute; /* 배너 내에서 버튼 고정 */
+    top: 50%; /* 세로 중앙 정렬 */
+    width: 100%; /* 버튼이 배너 너비를 가득 차게 설정 */
+    display: flex; /* Flexbox로 배치 */
+    justify-content: space-between; /* 좌우 간격 균등 분배 */
+    transform: translateY(-50%); /* 수직 중앙 정렬 */
+    z-index: 20; /* 버튼을 배너보다 위에 배치 */
 }
 
 .prev-btn, .next-btn {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 2rem;
-    border: none;
-    padding: 0.5rem;
-    cursor: pointer;
-    z-index: 30; /* 버튼이 다른 요소들 위에 오도록 설정 */
+    background-color: rgba(0, 0, 0, 0.5); /* 버튼 배경 색상 반투명 검정 */
+    color: white; /* 버튼 텍스트 색상 흰색 */
+    font-size: 2rem; /* 버튼 글자 크기 설정 */
+    border: none; /* 테두리 제거 */
+    padding: 0.5rem; /* 버튼 내부 여백 */
+    cursor: pointer; /* 클릭 시 포인터 커서 */
+    z-index: 30; /* 버튼을 다른 요소들 위에 위치하도록 설정 */
 }
 
 .prev-btn:hover, .next-btn:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7); /* 버튼 호버 시 배경 색상 어두운 검정 */
 }
 
 /* 슬라이더 배너 스타일 */
@@ -135,233 +137,227 @@ header {
 }
 
 .slider {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+    position: relative; /* 배너 슬라이더의 위치 설정 */
+    width: 100%; /* 슬라이더 너비 100% */
+    overflow: hidden; /* 슬라이더 영역 밖 콘텐츠 숨기기 */
 }
 
 .slider .slider-item {
-    width: 100%;
+    width: 100%; /* 각 슬라이드 아이템의 너비 100% */
 }
 
 .slider .slider-item img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
+    width: 100%; /* 슬라이드 이미지 크기 100%로 설정 */
+    height: 400px; /* 이미지 높이 400px로 설정 */
+    object-fit: cover; /* 이미지 비율 유지하며 크기 조정 */
 }
 
 .slider-control {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Flexbox로 버튼 배치 */
+    justify-content: center; /* 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
 }
 
 /* 버튼을 고정시키는 스타일 */
 .button-container {
-    position: absolute; /* absolute로 배너 안에서 고정 */
-    top: 50%;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    z-index: 20; /* 버튼을 배너보다 위에 위치시킴 */
-    width: 100%; /* 버튼이 배너 전체 너비에 맞게 배치 */
+    position: absolute; /* 배너 안에서 버튼 고정 */
+    top: 50%; /* 세로 중앙 정렬 */
+    left: 0; /* 좌측에 배치 */
+    right: 0; /* 우측에 배치 */
+    display: flex; /* Flexbox로 배치 */
+    justify-content: space-between; /* 좌우 간격 균등 분배 */
+    transform: translateY(-50%); /* 수직 중앙 정렬 */
+    z-index: 20; /* 버튼을 다른 요소들 위에 배치 */
+    width: 100%; /* 버튼을 배너 너비에 맞게 배치 */
 }
 
 .prev-btn, .next-btn {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 2rem;
-    border: none;
-    padding: 0.5rem;
-    cursor: pointer;
-    z-index: 30; /* 버튼이 다른 요소들 위에 오도록 설정 */
+    background-color: rgba(0, 0, 0, 0.5); /* 버튼 배경 색상 반투명 검정 */
+    color: white; /* 버튼 텍스트 색상 흰색 */
+    font-size: 2rem; /* 글자 크기 설정 */
+    border: none; /* 테두리 제거 */
+    padding: 0.5rem; /* 버튼 내부 여백 */
+    cursor: pointer; /* 클릭 시 포인터 커서 */
+    z-index: 30; /* 버튼을 다른 요소들 위에 위치하도록 설정 */
 }
 
 .prev-btn:hover, .next-btn:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7); /* 버튼 호버 시 배경 색상 어두운 검정 */
 }
+
 /* 도서 실시간 랭킹 스타일 */
 .ranking {
-    position: relative;
-    padding: 26px;
-    margin-bottom: 40px;
-    width: 1170px;
-    margin: 0 auto;
-    overflow: hidden;
-    background-color: #f5f5f500;
+    position: relative; /* 랭킹 영역 내 위치 설정 */
+    padding: 26px; /* 내부 여백 설정 */
+    margin-bottom: 40px; /* 랭킹과 다른 요소 간 간격 설정 */
+    width: 1170px; /* 랭킹 영역 너비 설정 */
+    margin: 0 auto; /* 수평 중앙 정렬 */
+    overflow: hidden; /* 영역 밖의 콘텐츠 숨기기 */
+    background-color: #f5f5f500; /* 배경 색상 (투명도 있음) */
 }
 
 .ranking h2 {
-    font-size: 26px;
-    margin-bottom: 1.5rem;
+    font-size: 26px; /* 제목 크기 설정 */
+    margin-bottom: 1.5rem; /* 제목과 다른 요소 간 간격 설정 */
 }
 
 /* 오늘의 도서 섹션 스타일 */
 .today-books {
-    margin-bottom: 40px;
-    padding: 20px;
-    width: 1170px;
-    height: 459px;
-    margin: 0 auto;
-    overflow: hidden;
+    margin-bottom: 40px; /* 섹션 간 여백 설정 */
+    padding: 20px; /* 내부 여백 설정 */
+    width: 1170px; /* 섹션 너비 설정 */
+    height: 459px; /* 섹션 높이 설정 */
+    margin: 0 auto; /* 수평 중앙 정렬 */
+    overflow: hidden; /* 영역 밖 콘텐츠 숨기기 */
 }
-.section-header h2{
-    font-size: 26px;
+
+.section-header h2 {
+    font-size: 26px; /* 섹션 제목 크기 설정 */
 }
 
 .section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+    display: flex; /* Flexbox로 배치 */
+    justify-content: space-between; /* 항목 간 간격 균등 분배 */
+    align-items: center; /* 세로 중앙 정렬 */
+    margin-bottom: 20px; /* 제목과 다른 요소 간 간격 설정 */
 }
 
 .today-books h2 {
-    font-size: 26px;
-    margin: 0;
+    font-size: 26px; /* 제목 크기 설정 */
+    margin: 0; /* 여백 제거 */
 }
 
 .see-more {
-    font-size: 1rem;
-    color: #888;
-    text-decoration: none;
+    font-size: 1rem; /* 글자 크기 설정 */
+    color: #888; /* 텍스트 색상 회색 */
+    text-decoration: none; /* 밑줄 제거 */
 }
 
 .see-more:hover {
-    color: #333;
+    color: #333; /* 호버 시 텍스트 색상 어두운 회색 */
 }
 
 /* 요일별 도서 그리드 */
 .days-of-week {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 7개 열로 나누기 */
-    gap: 6px;
-    justify-items: center;
+    display: grid; /* 그리드 레이아웃 사용 */
+    grid-template-columns: repeat(6, 1fr); /* 6개의 열로 분할 */
+    gap: 6px; /* 항목 간 간격 설정 */
+    justify-items: center; /* 아이템 중앙 정렬 */
 }
 
 .day-item {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 40px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0);
-    width: 180px;
-    height: 355px;
-    padding: 10px;
-    text-align: left;
-    position: relative;
+    background-color: #fff; /* 배경 색상 흰색 */
+    border-radius: 10px; /* 둥근 모서리 설정 */
+    overflow: hidden; /* 영역 밖의 콘텐츠 숨기기 */
+    margin-bottom: 40px; /* 항목 간 간격 설정 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0); /* 그림자 효과 설정 */
+    width: 180px; /* 너비 설정 */
+    height: 355px; /* 높이 설정 */
+    padding: 10px; /* 내부 여백 설정 */
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+    position: relative; /* 위치 상대 설정 */
 }
-
 
 /* 도서 이미지 */
 .book-img {
-    width: 100%;
-    height: 261px;  /* 이미지 높이를 261px로 변경 */
-    object-fit: cover; /* 이미지가 지정된 영역에 맞게 비율을 유지하며 크기 조정 */
+    width: 100%; /* 이미지 너비 100% */
+    height: 261px; /* 이미지 높이 261px */
+    object-fit: cover; /* 이미지 비율을 유지하며 크기 조정 */
 }
 
 /* 도서 제목 */
 .book-title {
-    font-size: 14px;
-    font-weight: bold;
-    margin-top: 10px;
+    font-size: 14px; /* 제목 글자 크기 설정 */
+    font-weight: bold; /* 제목 글자 두껍게 설정 */
+    margin-top: 10px; /* 제목 위 여백 설정 */
 }
 
 /* 도서 저자 */
 .book-author {
-    font-size: 12px;
-    color: #777;
+    font-size: 12px; /* 저자 글자 크기 설정 */
+    color: #777; /* 저자 텍스트 색상 설정 */
 }
 
 /* 별 평점 스타일 */
 .book-rating {
-    display: flex;
-    align-items: center;
-    margin-top: 1px;
+    display: flex; /* 평점 아이템을 Flexbox로 배치 */
+    align-items: center; /* 세로 중앙 정렬 */
+    margin-top: 1px; /* 위 여백 설정 */
 }
 
 .star {
-    color: red; /* 별 색 */
-    font-size: 13px;
-    margin-right: 1px; /* 별과 숫자 사이 간격 */
+    color: red; /* 별 색상 빨강 */
+    font-size: 13px; /* 별 크기 설정 */
+    margin-right: 1px; /* 별과 숫자 사이 여백 설정 */
 }
 
 .rating-text {
-    font-size: 13px;
-    color: red;
-    position: relative;  /* position을 relative로 설정 */
-    top: 3.5px;  /* 원하는 만큼 조정 */
+    font-size: 13px; /* 평점 글자 크기 설정 */
+    color: red; /* 평점 텍스트 색상 빨강 */
+    position: relative; /* 위치 상대 설정 */
+    top: 3.5px; /* 세로 위치 조정 */
 }
 
 /* 숫자 색 변경 */
 .rating-text span {
-    color: #787878; /* 회색으로 변경 */
+    color: #787878; /* 평점 숫자 색상 회색으로 변경 */
 }
+
 /* 회색 더보기 버튼 스타일 */
 .see-more {
-    color: #888;
-    font-size: 16px;
-    text-decoration: none;
-    margin-right: 40px;
-    margin-top: 40px;
+    color: #888; /* 텍스트 색상 회색 */
+    font-size: 16px; /* 글자 크기 설정 */
+    text-decoration: none; /* 밑줄 제거 */
+    margin-right: 40px; /* 오른쪽 여백 설정 */
+    margin-top: 40px; /* 위 여백 설정 */
 }
 
 .see-more:hover {
-    color: #333;
+    color: #333; /* 호버 시 텍스트 색상 어두운 회색 */
 }
 
 /* 웹툰 검색 섹션 스타일 */
 .webtoon-search {
-    margin-top: 40px;
-    padding: 20px;
-    width: 1170px;
-    margin: 0 auto;
-}
-
-.section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+    margin-top: 40px; /* 섹션 상단 여백 설정 */
+    padding: 20px; /* 내부 여백 설정 */
+    width: 1170px; /* 너비 설정 */
+    margin: 0 auto; /* 수평 중앙 정렬 */
 }
 
 /* 19금 스위치 스타일 */
 .adult-switch {
-    margin-right: 16px; /* 여백 16px 설정 */
-    
+    margin-right: 16px; /* 오른쪽 여백 설정 */
 }
 
 /* 스위치 배경 */
 .switch-container {
-    top: 20px;  /* 상단에서 50px 만큼 떨어진 위치 */
-    right: 70px;
-    width: 50px;
-    height: 15px; /* 높이를 그대로 두고 */
-    background-color: #D3D3D3; /* 기본 배경 회색 */
-    border-radius: 25px; /* 둥근 테두리 */
-    position: relative;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* 배경색 변환 */
+    top: 20px; /* 상단에서 20px 만큼 떨어진 위치 */
+    right: 70px; /* 우측에서 70px 만큼 떨어진 위치 */
+    width: 50px; /* 너비 설정 */
+    height: 15px; /* 높이 설정 */
+    background-color: #D3D3D3; /* 배경 색상 회색 */
+    border-radius: 25px; /* 둥근 모서리 */
+    position: relative; /* 위치 상대 설정 */
+    cursor: pointer; /* 클릭 시 포인터 커서 */
+    transition: background-color 0.3s ease; /* 배경색 변환 애니메이션 */
 }
 
 /* 19 텍스트 (하얀 원 배경) */
 .toggle-text {
-    position: absolute;
-    top: 50%;
-    left: 0px; /* 왼쪽 위치 */
+    position: absolute; /* 위치 절대 설정 */
+    top: 50%; /* 세로 중앙 정렬 */
+    left: 0px; /* 왼쪽 위치 설정 */
     transform: translateY(-50%); /* 수직 중앙 정렬 */
-    font-size: 12px;
-    font-weight: bold;
-    color: black; /* 검정색 텍스트 */
+    font-size: 12px; /* 글자 크기 설정 */
+    font-weight: bold; /* 글자 두껍게 설정 */
+    color: black; /* 텍스트 색상 검정 */
     background-color: white; /* 하얀 원 배경 */
     border-radius: 50%; /* 원 모양 */
-    width: 26px; /* 원 크기 */
-    height: 26px; /* 원 크기 */
-    display: flex;
+    width: 26px; /* 원 너비 */
+    height: 26px; /* 원 높이 */
+    display: flex; /* Flexbox로 배치 */
     align-items: center; /* 수평 중앙 정렬 */
-    border: 2px solid red; /* 원 테두리 빨간색 */
+    border: 2px solid red; /* 빨간 테두리 */
     justify-content: center; /* 수직 중앙 정렬 */
     transition: transform 0.3s ease, left 0.3s ease; /* 텍스트 이동 효과 */
 }
@@ -372,400 +368,386 @@ header {
 }
 
 .switch-container.active .toggle-text {
-    left: 24px; /* 텍스트 오른쪽으로 이동 */
+    left: 24px; /* 텍스트를 오른쪽으로 이동 */
 }
 
-/*키워드 검색*/
+/* 키워드 검색 */
 .keyword-search {
-    margin-top: 40px;
-    padding: 20px;
-    width: 1170px;
-    margin-bottom: 20px;
-    margin: 0 auto;
-    overflow: hidden;
+    margin-top: 40px; /* 상단 여백 설정 */
+    padding: 20px; /* 내부 여백 설정 */
+    width: 1170px; /* 너비 설정 */
+    margin-bottom: 20px; /* 하단 여백 설정 */
+    margin: 0 auto; /* 수평 중앙 정렬 */
+    overflow: hidden; /* 넘치는 콘텐츠 숨기기 */
 }
 
 .keyword-search h3 {
-    font-size: 26px;
-    margin-bottom: 10px;
+    font-size: 26px; /* 제목 크기 설정 */
+    margin-bottom: 10px; /* 제목과 본문 간 간격 설정 */
 }
 
 .keyword-list {
-    display: flex;
-    flex-wrap: wrap; /* 줄바꿈 허용 */
+    display: flex; /* 플렉스 박스를 사용하여 아이템을 나열 */
+    flex-wrap: wrap; /* 키워드가 화면을 벗어나면 줄 바꿈 */
     gap: 8px; /* 키워드 사이의 간격 */
-    margin-top: 8px;
+    margin-top: 8px; /* 상단 여백 설정 */
 }
 
 .keyword {
-    padding: 8px 12px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    color: #333;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    padding: 8px 12px; /* 키워드 내부 여백 설정 */
+    background-color: #fff; /* 배경색 흰색 */
+    border: 1px solid #ddd; /* 테두리 색 설정 */
+    border-radius: 5px; /* 둥근 모서리 */
+    font-size: 0.9rem; /* 글자 크기 설정 */
+    color: #333; /* 글자 색상 설정 */
+    cursor: pointer; /* 커서를 포인터로 변경 */
+    transition: background-color 0.3s; /* 배경색 변경 시 부드러운 애니메이션 */
 }
 
 .keyword:hover {
-    background-color: #f0f0f0; /* 호버 시 약간 회색 배경 */
+    background-color: #f0f0f0; /* 호버 시 배경색을 회색으로 변경 */
 }
-/*2024베스트*/
+
+/* 2024 베스트 웹툰 */
 .webtoon-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* 한 줄에 3개 */
-    gap: 10px;
+    display: grid; /* 그리드 레이아웃으로 배치 */
+    grid-template-columns: 1fr 1fr 1fr; /* 3개의 열로 배치 */
+    gap: 10px; /* 아이템 간 간격 설정 */
 }
 
 .webtoon-item {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 10px;
-    display: flex;
-    align-items: center; /* 세로 가운데 정렬 */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.0);
+    background-color: #fff; /* 배경색 흰색 */
+    border-radius: 10px; /* 둥근 모서리 */
+    padding: 10px; /* 내부 여백 설정 */
+    display: flex; /* 플렉스 박스를 사용 */
+    align-items: center; /* 세로 중앙 정렬 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.0); /* 그림자 효과 */
     position: relative; /* 버튼의 위치 설정을 위한 상대 위치 */
 }
 
 .webtoon-img {
-    width: 80px;
-    height: 116px;
-    object-fit: cover;
-    margin-right: 25px; /* 이미지와 랭킹 간 간격 */
+    width: 80px; /* 웹툰 이미지 너비 설정 */
+    height: 116px; /* 웹툰 이미지 높이 설정 */
+    object-fit: cover; /* 비율을 유지하며 크기 조정 */
+    margin-right: 25px; /* 이미지와 랭킹 간 간격 설정 */
 }
 
 .webtoon-ranking {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-right: 25px; /* 랭킹과 정보 간 간격 */
+    font-size: 1.5rem; /* 랭킹 텍스트 크기 설정 */
+    font-weight: bold; /* 랭킹 텍스트 두껍게 설정 */
+    margin-right: 25px; /* 랭킹과 정보 간 간격 설정 */
 }
 
 .webtoon-info {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* 플렉스 박스를 사용 */
+    flex-direction: column; /* 세로로 정렬 */
 }
 
 .webtoon-title {
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 5px 0;
+    font-size: 1rem; /* 제목 크기 설정 */
+    font-weight: bold; /* 제목 두껍게 설정 */
+    margin: 5px 0; /* 제목 상하 여백 설정 */
 }
 
 .webtoon-author {
-    font-size: 0.9rem;
-    color: #777;
-    margin-bottom: 5px;
+    font-size: 0.9rem; /* 저자 이름 크기 설정 */
+    color: #777; /* 저자 이름 색상 설정 */
+    margin-bottom: 5px; /* 저자와 평점 간 간격 설정 */
 }
 
 .webtoon-rating {
-    display: flex;
-    align-items: center;
+    display: flex; /* 평점 아이템을 Flexbox로 배치 */
+    align-items: center; /* 세로 중앙 정렬 */
 }
+
+/* 화살표 버튼 */
 .arrow-button {
-    position: absolute; /* 부모 요소 기준으로 절대 위치 */
+    position: absolute; /* 부모 요소 기준으로 절대 위치 설정 */
     top: 210px; /* 부모 요소 높이의 중간에 위치 */
     right: -10px; /* 부모 요소의 오른쪽에서 약간 떨어진 위치 */
     transform: translateY(-50%); /* Y축 중심 정렬 */
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #555;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+    width: 30px; /* 버튼 크기 설정 */
+    height: 30px; /* 버튼 크기 설정 */
+    background-color: white; /* 배경색 흰색 */
+    border-radius: 50%; /* 원형 버튼 */
+    display: flex; /* 플렉스 박스를 사용 */
+    align-items: center; /* 수평 중앙 정렬 */
+    justify-content: center; /* 수직 중앙 정렬 */
+    font-size: 1.2rem; /* 텍스트 크기 설정 */
+    font-weight: bold; /* 텍스트 두껍게 설정 */
+    color: #555; /* 텍스트 색상 설정 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    cursor: pointer; /* 포인터 커서 설정 */
 }
-/*이벤트 보러 가기*/
+
+/* 이벤트 섹션 */
 .event-section {
-    margin-top: 40px;
-    padding: 20px;
-    width: 1170px;
-    margin-bottom: 20px;
-    margin: 0 auto;
-    overflow: hidden;
+    margin-top: 40px; /* 상단 여백 설정 */
+    padding: 20px; /* 내부 여백 설정 */
+    width: 1170px; /* 너비 설정 */
+    margin-bottom: 20px; /* 하단 여백 설정 */
+    margin: 0 auto; /* 수평 중앙 정렬 */
+    overflow: hidden; /* 영역 밖 콘텐츠 숨기기 */
 }
 
 .event-section h3 {
-    font-size: 26px;
-    margin-bottom: 10px;
+    font-size: 26px; /* 제목 크기 설정 */
+    margin-bottom: 10px; /* 제목과 본문 간 간격 설정 */
 }
 
 .event-images {
-    display: flex;
-    gap: 6px; /* 이미지 사이 간격 */
+    display: flex; /* 플렉스 박스를 사용 */
+    gap: 6px; /* 이미지 간 간격 설정 */
 }
 
 .event-image {
-    width: 366px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 10px; /* 이미지에 둥근 모서리 추가 */
+    width: 366px; /* 이미지 너비 설정 */
+    height: 140px; /* 이미지 높이 설정 */
+    object-fit: cover; /* 이미지 비율 유지하며 크기 조정 */
+    border-radius: 10px; /* 둥근 모서리 */
 }
 
-
+/* 독점 소제 섹션 */
 .exclusive-soze-section {
-    margin-top: 40px;
-    padding: 20px;
-    width: 1170px;
-    margin-bottom: 20px;
-    margin: 0 auto;
-    overflow: hidden;
+    margin-top: 40px; /* 상단 여백 설정 */
+    padding: 20px; /* 내부 여백 설정 */
+    width: 1170px; /* 너비 설정 */
+    margin-bottom: 20px; /* 하단 여백 설정 */
+    margin: 0 auto; /* 수평 중앙 정렬 */
+    overflow: hidden; /* 넘치는 콘텐츠 숨기기 */
 }
 
 .exclusive-soze-section h3 {
-    font-size: 26px;
-    margin-bottom: 10px;
+    font-size: 26px; /* 제목 크기 설정 */
+    margin-bottom: 10px; /* 제목과 본문 간 간격 설정 */
 }
 
 .exclusive-cards {
-    display: flex;
-    gap: 6px;
-    position: relative;
-    margin-top: 44px;
+    display: flex; /* 플렉스 박스를 사용 */
+    gap: 6px; /* 카드 간 간격 설정 */
+    position: relative; /* 부모 요소 기준으로 상대 위치 설정 */
+    margin-top: 44px; /* 상단 여백 설정 */
 }
 
-
 .image-wrapper {
-    position: relative;
-    width: 366px;
-    height: 100px;
+    position: relative; /* 부모 요소 기준으로 상대 위치 설정 */
+    width: 366px; /* 카드 너비 설정 */
+    height: 100px; /* 카드 높이 설정 */
 }
 
 .background-image {
-    width: 366px;
-    height: 100px;
-    object-fit: cover;
+    width: 366px; /* 배경 이미지 너비 설정 */
+    height: 100px; /* 배경 이미지 높이 설정 */
+    object-fit: cover; /* 이미지 비율 유지하며 크기 조정 */
 }
 
 .character-image {
-    position: absolute;
-    width: 250px;
-    height: 140px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    position: absolute; /* 절대 위치 설정 */
+    width: 250px; /* 캐릭터 이미지 너비 설정 */
+    height: 140px; /* 캐릭터 이미지 높이 설정 */
+    bottom: 0; /* 하단 정렬 */
+    left: 50%; /* 가로 중앙 정렬 */
+    transform: translateX(-50%); /* 정확히 중앙 정렬 */
 }
 
-.arrow-button {
-    position: absolute;
-    top: 50%;
-    right: -40px;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #555;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+/* 주간 도서 섹션 */
+.weekly-books-title h3 {
+    font-size: 26px; /* 제목 크기 설정 */
 }
 
-.text-content {
-    padding: 10px;
-    text-align: center;
-}
-
-.title {
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: #333;
-    margin: 5px 0;
-}
-
-.subtitle {
-    font-size: 0.8rem;
-    color: #777;
-}
-.weekly-books-title h3{
-    font-size: 26px;
-}
 /* 섹션 제목 스타일 */
 .weekly-books-section {
-    margin-top: 40px;
-    padding: 20px;
-    width: 1170px;
-    margin-bottom: 20px;
-    margin: 0 auto;
-    overflow: hidden;
-
+    margin-top: 40px; /* 상단 여백 설정 */
+    padding: 20px; /* 내부 여백 설정 */
+    width: 1170px; /* 너비 설정 */
+    margin-bottom: 20px; /* 하단 여백 설정 */
+    margin: 0 auto; /* 수평 중앙 정렬 */
+    overflow: hidden; /* 넘치는 콘텐츠 숨기기 */
 }
 
 .weekly-books-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
+    font-size: 1.2rem; /* 제목 크기 설정 */
+    font-weight: bold; /* 제목 두껍게 설정 */
+    margin-bottom: 10px; /* 제목과 본문 간 간격 설정 */
+    color: #333; /* 제목 색상 설정 */
 }
 
 .weekly-books {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 1줄에 6개 */
-    gap: 6px;
-    justify-items: center;
+    display: grid; /* 그리드 레이아웃 사용 */
+    grid-template-columns: repeat(6, 1fr); /* 한 줄에 6개의 항목 */
+    gap: 6px; /* 항목 간 간격 설정 */
+    justify-items: center; /* 항목 중앙 정렬 */
 }
 
 .weekly-book-item {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0);
-    width: 180px;
-    height: 355px;
-    padding: 10px;
-    text-align: left;
-    position: relative;
+    background-color: #fff; /* 배경색 흰색 */
+    border-radius: 10px; /* 둥근 모서리 */
+    overflow: hidden; /* 넘치는 내용 숨기기 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0); /* 그림자 효과 */
+    width: 180px; /* 책 아이템 너비 설정 */
+    height: 355px; /* 책 아이템 높이 설정 */
+    padding: 10px; /* 내부 여백 설정 */
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+    position: relative; /* 위치 설정 */
 }
 
 /* 도서 이미지 */
 .weekly-book-img {
-    width: 100%;
-    height: 261px;
-    object-fit: cover;
+    width: 100%; /* 이미지가 부모 요소의 너비를 채우도록 설정 */
+    height: 261px; /* 이미지의 높이를 261px로 설정 */
+    object-fit: cover; /* 이미지 비율을 유지하며 크기를 맞추기 위해 잘림 */
 }
 
 /* 도서 제목 */
 .weekly-book-title {
-    font-size: 14px;
-    font-weight: bold;
-    margin-top: 10px;
+    font-size: 14px; /* 제목 글자 크기 설정 */
+    font-weight: bold; /* 제목을 두껍게 설정 */
+    margin-top: 10px; /* 제목 위에 여백 추가 */
 }
 
 /* 도서 저자 */
 .weekly-book-author {
-    font-size: 12px;
-    color: #777;
+    font-size: 12px; /* 저자 글자 크기 설정 */
+    color: #777; /* 저자 색상 설정 (연한 회색) */
 }
 
 /* 별 평점 스타일 */
 .weekly-book-rating {
-    display: flex;
-    align-items: center;
-    margin-top: 1px;
+    display: flex; /* 별과 평점 텍스트를 수평 배치 */
+    align-items: center; /* 세로로 중앙 정렬 */
+    margin-top: 1px; /* 평점과 별 간의 간격 설정 */
 }
 
 .weekly-star {
-    color: red;
-    font-size: 13px;
-    margin-right: 1px;
+    color: red; /* 별 색상 빨간색 */
+    font-size: 13px; /* 별 크기 설정 */
+    margin-right: 1px; /* 별과 평점 텍스트 간 간격 설정 */
 }
 
 .weekly-rating-text {
-    font-size: 13px;
-    color: red;
-    position: relative;
-    top: 3.5px;
+    font-size: 13px; /* 평점 텍스트 크기 설정 */
+    color: red; /* 평점 텍스트 색상 빨간색 */
+    position: relative; /* 상대 위치 설정 */
+    top: 3.5px; /* 평점 텍스트의 위치 조정 */
 }
 
 /* 숫자 색 변경 */
 .weekly-rating-text span {
-    color: #787878;
+    color: #787878; /* 숫자 색상 설정 (회색) */
 }
+
 /* 푸터 */
 .footer {
-    margin-top: 40px;
-    padding: 20px;
-    width: 100%;
-    margin-bottom: 20px;
-    margin: 0 auto;
-    overflow: hidden;
-    height: 500px;
-    position: relative;
+    margin-top: 40px; /* 푸터 상단 여백 설정 */
+    padding: 20px; /* 푸터 내부 여백 설정 */
+    width: 100%; /* 푸터가 화면의 너비를 가득 채우도록 설정 */
+    margin-bottom: 20px; /* 푸터 하단 여백 설정 */
+    margin: 0 auto; /* 수평 중앙 정렬 */
+    overflow: hidden; /* 푸터 내 넘치는 콘텐츠 숨김 */
+    height: 500px; /* 푸터 높이 설정 */
+    position: relative; /* 상대 위치 설정 */
     display: flex; /* Flexbox 사용 */
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 230px; /* 왼쪽 여백 230px 추가 */
+    flex-direction: column; /* 내부 아이템을 세로로 배치 */
+    justify-content: center; /* 내부 아이템을 세로 중앙 정렬 */
+    padding-left: 230px; /* 왼쪽 여백 230px 설정 */
 }
 
+/* 푸터 배경 */
 .footer-background {
-    background-color: rgba(72, 72, 72, 1); /* 배경색 지정 */
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    margin-top: 50px;
-    z-index: 1; /* 배경의 z-index는 낮게 설정 */
+    background-color: rgba(72, 72, 72, 1); /* 푸터 배경색 설정 (어두운 회색) */
+    width: 100%; /* 배경이 화면 전체를 채우도록 설정 */
+    height: 100%; /* 배경이 푸터 높이를 채우도록 설정 */
+    position: absolute; /* 절대 위치 설정 */
+    left: 0; /* 왼쪽 정렬 */
+    margin-top: 50px; /* 상단 여백 설정 */
+    z-index: 1; /* 배경이 다른 요소들 아래에 위치하도록 설정 */
 }
 
+/* 푸터 제목 */
 .footer-title {
-    color: rgba(255, 255, 255, 1); /* 흰색으로 설정 */
-    font-family: 'Pretendard', sans-serif; /* 사용할 폰트 */
-    font-size: 70px; /* 적절한 크기로 조정 */
+    color: rgba(255, 255, 255, 1); /* 제목 색상 흰색 설정 */
+    font-family: 'Pretendard', sans-serif; /* 폰트 설정 */
+    font-size: 70px; /* 제목 크기 설정 */
     margin: 0; /* 기본 마진 제거 */
-    margin-top:51px;
-    z-index: 2; /* 글자들이 배경 위에 표시되도록 설정 */
+    margin-top: 51px; /* 제목 상단 여백 설정 */
+    z-index: 2; /* 제목이 배경 위에 표시되도록 설정 */
 }
+
+/* 푸터 서브타이틀 */
 .footer-subtitle {
-    color: rgba(255, 255, 255, 1); /* 흰색으로 설정 */
-    font-family: 'Pretendard', sans-serif; /* 사용할 폰트 */
-    font-size: 17px; /* 적절한 크기로 조정 */
+    color: rgba(255, 255, 255, 1); /* 서브타이틀 색상 흰색 설정 */
+    font-family: 'Pretendard', sans-serif; /* 폰트 설정 */
+    font-size: 17px; /* 서브타이틀 크기 설정 */
     margin: 0; /* 기본 마진 제거 */
-    margin-top: -80px;
-    margin-bottom: 60px;
-    z-index: 2; /* 글자들이 배경 위에 표시되도록 설정 */
+    margin-top: -80px; /* 서브타이틀 상단 위치 조정 */
+    margin-bottom: 60px; /* 서브타이틀 하단 여백 설정 */
+    z-index: 2; /* 서브타이틀이 배경 위에 표시되도록 설정 */
 }
+
+/* 푸터 선 */
 .footer-line {
-    width: calc(100% - 360px); /* 좌우 여백 210px을 제외한 폭 */
-    height: 1px; /* 선의 높이 */
-    background-color: rgba(255, 255, 255, 1); /* 흰색 */
-    margin: 20px 0px; /* 상단 여백 및 좌우 여백 */
-    z-index: 2;
+    width: calc(100% - 360px); /* 푸터의 양쪽 여백을 제외한 폭 설정 */
+    height: 1px; /* 선의 높이 설정 */
+    background-color: rgba(255, 255, 255, 1); /* 선 색상 흰색 설정 */
+    margin: 20px 0px; /* 선의 상하 여백 설정 */
+    z-index: 2; /* 선이 배경 위에 표시되도록 설정 */
 }
+
+/* 푸터 상세 텍스트 */
 .footer-details {
-    color: rgba(255, 255, 255, 1); /* 흰색으로 설정 */
-    font-family: 'Pretendard', sans-serif; /* 사용할 폰트 */
+    color: rgba(255, 255, 255, 1); /* 텍스트 색상 흰색 설정 */
+    font-family: 'Pretendard', sans-serif; /* 폰트 설정 */
     font-size: 17px; /* 글자 크기 설정 */
-    margin-top: 20px; /* 상단 여백 조정 */
-    z-index: 2; /* 글자들이 배경 위에 표시되도록 설정 */
+    margin-top: 20px; /* 상단 여백 설정 */
+    z-index: 2; /* 텍스트가 배경 위에 표시되도록 설정 */
 }
 
-
+/* 푸터 링크 */
 .footer-links {
-    color: rgba(255, 255, 255, 1); /* 글자색 흰색 */
-    font-family: 'NanumSquareRound', sans-serif; /* 사용할 폰트 */
+    color: rgba(255, 255, 255, 1); /* 링크 색상 흰색 설정 */
+    font-family: 'NanumSquareRound', sans-serif; /* 폰트 설정 */
     font-size: 20px; /* 글자 크기 설정 */
-    margin: 0 10px; /* 좌우 간격 조정 */
-    z-index: 2;
+    margin: 0 10px; /* 좌우 간격 설정 */
+    z-index: 2; /* 링크가 배경 위에 표시되도록 설정 */
     margin-left: auto; /* 오른쪽 정렬 */
-    margin-right: 360px; /* 오른쪽 여백 */
-}
-.footer-terms{
-    margin: 0 30px; /* 좌우 간격 조정 */
-}
-.footer-name {
-    color: rgba(255, 255, 255, 1); /* 흰색으로 설정 */
-    font-family: 'Pretendard', sans-serif; /* 사용할 폰트 */
-    font-size: 70px; /* 글자 크기 설정 */
-    margin-top: 20px; /* 여백 조정 */
-    z-index: 2; /* 글자들이 배경 위에 표시되도록 설정 */
+    margin-right: 360px; /* 오른쪽 여백 설정 */
 }
 
+/* 푸터 약관 */
+.footer-terms {
+    margin: 0 30px; /* 좌우 간격 설정 */
+}
+
+/* 푸터 이름 */
+.footer-name {
+    color: rgba(255, 255, 255, 1); /* 이름 색상 흰색 설정 */
+    font-family: 'Pretendard', sans-serif; /* 폰트 설정 */
+    font-size: 70px; /* 글자 크기 설정 */
+    margin-top: 20px; /* 상단 여백 설정 */
+    z-index: 2; /* 이름이 배경 위에 표시되도록 설정 */
+}
+
+/* 소셜 아이콘 */
 .social-icons {
     display: flex; /* 아이콘을 수평으로 배치 */
-    justify-content: flex-end; /* 오른쪽 정렬 */
-    margin-right: 360px;
-    margin-top: 10px; /* 아이콘 위 여백 조정 */
-    margin-bottom: 30px; /* 아이콘 아래 여백 조정 */
-    z-index: 2;
-    position: relative; /* 푸터 내에서 상대 위치 설정 */
-    top: -30px; /* 위치 조정 */
+    justify-content: flex-end; /* 아이콘을 오른쪽 정렬 */
+    margin-right: 360px; /* 오른쪽 여백 설정 */
+    margin-top: 10px; /* 아이콘 상단 여백 설정 */
+    margin-bottom: 30px; /* 아이콘 하단 여백 설정 */
+    z-index: 2; /* 아이콘이 배경 위에 표시되도록 설정 */
+    position: relative; /* 상대 위치 설정 */
+    top: -30px; /* 아이콘 위치 조정 */
 }
 
+/* 소셜 아이콘 개별 스타일 */
 .social-icon {
-    margin: 0 10px; /* 아이콘 사이의 간격 조정 */
+    margin: 0 10px; /* 아이콘 간 간격 설정 */
 }
 
+/* 소셜 아이콘 이미지 크기 */
 .social-icon img {
-    width: 48px; /* 아이콘 크기 */
-    height: 48px; /* 아이콘 크기 */
+    width: 48px; /* 아이콘 너비 설정 */
+    height: 48px; /* 아이콘 높이 설정 */
 }
+
 
