@@ -22,7 +22,7 @@ header {
     left: 0; /* 화면 왼쪽에 위치 */
     z-index: 10; /* 다른 요소들 위에 헤더를 표시 */
     color: rgb(255, 255, 255); /* 헤더 글자 색을 흰색으로 설정 */
-    background-color: #0000; /* 배경색을 투명하게 설정 */
+    background-color: #00000000; /* 배경색을 투명하게 설정 */
     padding: 1rem 2rem; /* 헤더 내부 여백 설정 */
 }
 
@@ -31,6 +31,7 @@ header {
     display: flex; /* Flexbox 레이아웃 사용 */
     justify-content: space-between; /* 좌우 공간을 균등 배분 */
     align-items: center; /* 세로 중앙 정렬 */
+    
 }
 
 /* 로고 스타일 */
@@ -64,7 +65,7 @@ header {
 /* 배너 스타일 */
 .banner {
     position: relative; /* 배너 위치를 상대적으로 설정 */
-    background-image: url('/img/banner1.png'); /* 배너 이미지 경로 */
+    background-image: url('/img/github\ 이미지/자료목록페이지 배너.png'); /* 배너 이미지 경로 */
     background-size: flex; /* 배경 이미지 크기 조정 */
     background-position: center; /* 배경 이미지 중앙 정렬 */
     height: 300px; /* 배너 높이 설정 */
@@ -72,6 +73,7 @@ header {
     justify-content: center; /* 배너 내용 중앙 정렬 */
     align-items: center; /* 세로 중앙 정렬 */
     color: rgb(255, 255, 255); /* 배너 텍스트 색을 흰색으로 설정 */
+    height: 400px;
 }
 
 /* 배너 제목 스타일 */
