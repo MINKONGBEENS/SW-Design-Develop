@@ -64,25 +64,28 @@ header {
 /* 배너 스타일 */
 .banner {
     position: relative; /* 배너 위치를 상대적으로 설정 */
-    background-image: url('/img/banner1.png'); /* 배너 이미지 경로 설정 */
+    background-image: url('/img/github\ 이미지/오시는길 배너.png'); /* 배너 이미지 경로 설정 */
     background-size: flex; /* 배경 이미지 크기를 맞춤 */
+    width: 1920px;
     background-position: center; /* 배경 이미지 중앙 정렬 */
-    height: 300px; /* 배너 높이 설정 */
+    height: 400px; /* 배너 높이 설정 */
     display: flex; /* Flexbox 사용 */
     justify-content: center; /* 배너 내용 중앙 정렬 */
     align-items: center; /* 세로로 중앙 정렬 */
-    color: rgb(255, 255, 255); /* 텍스트 색상 흰색으로 설정 */
-    background-color: #f5f5f5; /* 배경색 회색으로 설정 */
     padding: 30px 0; /* 배너 내부 여백 설정 */
     margin-bottom: 150px; /* 배너 하단 여백 설정 */
 }
 
 /* 배너 제목 스타일 */
 .banner h1 {
-    font-size: 2rem; /* 제목 폰트 크기 설정 */
+    font-size: 3rem; /* 제목 폰트 크기 설정 */
     padding: 10px 20px; /* 제목 여백 설정 */
     border-radius: 5px; /* 제목 테두리 둥글게 설정 */
     text-align: center; /* 제목 텍스트 중앙 정렬 */
+    margin-right: 21%;
+    font-weight: lighter;
+    color: rgb(0, 0, 0); /* 텍스트 색상 흰색으로 설정 */
+
 }
 
 /* 헤더 타이틀 스타일 */
@@ -106,7 +109,7 @@ header {
     background-color: #fff; /* 배경색 흰색으로 설정 */
     border-top: 1px solid #ddd; /* 상단 테두리 설정 */
     border-bottom: 1px solid #ddd; /* 하단 테두리 설정 */
-    margin-top: 100px; /* 상단 여백 설정 */
+    margin-top: 200px; /* 상단 여백 설정 */
 }
 
 /* 개별 연락처 항목 스타일 */
@@ -118,7 +121,7 @@ header {
 }
 
 .contact-item .icon {
-    font-size: 36px; /* 아이콘 크기 설정 */
+    max-width: 55px; /* 아이콘 크기 설정 */
     margin-bottom: 10px; /* 아이콘 아래 여백 설정 */
     color: #333; /* 아이콘 색상 설정 */
 }
