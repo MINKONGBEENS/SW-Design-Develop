@@ -65,7 +65,7 @@ header {
 /* 배너 스타일 */
 .banner {
     position: relative; /* 배너 위치를 상대적으로 설정 */
-    background-image: url('/img/github\ 이미지/자료목록페이지 배너.png'); /* 배너 이미지 경로 */
+    background-image: url('img/github 이미지/자료목록페이지\ 배너.png'); /* 배너 이미지 경로 */
     background-size: flex; /* 배경 이미지 크기 조정 */
     background-position: center; /* 배경 이미지 중앙 정렬 */
     height: 300px; /* 배너 높이 설정 */

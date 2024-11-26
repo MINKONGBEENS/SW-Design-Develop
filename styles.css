@@ -5,9 +5,13 @@
     box-sizing: border-box; /* 모든 요소에 대해 box-sizing을 border-box로 설정 */
 }
 
+/* 전체 크기 축소 (75%) */
 body {
     font-family: Arial, sans-serif; /* 기본 폰트 설정 */
     overflow-x: hidden; /* 가로 스크롤 방지 */
+    font-size: 0.75rem; /* 기본 텍스트 크기 25% 축소 */
+    height: 100vh; /* 전체 페이지 높이 100% */
+    width: 100vw; /* 전체 페이지 너비 100% */
 }
 
 /* 고정 헤더 스타일 */
@@ -19,9 +23,10 @@ header {
     z-index: 10; /* 헤더의 z-index를 10으로 설정하여 다른 요소들 위에 표시되도록 설정 */
     background-color: rgba(0, 0, 0, 0); /* 배경 투명 설정 */
     color: #fff; /* 글자색을 흰색으로 설정 */
-    padding: 1rem 2rem; /* 상하 1rem, 좌우 2rem 패딩 */
+    padding: 1.25rem 1.5rem; /* 상하 0.75rem, 좌우 1.5rem 패딩 */
 }
 
+/* 네비게이션 바 및 로고 크기 축소 */
 .navbar {
     display: flex; /* 플렉스 박스를 사용하여 레이아웃 설정 */
     justify-content: space-between; /* 아이템들 간의 간격을 균등하게 설정 */
@@ -29,116 +34,115 @@ header {
 }
 
 .logo {
-    font-size: 1.8rem; /* 로고의 글자 크기 설정 */
+    font-size: 1.35rem; /* 로고 글자 크기 25% 축소 */
     font-weight: bold; /* 로고를 굵게 설정 */
 }
 
 .nav-links {
     list-style: none; /* 리스트 스타일 제거 */
     display: flex; /* 수평 배치 */
-    gap: 120px; /* 항목 간의 간격을 120px로 설정 */
+    gap: 90px; /* 항목 간 간격을 90px로 설정 */
 }
 
 .nav-links li a {
-    color: #fff; /* 링크 글자 색상을 흰색으로 설정 */
+    color: #fff; /* 링크 글자 색상 흰색으로 설정 */
     text-decoration: none; /* 링크의 밑줄 제거 */
-    font-size: 1.2rem; /* 링크 글자 크기 설정 */
+    font-size: 1rem; /* 링크 글자 크기 25% 축소 */
 }
 
 .auth-links a {
     color: #fff; /* 인증 링크 색상 흰색으로 설정 */
-    margin-left: 1rem; /* 왼쪽에 1rem 여백 추가 */
+    margin-left: 0.75rem; /* 왼쪽에 0.75rem 여백 추가 */
     text-decoration: none; /* 링크의 밑줄 제거 */
-    font-size: 1rem; /* 인증 링크 글자 크기 설정 */
+    font-size: 1rem; /* 인증 링크 글자 크기 25% 축소 */
 }
 
 /* 메인 배너 스타일 */
 .main-banner {
-    height: 90vh; /* 배너의 높이를 화면의 90%로 설정 */
+    height: 67.5vh; /* 배너의 높이를 화면의 67.5%로 설정 */
     background: url('img/배경배너.png') no-repeat center center; /* 배경 이미지 설정 */
     background-size: cover; /* 배경 이미지가 화면에 맞게 확대/축소되도록 설정 */
     display: flex; /* 플렉스 박스를 사용하여 배치 */
     align-items: center; /* 배너 내부 요소 수직 가운데 정렬 */
     color: #fff; /* 배너 내 텍스트 색상을 흰색으로 설정 */
-    padding-left: 150px; /* 배너 왼쪽에 150px 여백 추가 */
-    margin-bottom: 400px; /* 배너 아래에 400px 마진 추가 */
+    padding-left: 112.5px; /* 배너 왼쪽에 112.5px 여백 추가 */
+    margin-bottom: 300px; /* 배너 아래에 300px 마진 추가 */
 }
 
 .banner-text {
-    max-width: 700px; /* 배너 텍스트 영역의 최대 너비 설정 */
+    max-width: 525px; /* 배너 텍스트 영역의 최대 너비 25% 축소 */
 }
 
 .title {
-    font-size: 4rem; /* 타이틀 글자 크기 설정 */
-    margin-bottom: 0.5rem; /* 타이틀과 아래 텍스트 간의 간격 설정 */
+    font-size: 3rem; /* 타이틀 글자 크기 25% 축소 */
+    margin-bottom: 0.375rem; /* 타이틀과 아래 텍스트 간의 간격 설정 */
 }
 
 .subtitle {
-    font-size: 4rem; /* 서브타이틀 글자 크기 설정 */
+    font-size: 3rem; /* 서브타이틀 글자 크기 25% 축소 */
 }
 
 /* 추천 플레이리스트 섹션 */
 .playlist-section {
     position: relative; /* 상대적인 위치 설정 */
     width: 100%; /* 섹션의 너비를 100%로 설정 */
-    max-width: 1920px; /* 최대 너비를 1920px로 설정 */
+    max-width: 1440px; /* 최대 너비를 1440px로 설정 */
     margin: 0 auto; /* 섹션의 가로 가운데 정렬 */
-    padding: 50px 0; /* 상하 50px 여백 */
+    padding: 37.5px 0; /* 상하 37.5px 여백 */
     display: flex; /* 플렉스 박스를 사용하여 배치 */
     justify-content: flex-start; /* 왼쪽 정렬 */
-    margin-bottom: 1200px; /* 섹션 아래에 1200px 마진 추가 */
+    margin-bottom: 900px; /* 섹션 아래에 900px 마진 추가 */
 }
 
 /* 앨범 이미지 설정 */
 .album-image {
     position: absolute; /* 절대 위치로 설정 */
-    width: 600px; /* 이미지의 너비 설정 */
-    height: 600px; /* 이미지의 높이 설정 */
+    width: 450px; /* 이미지의 너비 25% 축소 */
+    height: 450px; /* 이미지의 높이 25% 축소 */
     top: 0; /* 상단에 위치하도록 설정 */
-    left: 150px; /* 왼쪽에 150px 여백 추가 */
+    left: 112.5px; /* 왼쪽에 112.5px 여백 추가 */
 }
 
 /* POSITIVE 텍스트 */
 .overlay-text {
     position: absolute; /* 절대 위치로 설정 */
-    width: 1917px; /* 텍스트 너비 설정 */
-    height: 504px; /* 텍스트 높이 설정 */
-    top: 268px; /* 상단 268px 위치 */
-    left: 20px; /* 왼쪽 20px 위치 */
-    font-size: 420px; /* 글자 크기 설정 */
+    width: 1438px; /* 텍스트 너비 25% 축소 */
+    height: 378px; /* 텍스트 높이 25% 축소 */
+    top: 201px; /* 상단 201px 위치 */
+    left: 15px; /* 왼쪽 15px 위치 */
+    font-size: 315px; /* 글자 크기 25% 축소 */
     color: black; /* 텍스트 색상을 검은색으로 설정 */
 }
 
-/* "나에게 딱 맞춘 플레이리스트" 타이틀 */
+/* 플레이리스트 타이틀과 서브타이틀 축소 */
 .playlist-title {
     position: absolute; /* 절대 위치로 설정 */
-    width: 686px; /* 타이틀 너비 설정 */
-    height: 66px; /* 타이틀 높이 설정 */
-    top: 20px; /* 상단에 20px 여백 추가 */
-    left: 870px; /* 왼쪽에 870px 위치하도록 설정 */
-    font-size: 53px; /* 타이틀 글자 크기 설정 */
+    width: 514px; /* 타이틀 너비 25% 축소 */
+    height: 49.5px; /* 타이틀 높이 25% 축소 */
+    top: 15px; /* 상단에 15px 여백 추가 */
+    left: 652.5px; /* 왼쪽에 652.5px 위치하도록 설정 */
+    font-size: 39.75px; /* 타이틀 글자 크기 25% 축소 */
     font-weight: bold; /* 타이틀을 굵게 설정 */
 }
 
-/* "자동으로 추가되는 취향저격 플리를 만나보세요" 서브타이틀 */
 .playlist-subtitle {
     position: absolute; /* 절대 위치로 설정 */
-    width: 823px; /* 너비 823px */
-    height: 48px; /* 높이 48px */
-    top: 100px; /* 상단 100px 위치 */
-    left: 870px; /* 왼쪽 870px 위치 */
-    font-size: 39px; /* 글자 크기 설정 */
+    width: 617.25px; /* 너비 617.25px */
+    height: 36px; /* 높이 36px */
+    top: 75px; /* 상단 75px 위치 */
+    left: 652.5px; /* 왼쪽 652.5px 위치 */
+    font-size: 29.25px; /* 글자 크기 25% 축소 */
     color: #555; /* 글자 색상을 어두운 회색으로 설정 */
 }
 
 /* 설명 텍스트 */
 .description {
     position: absolute; /* 절대 위치로 설정 */
-    width: 400px; /* 너비 400px */
-    height: 72px; /* 높이 72px */
-    top: 820px; /* 상단 820px 위치 */
-    left: 722px; /* 왼쪽 722px 위치 */
-    font-size: 25px; /* 글자 크기 설정 */
+    width: 300px; /* 너비 300px */
+    height: 54px; /* 높이 54px */
+    top: 615px; /* 상단 615px 위치 */
+    left: 541.5px; /* 왼쪽 541.5px 위치 */
+    font-size: 18.75px; /* 글자 크기 25% 축소 */
     color: #666; /* 글자 색상을 회색으로 설정 */
     text-align: right; /* 텍스트 오른쪽 정렬 */
     line-height: 1.2; /* 줄 간격 설정 */
@@ -148,19 +152,15 @@ header {
 .artist-images {
     display: flex; /* 플렉스 박스로 배치 */
     position: absolute; /* 절대 위치로 설정 */
-    top: calc(820px - 400px + 72px); /* 설명 텍스트와 하단 맞추기 */
-    left: 1120px; /* 설명 텍스트 오른쪽에 배치 */
-    gap: 28px; /* 이미지들 간의 간격을 28px로 설정 */
+    top: calc(615px - 300px + 54px); /* 설명 텍스트와 하단 맞추기 */
+    left: 840px; /* 설명 텍스트 오른쪽에 배치 */
+    gap: 21px; /* 이미지들 간의 간격을 21px로 설정 */
     align-items: flex-end; /* 이미지를 아래쪽에 정렬 */
 }
 
 .artist-image {
-    width: 300px; /* 이미지의 너비 300px 설정 */
-    height: 400px; /* 이미지의 높이 400px 설정 */
-}
-
-.artist-image + .artist-image {
-    margin-left: 2px; /* 첫 번째와 두 번째 이미지 간격 2px */
+    width: 225px; /* 이미지의 너비 25% 축소 */
+    height: 300px; /* 이미지의 높이 25% 축소 */
 }
 
 /* 반응형 디자인 */
@@ -171,7 +171,7 @@ header {
         padding: 20px; /* 패딩 20px */
     }
     .album-image, .artist-images .artist-image {
-        width: 80%; /* 앨범 이미지와 아티스트 이미지 너비를 80%로 설정 */
+        width: 60%; /* 앨범 이미지와 아티스트 이미지 너비를 60%로 설정 */
     }
     .playlist-title, .playlist-subtitle, .overlay-text, .description {
         position: relative; /* 절대 위치에서 상대 위치로 변경 */
@@ -188,124 +188,109 @@ header {
         padding: 20px; /* 패딩 20px */
     }
     .playlist-title {
-        font-size: 2rem; /* 타이틀 글자 크기 조정 */
+        font-size: 1.5rem; /* 타이틀 글자 크기 조정 */
     }
     .playlist-subtitle {
-        font-size: 1.5rem; /* 서브타이틀 글자 크기 조정 */
+        font-size: 1.125rem; /* 서브타이틀 글자 크기 조정 */
     }
     .overlay-text {
-        font-size: 8rem; /* 오버레이 텍스트 크기 조정 */
+        font-size: 6rem; /* 오버레이 텍스트 크기 조정 */
     }
     .album-image, .artist-images .artist-image {
-        width: 100%; /* 앨범 이미지와 아티스트 이미지 너비 100%로 설정 */
+        width: 80%; /* 앨범 이미지와 아티스트 이미지 너비 80%로 설정 */
     }
     .description {
-        font-size: 1rem; /* 설명 텍스트 글자 크기 조정 */
+        font-size: 0.75rem; /* 설명 텍스트 글자 크기 조정 */
         text-align: center; /* 텍스트 가운데 정렬 */
     }
 }
 
-/* 기본 스타일 초기화 */
-* {
-    margin: 0; /* 모든 요소의 마진 초기화 */
-    padding: 0; /* 모든 요소의 패딩 초기화 */
-    box-sizing: border-box; /* 모든 요소에 대해 box-sizing을 border-box로 설정 */
-}
-
-body {
-    font-family: Arial, sans-serif; /* 기본 폰트 설정 */
-    overflow-x: hidden; /* 가로 스크롤 방지 */
-}
 
 /* 추천 도서 섹션 스타일 */
 .recommended-books {
     background-color: #FF5420; /* 배경 색상을 주황색으로 설정 */
-    padding: 100px 20px; /* 상하 100px, 좌우 20px 패딩 */
+    padding: 75px 15px; /* 상하 75px, 좌우 15px 패딩 */
     text-align: center; /* 텍스트를 가운데 정렬 */
     color: #FFFFFF; /* 텍스트 색상을 흰색으로 설정 */
 }
 
+/* 추천 도서 섹션 헤더 */
 .recommended-header {
-    margin-bottom: 30px; /* 헤더와 아래 요소 간의 간격 설정 */
+    margin-bottom: 22.5px; /* 헤더와 아래 요소 간의 간격 설정 */
 }
 
 .recommended-header h2 {
-    font-size: 100px; /* 헤더 제목 글자 크기 설정 */
+    font-size: 75px; /* 헤더 제목 글자 크기 25% 축소 */
     font-weight: bold; /* 제목 글자 굵게 설정 */
 }
 
 .recommended-header .author-info {
-    font-size: 25px; /* 저자 정보 글자 크기 설정 */
-    margin-bottom: 10px; /* 저자 정보와 아래 요소 간의 간격 설정 */
+    font-size: 18.75px; /* 저자 정보 글자 크기 25% 축소 */
+    margin-bottom: 7.5px; /* 저자 정보와 아래 요소 간의 간격 설정 */
 }
 
+/* 추천 도서의 책 정보 배치 */
 .featured-book {
     display: flex; /* 플렉스 박스를 사용하여 책 정보 배치 */
     justify-content: space-between; /* 책 정보들 간의 간격을 균등하게 설정 */
-    padding-left: 150px; /* 왼쪽에 150px 여백 추가 */
-    margin-top: 30px; /* 상단에 30px 여백 추가 */
+    padding-left: 112.5px; /* 왼쪽에 112.5px 여백 추가 */
+    margin-top: 22.5px; /* 상단에 22.5px 여백 추가 */
 }
-
-.featured-info {
+.featured-info{
     text-align: left; /* 책 정보 텍스트 왼쪽 정렬 */
-    max-width: 500px; /* 최대 너비 500px로 설정 */
 }
 
+/* 책 제목 및 저자 스타일 */
 .book-title {
-    background-color: #FFFFFF; /* 책 제목 배경 색상을 흰색으로 설정 */
-    color: #FF5420; /* 책 제목 글자 색상을 주황색으로 설정 */
-    padding-left: 150px; /* 왼쪽에 150px 여백 추가 */
-    padding: 10px 20px; /* 책 제목 패딩 설정 */
-    font-size: 55px; /* 글자 크기 설정 */
-    margin-bottom: 10px; /* 제목과 아래 요소 간의 간격 설정 */
+    background-color: #FFFFFF; /* 배경 색상 흰색으로 설정 */
+    color: #FF5420; /* 글자 색상 주황색으로 설정 */
+    padding-left: 112.5px; /* 왼쪽 여백 */
+    padding: 7.5px 15px; /* 책 제목 패딩 설정 */
+    font-size: 41.25px; /* 글자 크기 25% 축소 */
+    margin-bottom: 7.5px; /* 제목과 아래 요소 간의 간격 설정 */
     display: inline-block; /* 인라인 블록으로 설정 */
 }
-
-.book-author {
-    background-color: #FFFFFF; /* 저자 이름 배경 색상 흰색으로 설정 */
-    color: #FF5420; /* 저자 이름 글자 색상 주황색으로 설정 */
-    padding-left: 150px; /* 왼쪽에 150px 여백 추가 */
-    padding: 10px 20px; /* 저자 이름 패딩 설정 */
-    font-size: 55px; /* 글자 크기 설정 */
-    margin-bottom: 20px; /* 저자 이름과 아래 요소 간의 간격 설정 */
-    display: inline-block; /* 인라인 블록으로 설정 */
+.book-author{
+    background-color: #FFFFFF; /* 배경 색상 흰색으로 설정 */
+    color: #FF5420; /* 글자 색상 주황색으로 설정 */
+    padding-left: 112.5px; /* 왼쪽 여백 */
+    padding: 7.5px 15px; /* 책 제목 패딩 설정 */
+    font-size: 41.25px; /* 글자 크기 25% 축소 */
+    margin-top: 10px;
+    margin-bottom: 70px;
 }
 
+/* 책 정보 하위 항목 */
 .small-title {
-    font-size: 35px; /* 작은 제목 글자 크기 설정 */
-    margin-top: 20px; /* 제목과 위 요소 간의 간격 설정 */
+    font-size: 26.25px; /* 작은 제목 글자 크기 25% 축소 */
+    margin-top: 15px; /* 제목과 위 요소 간의 간격 설정 */
 }
 
 .author {
-    font-size: 25px; /* 저자 이름 글자 크기 설정 */
-    margin-top: 10px; /* 위쪽 여백 추가 */
-    margin-bottom: 110px; /* 아래쪽 여백 추가 */
+    font-size: 18.75px; /* 저자 이름 글자 크기 25% 축소 */
+    margin-top: 7.5px; /* 위쪽 여백 추가 */
+    margin-bottom: 82.5px; /* 아래쪽 여백 추가 */
 }
 
+/* 설명 텍스트 */
 .sebal {
-    font-size: 20px; /* 설명 글자 크기 설정 */
+    font-size: 15px; /* 설명 글자 크기 25% 축소 */
     color: rgba(217, 217, 217, 0.8); /* 텍스트 색상을 연한 회색으로 설정 */
     line-height: 1.6; /* 줄 간격 설정 */
-    margin-top: 10px; /* 위쪽 여백 추가 */
+    margin-top: 7.5px; /* 위쪽 여백 추가 */
 }
 
-/* 텍스트 박스 좌우 배치 스타일 */
-.author {
-    font-size: 25px; /* 폰트 크기 설정 */
-    margin-bottom: 110px; /* 아래 텍스트 박스와 간격 110px 설정 */
-}
-
-/* 텍스트를 좌우로 배치하는 컨테이너 */
+/* 텍스트 박스를 좌우 배치하는 스타일 */
 .text-container {
     display: flex; /* 플렉스 박스 레이아웃 적용 */
-    gap: 50px; /* 좌우 텍스트 간격 설정 */
-    padding-left: 150px; /* 왼쪽 여백 설정 */
+    gap: 37.5px; /* 좌우 텍스트 간격 설정 */
+    padding-left: 112.5px; /* 왼쪽 여백 설정 */
 }
 
 /* 왼쪽과 오른쪽 설명 텍스트 스타일 */
 .left-desc, .right-desc {
-    font-size: 20px; /* 글자 크기 설정 */
-    width: 450px; /* 텍스트 박스 너비 설정 */
+    font-size: 15px; /* 글자 크기 25% 축소 */
+    width: 337.5px; /* 텍스트 박스 너비 설정 */
     line-height: 1.6; /* 줄 간격 설정 */
     color: #d9d9d9; /* 텍스트 색상 설정 */
 }
@@ -315,12 +300,12 @@ body {
     display: flex; /* 플렉스 박스 사용 */
     flex-direction: column; /* 세로로 정렬 */
     align-items: center; /* 수평 중앙 정렬 */
-    margin-right: 00px; /* 오른쪽 여백 설정 */
+    margin-right: 0; /* 오른쪽 여백 설정 */
 }
 
 /* 대표 이미지 스타일 */
 .featured-image {
-    width: 450px; /* 이미지 너비 설정 */
+    width: 337.5px; /* 이미지 너비 설정 25% 축소 */
     height: auto; /* 높이는 자동으로 설정 */
 }
 
@@ -328,12 +313,12 @@ body {
 .more-button {
     background-color: transparent; /* 배경색 투명 설정 */
     color: white; /* 글자 색상 흰색 */
-    padding: 10px 20px; /* 여백 설정 */
-    font-size: 30px; /* 글자 크기 설정 */
-    border-radius: 5px; /* 버튼 모서리 둥글게 설정 */
+    padding: 7.5px 15px; /* 여백 설정 */
+    font-size: 22.5px; /* 글자 크기 25% 축소 */
+    border-radius: 3.75px; /* 버튼 모서리 둥글게 설정 */
     position: relative; /* 상대 위치로 설정 */
     text-decoration: none; /* 밑줄 제거 */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* 텍스트에 그림자 효과 */
+    text-shadow: 1.5px 1.5px 3px rgba(0, 0, 0, 0.8); /* 텍스트에 그림자 효과 */
     display: inline-flex; /* 인라인 플렉스 설정 */
     align-items: center; /* 수직 중앙 정렬 */
 }
@@ -344,8 +329,8 @@ body {
     color: #FF5420; /* 화살표 색상 설정 */
     background-color: white; /* 화살표 배경 색상 흰색 */
     border-radius: 50%; /* 원형 모양으로 설정 */
-    padding: 8px; /* 내부 여백 설정 */
-    margin-left: 20px; /* 텍스트와 화살표 간격 설정 */
+    padding: 6px; /* 내부 여백 설정 */
+    margin-left: 15px; /* 텍스트와 화살표 간격 설정 */
     display: inline-flex; /* 인라인 플렉스 설정 */
     align-items: center; /* 수직 중앙 정렬 */
     justify-content: center; /* 수평 중앙 정렬 */
@@ -354,30 +339,30 @@ body {
 /* 다른 책 목록 */
 .other-books {
     display: flex; /* 플렉스 박스 사용 */
-    padding-left: 150px; /* 왼쪽 여백 설정 */
+    padding-left: 112.5px; /* 왼쪽 여백 설정 */
     justify-content: center; /* 중앙 정렬 */
-    gap: 20px; /* 책 간의 간격 설정 */
-    margin-top: 50px; /* 상단 여백 설정 */
+    gap: 15px; /* 책 간의 간격 설정 */
+    margin-top: 37.5px; /* 상단 여백 설정 */
 }
 
 /* 책 썸네일 스타일 */
 .book-thumbnail {
-    width: 250px; /* 썸네일 너비 설정 */
-    height: 350px; /* 썸네일 높이 설정 */
+    width: 187.5px; /* 썸네일 너비 25% 축소 */
+    height: 262.5px; /* 썸네일 높이 25% 축소 */
     transition: box-shadow 0.3s ease; /* 마우스 오버 시 그림자 효과 */
 }
 
 /* 마우스 오버 시 책 썸네일 그림자 */
 .book-thumbnail:hover {
-    box-shadow: 3px 6px 50px rgba(0, 0, 0, 0.4); /* 그림자 추가 */
+    box-shadow: 2.25px 4.5px 37.5px rgba(0, 0, 0, 0.4); /* 그림자 추가 */
 }
 
-/* 전체 너비의 이미지 스타일 */
+/* 전체 너비 이미지 */
 .full-width-image {
     position: relative; /* 상대 위치 설정 */
     width: 100%; /* 너비 100% 설정 */
-    max-width: 1920px; /* 최대 너비 1920px */
-    height: 1080px; /* 높이 1080px 설정 */
+    max-width: 1540px; /* 최대 너비 1440px */
+    height: 810px; /* 높이 810px 설정 */
     margin: 0 auto; /* 가운데 정렬 */
     display: flex; /* 플렉스 박스 사용 */
     justify-content: center; /* 중앙 정렬 */
@@ -401,19 +386,20 @@ body {
     background-color: rgba(0, 0, 0, 0.4); /* 검은색 40% 투명도 설정 */
     z-index: 1; /* 이미지 위에 오버레이 */
 }
-
 /* 새로운 작가 섹션 */
 .new-author-section {
+    margin: 0 auto;
     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(235, 218, 187, 1) 25%, rgba(255, 181, 147, 1) 50%, rgba(254, 191, 172, 1) 75%, rgba(240, 228, 206, 1) 100%); /* 배경 그라데이션 설정 */
-    width: 100%; /* 너비 100% 설정 */
-    max-width: 1920px; /* 최대 너비 1920px */
-    height: 1600px; /* 높이 1600px 설정 */
-    padding-top: 250px; /* 상단 여백 250px 설정 */
-    padding-left: 100px; /* 왼쪽 여백 100px 설정 */
-    padding-right: 100px; /* 오른쪽 여백 100px 설정 */
+    width: 100%; /* 너비 75%로 설정 */
+    max-width: 1540px; /* 최대 너비 1440px로 설정 */
+    height: 1200px; /* 높이 1200px로 설정 */
+    padding-top: 188px; /* 상단 여백 188px 설정 */
+    padding-left: 75px; /* 왼쪽 여백 75px 설정 */
+    padding-right: 75px; /* 오른쪽 여백 75px 설정 */
     box-sizing: border-box; /* 크기 계산에 여백 포함 */
     text-align: center; /* 텍스트 중앙 정렬 */
     position: relative; /* 절대 위치 안에서 상대 위치로 설정 */
+    margin-bottom: 140px;
 }
 
 /* 섹션 제목 스타일 */
@@ -428,10 +414,10 @@ body {
 
 /* 작가 카드 컨테이너 */
 .author-card-container {
-    display: flex; /* 플렉스 박스 사용 */
+    display: flex; /* 플렉스 박스를 사용하여 카드 배치 */
     justify-content: space-around; /* 카드들 간의 간격 설정 */
     align-items: flex-start; /* 상단 정렬 */
-    gap: 80px; /* 카드들 간의 간격 설정 */
+    gap: 60px; /* 카드들 간의 간격 설정 */
 }
 
 /* 작가 카드 스타일 */
@@ -482,16 +468,16 @@ body {
 /* 전체 이미지 */
 .featured-full-image {
     width: 100%; /* 너비 100% */
-    height: 1800px; /* 높이 1800px */
+    height: 1350px; /* 높이 1350px 75% 축소 */
     position: relative; /* 상대 위치 */
     overflow: hidden; /* 넘치는 부분 숨김 */
 }
 
 /* 이미지 설정 */
 .featured-full-image img {
-    width: 100%; /* 이미지 너비 100% */
-    height: 100%; /* 이미지 높이 100% */
-    object-fit: cover; /* 영역을 꽉 채우도록 설정 */
+    width: 100%; /* 이미지 너비 100% 설정 */
+    height: 100%; /* 이미지 높이는 100% 설정 */
+    object-fit: cover; /* 이미지가 영역을 꽉 채우도록 설정 */
 }
 
 /* 오버레이 콘텐츠 */
@@ -511,9 +497,9 @@ body {
 /* 이벤트 타이틀 */
 .event-title {
     font-family: "Press Start 2P"; /* 폰트 설정 */
-    font-size: 150px; /* 글자 크기 */
-    margin-top: 300px; /* 위 여백 */
-    margin-bottom: 300px; /* 아래 여백 */
+    font-size: 112.5px; /* 글자 크기 75% 축소 */
+    margin-top: 225px; /* 위 여백 */
+    margin-bottom: 225px; /* 아래 여백 */
     text-align: center; /* 텍스트 중앙 정렬 */
     letter-spacing: 0; /* 자간 설정 */
 }
@@ -523,46 +509,47 @@ body {
     display: flex; /* flexbox 사용 */
     flex-direction: column; /* 세로로 배치 */
     align-items: center; /* 중앙 정렬 */
-    gap: 200px; /* 텍스트 간격 */
+    gap: 150px; /* 텍스트 간격 75% 축소 */
 }
 
 /* 이벤트 항목 */
 .event-item {
     display: flex; /* 수평 배치 */
     align-items: center; /* 수직 중앙 정렬 */
-    margin-bottom: 20px; /* 아이템 간격 */
+    margin-bottom: 15px; /* 아이템 간격 75% 축소 */
 }
 
 /* 아이콘 스타일 */
 .icon {
     width: 0; /* 너비 0 */
     height: 0; /* 높이 0 */
-    border-top: 15px solid transparent; /* 위쪽 삼각형 */
-    border-bottom: 15px solid transparent; /* 아래쪽 삼각형 */
-    border-left: 30px solid rgba(255, 255, 255, 1); /* 왼쪽 삼각형 색상 */
-    margin-right: 65px; /* 텍스트와 아이콘 간격 */
+    border-top: 11.25px solid transparent; /* 위쪽 삼각형 75% 축소 */
+    border-bottom: 11.25px solid transparent; /* 아래쪽 삼각형 75% 축소 */
+    border-left: 22.5px solid rgba(255, 255, 255, 1); /* 왼쪽 삼각형 색상 */
+    margin-right: 48.75px; /* 텍스트와 아이콘 간격 75% 축소 */
 }
 
 /* 이벤트 항목 텍스트 */
 .event-item-text {
     font-family: 'Press Start 2P', sans-serif !important; /* 폰트 설정 */
-    font-size: 65px; /* 텍스트 크기 */
+    font-size: 48.75px; /* 텍스트 크기 75% 축소 */
     color: rgba(255, 255, 255, 1); /* 텍스트 색상 */
 }
 
 /* 이벤트 날짜 및 장소 */
 .event-date-location {
     font-family: "Press Start 2P"; /* 폰트 설정 */
-    font-size: 44px; /* 글자 크기 */
+    font-size: 33px; /* 글자 크기 75% 축소 */
     text-align: center; /* 중앙 정렬 */
-    margin-top: 200px; /* 위 여백 */
+    margin-top: 150px; /* 위 여백 */
 }
 
 /* 교체 섹션 */
 .replace-section { 
+    margin: 0 auto;
     background-color: rgba(255, 255, 255, 1); /* 배경색 */
-    width: 1920px; /* 너비 */
-    height: 600px; /* 높이 */
+    width: 1440px; /* 너비 75% 축소 */
+    height: 450px; /* 높이 75% 축소 */
     display: flex; /* flexbox 사용 */
     flex-direction: column; /* 세로로 배치 */
     justify-content: center; /* 세로 중앙 정렬 */
@@ -574,20 +561,20 @@ body {
 .replace-title, .double-accent { 
     color: rgba(151, 141, 141, 1); /* 텍스트 색상 */
     font-family: 'Pretendard Variable', sans-serif; /* 폰트 설정 */
-    font-size: 30px; /* 글자 크기 */
-    letter-spacing: 10px; /* 자간 설정 */
+    font-size: 22.5px; /* 글자 크기 75% 축소 */
+    letter-spacing: 7.5px; /* 자간 75% 축소 */
     margin: 0; /* 기본 마진 제거 */
 }
 
 /* 푸터 */
 .footer {
     width: 100%; /* 너비 100% */
-    height: 500px; /* 높이 500px */
+    height: 375px; /* 높이 75% 축소 */
     position: relative; /* 상대 위치 */
     display: flex; /* flexbox 사용 */
     flex-direction: column; /* 세로로 배치 */
     justify-content: center; /* 세로 중앙 정렬 */
-    padding-left: 230px; /* 왼쪽 여백 */
+    padding-left: 172.5px; /* 왼쪽 여백 75% 축소 */
 }
 
 /* 푸터 배경 */
@@ -597,7 +584,7 @@ body {
     height: 100%; /* 높이 100% */
     position: absolute; /* 절대 위치 */
     left: 0; /* 왼쪽 정렬 */
-    margin-top: 50px; /* 위 여백 */
+    margin-top: 37.5px; /* 위 여백 */
     z-index: 1; /* 배경의 z-index */
 }
 
@@ -605,9 +592,9 @@ body {
 .footer-title {
     color: rgba(255, 255, 255, 1); /* 흰색 텍스트 */
     font-family: 'Pretendard', sans-serif; /* 폰트 설정 */
-    font-size: 70px; /* 글자 크기 */
+    font-size: 52.5px; /* 글자 크기 75% 축소 */
     margin: 0; /* 기본 마진 제거 */
-    margin-top: 51px; /* 위 여백 */
+    margin-top: 38px; /* 위 여백 */
     z-index: 2; /* 글자 위로 설정 */
 }
 
@@ -615,19 +602,19 @@ body {
 .footer-subtitle {
     color: rgba(255, 255, 255, 1); /* 흰색 텍스트 */
     font-family: 'Pretendard', sans-serif; /* 폰트 설정 */
-    font-size: 17px; /* 글자 크기 */
+    font-size: 12.75px; /* 글자 크기 75% 축소 */
     margin: 0; /* 기본 마진 제거 */
-    margin-top: -80px; /* 위 여백 */
-    margin-bottom: 60px; /* 아래 여백 */
+    margin-top: -60px; /* 위 여백 */
+    margin-bottom: 45px; /* 아래 여백 */
     z-index: 2; /* 글자 위로 설정 */
 }
 
 /* 푸터 선 */
 .footer-line {
-    width: calc(100% - 360px); /* 좌우 여백 360px 제외 */
+    width: calc(100% - 270px); /* 좌우 여백 270px 제외 */
     height: 1px; /* 선의 높이 */
     background-color: rgba(255, 255, 255, 1); /* 흰색 */
-    margin: 20px 0px; /* 상하 여백 */
+    margin: 15px 0px; /* 상하 여백 75% 축소 */
     z-index: 2; /* 선을 위로 설정 */
 }
 
@@ -635,8 +622,8 @@ body {
 .footer-details {
     color: rgba(255, 255, 255, 1); /* 흰색 텍스트 */
     font-family: 'Pretendard', sans-serif; /* 폰트 설정 */
-    font-size: 17px; /* 글자 크기 */
-    margin-top: 20px; /* 상단 여백 */
+    font-size: 12.75px; /* 글자 크기 75% 축소 */
+    margin-top: 15px; /* 상단 여백 */
     z-index: 2; /* 텍스트 위로 설정 */
 }
 
@@ -644,24 +631,24 @@ body {
 .footer-links {
     color: rgba(255, 255, 255, 1); /* 흰색 텍스트 */
     font-family: 'NanumSquareRound', sans-serif; /* 폰트 설정 */
-    font-size: 20px; /* 글자 크기 */
-    margin: 0 10px; /* 좌우 여백 */
+    font-size: 15px; /* 글자 크기 75% 축소 */
+    margin: 0 7.5px; /* 좌우 여백 75% 축소 */
     z-index: 2;
     margin-left: auto; /* 오른쪽 정렬 */
-    margin-right: 360px; /* 오른쪽 여백 */
+    margin-right: 270px; /* 오른쪽 여백 75% 축소 */
 }
 
 /* 푸터 이용약관 */
 .footer-terms{
-    margin: 0 30px; /* 좌우 여백 */
+    margin: 0 22.5px; /* 좌우 여백 75% 축소 */
 }
 
 /* 푸터 이름 */
 .footer-name {
     color: rgba(255, 255, 255, 1); /* 흰색 텍스트 */
     font-family: 'Pretendard', sans-serif; /* 폰트 설정 */
-    font-size: 70px; /* 글자 크기 */
-    margin-top: 20px; /* 상단 여백 */
+    font-size: 52.5px; /* 글자 크기 75% 축소 */
+    margin-top: 15px; /* 상단 여백 */
     z-index: 2; /* 글자 위로 설정 */
 }
 
@@ -669,23 +656,23 @@ body {
 .social-icons {
     display: flex; /* 수평 배치 */
     justify-content: flex-end; /* 오른쪽 정렬 */
-    margin-right: 360px; /* 오른쪽 여백 */
-    margin-top: 10px; /* 위 여백 */
-    margin-bottom: 30px; /* 아래 여백 */
+    margin-right: 270px; /* 오른쪽 여백 75% 축소 */
+    margin-top: 7.5px; /* 위 여백 */
+    margin-bottom: 22.5px; /* 아래 여백 */
     z-index: 2;
     position: relative; /* 상대 위치 */
-    top: -30px; /* 위치 조정 */
+    top: -22.5px; /* 위치 조정 */
 }
 
 /* 소셜 아이콘 개별 스타일 */
 .social-icon {
-    margin: 0 10px; /* 아이콘 간격 */
+    margin: 0 7.5px; /* 아이콘 간격 75% 축소 */
 }
 
 /* 소셜 아이콘 크기 */
 .social-icon img {
-    width: 48px; /* 크기 */
-    height: 48px; /* 크기 */
+    width: 36px; /* 크기 75% 축소 */
+    height: 36px; /* 크기 75% 축소 */
 }
 
 /* 반응형 디자인 */
@@ -697,15 +684,15 @@ body {
 
     .featured-info {
         max-width: 100%; /* 최대 너비 100% */
-        margin-bottom: 20px; /* 하단 여백 */
+        margin-bottom: 15px; /* 하단 여백 */
     }
 
     .featured-image {
-        width: 80%; /* 이미지 너비 80% */
+        width: 60%; /* 이미지 너비 60% */
     }
 
     .other-books img {
-        width: 80px; /* 이미지 크기 */
+        width: 60px; /* 이미지 크기 */
     }
 }
 
@@ -716,7 +703,7 @@ body {
         align-items: flex-start; /* 왼쪽 정렬 */
     }
     .nav-links {
-        gap: 50px; /* 링크 간격 */
+        gap: 37.5px; /* 링크 간격 */
     }
     .featured-book {
         flex-direction: column; /* 세로 배치 */
@@ -728,50 +715,7 @@ body {
         padding-left: 0; /* 왼쪽 여백 제거 */
     }
     .left-desc, .right-desc {
-        width: 100%; /* 너비 100% */
-        margin: 10px 0; /* 여백 조정 */
+        width: 75%; /* 너비 75% */
+        margin: 7.5px 0; /* 여백 조정 */
     }
 }
-
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* 내비게이션 바 세로 배치 */
-        align-items: flex-start; /* 왼쪽 정렬 */
-    }
-    .nav-links {
-        flex-direction: column; /* 내비게이션 링크 세로 배치 */
-        gap: 10px; /* 간격 */
-    }
-    .main-banner {
-        padding-left: 20px; /* 여백 조정 */
-    }
-    .title {
-        font-size: 3rem; /* 제목 크기 */
-    }
-    .subtitle {
-        font-size: 2rem; /* 부제목 크기 */
-    }
-    .playlist-title {
-        font-size: 2.5rem; /* 플레이리스트 타이틀 크기 */
-    }
-    .playlist-subtitle {
-        font-size: 1.2rem; /* 플레이리스트 서브타이틀 크기 */
-    }
-    .author-card-container {
-        flex-direction: column; /* 작가 카드 세로 배치 */
-        align-items: center; /* 중앙 정렬 */
-    }
-    .author-card {
-        width: 90%; /* 카드 너비 */
-        margin-bottom: 20px; /* 하단 여백 */
-    }
-    .footer {
-        flex-direction: column; /* 푸터 세로 배치 */
-        align-items: center; /* 중앙 정렬 */
-    }
-    .social-icons {
-        margin-top: 10px; /* 아이콘 위 여백 */
-        margin-bottom: 10px; /* 아이콘 아래 여백 */
-    }
-}
-
