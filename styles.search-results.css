@@ -1,0 +1,548 @@
+/* 기본 스타일 초기화 */
+* {
+    margin: 0; /* 모든 요소의 기본 마진 제거 */
+    padding: 0; /* 모든 요소의 기본 패딩 제거 */
+    box-sizing: border-box; /* 요소 크기 계산에 패딩과 테두리 포함 */
+}
+body {
+    font-family: Arial, sans-serif; /* 기본 폰트를 Arial로 설정, 대체로 sans-serif */
+    overflow-x: hidden; /* 좌우 스크롤 방지 */
+}
+
+/* 고정 헤더 스타일 */
+header {
+    position: fixed; /* 화면에 고정되는 헤더 */
+    width: 100%; /* 헤더 너비를 화면 전체로 설정 */
+    top: 0; /* 화면 상단에 위치 */
+    left: 0; /* 왼쪽 끝에 위치 */
+    z-index: 10; /* 다른 요소보다 위에 위치 */
+    background-color: rgba(0, 0, 0, 0); /* 투명한 배경색 */
+    color: black; /* 텍스트 색상 검정 */
+    padding: 1rem 2rem; /* 상하 여백 1rem, 좌우 여백 2rem */
+    border: 1px solid lightgray; /* 연한 회색 테두리 */
+}
+
+.navbar {
+    display: flex; /* 수평 정렬을 위해 Flexbox 사용 */
+    justify-content: space-between; /* 좌우 끝에 내용 배치 */
+    align-items: center; /* 수직 중앙 정렬 */
+}
+
+.logo {
+    font-size: 2.2rem; /* 로고 글자 크기 */
+    font-weight: lighter; /* 가벼운 글자 굵기 */
+    letter-spacing: 10px; /* 글자 간격 10px */
+}
+
+.nav-links {
+    list-style: none; /* 목록의 기본 스타일 제거 */
+    display: flex; /* 수평 정렬 */
+    gap: 120px; /* 항목 간 간격 120px */
+}
+
+.nav-links li a {
+    color: black; /* 링크 글자 색상 검정 */
+    text-decoration: none; /* 밑줄 제거 */
+    font-size: 1.2rem; /* 글자 크기 */
+}
+
+.auth-links a {
+    color: black; /* 링크 글자 색상 검정 */
+    margin-left: 1rem; /* 왼쪽 여백 1rem */
+    text-decoration: none; /* 밑줄 제거 */
+    font-size: 1rem; /* 글자 크기 */
+}
+
+/************** 검색창 및 배너 스타일 ************/
+.search-banner {
+    position: relative; /* 상대 위치 */
+    margin-top: 80px; /* 헤더와 배너 사이 간격 */
+    padding: 20px; /* 내부 여백 */
+    background-color: #f4f4f400; /* 투명한 배경 */
+    text-align: center; /* 가운데 정렬 */
+}
+
+/* 검색창 크기 스타일 */
+.search-box {
+    display: flex; /* 수평 정렬 */
+    height: 50px; /* 높이 50px */
+    justify-content: center; /* 가운데 정렬 */
+    margin-bottom: 20px; /* 아래쪽 여백 */
+}
+
+/* 검색어 입력칸 */
+.search-box input {
+    width: 50%; /* 입력 칸 너비 화면의 50% */
+    padding: 10px; /* 내부 여백 */
+    font-size: 1rem; /* 글자 크기 */
+    border-radius: 25px; /* 둥근 모서리 */
+    border: 1px solid darkgray; /* 진한 회색 테두리 */
+}
+
+/************* 검색결과제목 및 연관검색어 ********/
+.search-results {
+    display: flex; /* 수평 정렬 */
+    gap: 10px; /* 요소 간 간격 */
+    margin-left: 25%; /* 왼쪽 여백 */
+}
+
+/* 연관검색 제목 컨테이너 */
+.related-search-terms {
+    padding: 5px; /* 내부 여백 */
+    color: #555; /* 텍스트 색상 어두운 회색 */
+    font-size: 18px; /* 글자 크기 */
+}
+
+/* 연관검색결과 제목 */
+.search-results h1 {
+    font-size: 30px; /* 제목 글자 크기 */
+    margin-bottom: 15px; /* 아래쪽 여백 */
+}
+
+/* 연관검색결과 강조 제목 */
+.search-results h1 span {
+    color: rgb(0, 185, 0); /* 초록색 강조 */
+    font-weight: bold; /* 굵게 표시 */
+}
+
+/* 연관 검색 컨테이너 스타일 */
+.related-search {
+    display: flex; /* 수평 정렬 */
+    justify-content: center; /* 가운데 정렬 */
+    gap: 10px; /* 요소 간 간격 */
+    margin-bottom: 20px; /* 아래쪽 여백 */
+    flex-wrap: wrap; /* 여러 줄로 요소 나열 */
+}
+
+/* 연관 검색 버튼 스타일 */
+.related-search button {
+    padding: 8px 12px; /* 내부 여백 */
+    border: none; /* 테두리 제거 */
+    background-color: #f0f0f0; /* 연한 회색 배경 */
+    border-radius: 20px; /* 둥근 모서리 */
+    font-size: 15px; /* 글자 크기 */
+    cursor: pointer; /* 클릭 가능 커서 */
+    color: #555; /* 텍스트 색상 */
+}
+
+/************* 배너 **************/
+/* 배너 컨테이너 */
+.banner {
+    display: flex; /* 수평 정렬 */
+    justify-content: center; /* 가운데 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    width: 100%; /* 뷰포트 전체 너비 */
+    padding: 20px 0; /* 위아래 여백 */
+    box-sizing: border-box; /* 요소 크기 계산에 패딩 포함 */
+}
+
+/* 배너 이미지 */
+.banner img {
+    width: 1000px; /* 고정 너비 1000px */
+    max-width: 1000px; /* 최대 너비 1000px */
+    height: auto; /* 비율 유지하여 높이 자동 조절 */
+}
+
+/* 검색결과 구별 라인 */
+.search-line {
+    width: 80%; /* 너비의 80% */
+    width: 1140px; /* 고정 너비 1140px */
+    max-width: 1140px; /* 최대 너비 1140px */
+    margin: 20px auto; /* 상하 여백, 중앙 정렬 */
+    border: 2px solid black; /* 두께 2px의 검정색 선 */
+}
+
+/************** 프로필 **************/
+
+/* 프로필 컨테이너 스타일 */
+.profile-container {
+    display: grid; /* 그리드 레이아웃 사용 */
+    grid-template-columns: 0.1fr 0.1fr; /* 두 개의 동일한 너비 열 */
+    gap: 50px; /* 열 간 간격 */
+    padding: 50px; /* 내부 여백 */
+    justify-content: center; /* 수평으로 가운데 정렬 */
+    align-items: center; /* 필요한 경우 수직으로 가운데 정렬 */
+}
+
+/* 프로필 스타일 */
+.profile {
+    display: flex; /* 수평 정렬을 위해 Flexbox 사용 */
+    align-items: center; /* 수직 중앙 정렬 */
+    padding: 20px; /* 내부 여백 */
+    border-radius: 100px; /* 모서리를 둥글게 */
+    background-color: #f8f8f8; /* 연한 회색 배경 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 약간의 그림자 */
+    border: 20px solid #f1e0e0; /* 연한 분홍색 테두리 */
+    width: 550px; /* 너비 고정 */
+    height: 250px; /* 높이 고정 */
+    margin: auto; /* 가운데 정렬 */
+}
+
+/* 프로필 이미지 */
+.profile img {
+    width: 130px; /* 이미지 너비 */
+    height: 130px; /* 이미지 높이 */
+    border-radius: 50%; /* 원형 이미지 */
+    margin-right: 20px; /* 이미지와 텍스트 사이 간격 */
+    object-fit: cover; /* 이미지 비율 유지 */
+}
+
+/* 프로필 제목 */
+.profile-content {
+    font-family: Arial, sans-serif; /* 폰트 설정 */
+    color: #333; /* 텍스트 색상 */
+}
+
+/* 프로필 이름 */
+.profile-content .name {
+    font-size: 30px; /* 글자 크기 */
+    font-weight: bold; /* 굵은 글꼴 */
+    margin-bottom: 10px; /* 아래 여백 축소 */
+}
+
+/* 프로필 설명 */
+.profile-content .description {
+    font-size: 15px; /* 설명 글자 크기 */
+    line-height: 1.6; /* 줄 간격 */
+    color: #666; /* 설명 텍스트 색상 */
+    margin-top: 5px; /* 위쪽 여백 */
+}
+
+/**************** 오디오북 *****************/
+
+.audiobook-section {
+    max-width: 1200px; /* 최대 너비 설정 */
+    margin: 0 auto; /* 가운데 정렬 */
+    padding: 20px; /* 내부 여백 */
+    font-family: Arial, sans-serif; /* 폰트 설정 */
+    margin-top: 150px; /* 위쪽 여백 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+/* 오디오북 라인 */
+.custom-line {
+    width: 80%; /* 반응형을 위한 너비 설정 */
+    width: 1140px; /* 고정 너비 */
+    max-width: 1140px; /* 최대 너비 제한 */
+    border: 2; /* 테두리 */
+}
+
+/* 오디오북 더보기 */
+.audiobook-header {
+    max-width: 1135px; /* 최대 너비 설정 */
+    display: flex; /* 수평 정렬 */
+    justify-content: space-between; /* 좌우에 내용 배치 */
+    align-items: center; /* 수직 중앙 정렬 */
+    padding-bottom: 5px; /* 아래쪽 여백 */
+}
+
+/* 오디오북 헤더 */
+.audiobook-header h2 {
+    font-size: 24px; /* 글자 크기 */
+    font-weight: bold; /* 굵은 글꼴 */
+    margin: 0; /* 여백 제거 */
+}
+
+/* 오디오북 더보기 링크 */
+.view-more {
+    font-size: 14px; /* 글자 크기 */
+    color: #666; /* 텍스트 색상 */
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+/* 오디오북 그리드 */
+.audiobook-grid {
+    display: grid; /* 그리드 레이아웃 사용 */
+    grid-template-columns: 1fr 1fr; /* 두 개의 동일한 열 */
+    gap: 20px; /* 열 간 간격 */
+    margin-top: 100px; /* 위쪽 여백 */
+    justify-content: center; /* 가운데 정렬 */
+}
+
+/* 오디오북 항목 */
+.audiobook-item {
+    display: flex; /* 수평 정렬을 위해 Flexbox 사용 */
+    align-items: center; /* 수직 중앙 정렬 */
+    padding: 15px; /* 내부 여백 */
+    border: 1px solid #c7c6c6; /* 테두리 색상 */
+    border-radius: 8px; /* 모서리를 둥글게 */
+    background-color: #fff; /* 흰색 배경 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    width: 550px; /* 너비 고정 */
+    height: 200px; /* 높이 고정 */
+    box-shadow: 1px 1px 2px; /* 추가 그림자 효과 */
+}
+
+/* 오디오북 이미지 */
+.audiobook-img {
+    width: 120px; /* 이미지 너비 */
+    height: 180px; /* 이미지 높이 */
+    object-fit: cover; /* 이미지 비율 유지 */
+    margin-right: 20px; /* 이미지와 텍스트 사이 간격 */
+}
+
+/* 오디오북 정보 */
+.audiobook-info {
+    flex-grow: 1; /* 남은 공간 차지 */
+    display: flex; /* Flexbox 사용 */
+    flex-direction: column; /* 수직 정렬 */
+    justify-content: flex-start; /* 위쪽 정렬 */
+}
+
+/* 오디오북 작가 */
+.audiobook-info .author {
+    text-align: left; /* 왼쪽 정렬 */
+    font-weight: bold; /* 굵은 글꼴 */
+    font-size: 15px; /* 글자 크기 */
+    color: #000000; /* 검정색 */
+    margin-bottom: 4px; /* 제목과의 간격 */
+    margin-left: 40px; /* 왼쪽 여백 */
+}
+
+/* 오디오북 제목 */
+.audiobook-info .title {
+    font-size: 15px; /* 글자 크기 */
+    font-weight: bold; /* 굵은 글꼴 */
+    color: #333; /* 제목 색상 */
+    margin-bottom: 8px; /* 제목과 세부 정보 간 간격 */
+    line-height: 1.3; /* 줄 간격 */
+}
+
+/* 오디오북 세부정보 */
+.audiobook-info .details {
+    font-size: 13px; /* 글자 크기 */
+    color: #000000; /* 텍스트 색상 */
+    text-align: left; /* 왼쪽 정렬 */
+    margin-left: 40px; /* 왼쪽 여백 */
+}
+
+/* 버튼 동작 스타일링 */
+.actions {
+    display: flex; /* Flexbox 사용 */
+    flex-direction: column; /* 수직 정렬 */
+    align-items: flex-end; /* 오른쪽 정렬 */
+    gap: 6px; /* 버튼 간 간격 */
+}
+
+/* 찜, 구매 스타일 */
+.wishlist, .purchase {
+    font-size: 13px; /* 글자 크기 */
+    padding: 4px 12px; /* 내부 여백 */
+    border-radius: 5px; /* 모서리를 둥글게 */
+    cursor: pointer; /* 클릭 가능한 커서 */
+    border: 1px solid #ccc; /* 테두리 색상 */
+    background-color: #fff; /* 배경 흰색 */
+}
+
+/* 찜 버튼 스타일 */
+.wishlist {
+    color: #ff66b2; /* 텍스트 색상 분홍색 */
+    border-color: #ff66b2; /* 테두리 색상 분홍색 */
+    text-decoration-line: none; /* 밑줄 제거 */
+}
+
+/* 구매 버튼 스타일 */
+.purchase {
+    color: #007bff; /* 텍스트 색상 파란색 */
+    border-color: #007bff; /* 테두리 색상 파란색 */
+    width: 56px; /* 너비 고정 */
+    text-decoration-line: none; /* 밑줄 제거 */
+}
+
+/************* e북 ************/
+
+/* E북 목록 */
+.ebook-list {
+    border-top: 2px solid #ccc; /* 위쪽에 회색 선 */
+    max-width: 1200px; /* 최대 너비 설정 */
+    margin-top: 150px; /* 위쪽 여백 */
+    margin-left: 18%; /* 왼쪽 여백 */
+}
+
+/* e북 항목 */
+.ebook-item {
+    display: flex; /* Flexbox 사용하여 수평 정렬 */
+    padding: 50px; /* 내부 여백 */
+    border-bottom: 2px solid #ccc; /* 아래쪽에 회색 선 */
+    border-width: 1140; /* 테두리 두께 설정 */
+}
+
+/* e북 항목 이미지 */
+.ebook-item img {
+    width: 120px; /* 이미지 너비 */
+    height: 180px; /* 이미지 높이 */
+    object-fit: cover; /* 이미지 비율 유지 */
+    margin-right: 50px; /* 이미지와 텍스트 사이 간격 */
+}
+
+/* e북 세부정보 */
+.ebook-details {
+    display: flex; /* Flexbox 사용 */
+    flex-direction: column; /* 수직 정렬 */
+}
+
+/* e북 제목 */
+.ebook-title {
+    font-size: 18px; /* 글자 크기 */
+    font-weight: bold; /* 굵은 글꼴 */
+    margin-bottom: 5px; /* 아래쪽 여백 */
+    color: #333; /* 제목 색상 */
+}
+
+/* e북 저자, 출판사, 날짜 */
+.ebook-author, .ebook-publisher, .ebook-date {
+    font-size: 14px; /* 글자 크기 */
+    color: #666; /* 텍스트 색상 */
+    margin-bottom: 5px; /* 아래쪽 여백 */
+}
+
+/* e북 설명 */
+.ebook-description {
+    font-size: 14px; /* 글자 크기 */
+    color: #333; /* 설명 텍스트 색상 */
+    margin-top: 10px; /* 위쪽 여백 */
+    line-height: 1.5; /* 줄 간격 */
+    max-width: 600px; /* 최대 너비 설정 */
+}
+
+/* 페이지 네비게이션 (C-PL) */
+.pagination {
+    display: flex; /* Flexbox 사용하여 수평 정렬 */
+    justify-content: center; /* 가운데 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    gap: 30px; /* 항목 간 간격 */
+    font-size: 20px; /* 글자 크기 */
+    margin-top: 150px; /* 위쪽 여백 */
+    margin-bottom: 150px; /* 아래쪽 여백 */
+}
+
+/* 화살표 스타일링 */
+.pagination .arrow {
+    font-size: 25px; /* 화살표 글자 크기 */
+    color: #888; /* 화살표 색상 */
+    cursor: pointer; /* 마우스 커서 포인터로 변경 */
+    text-decoration-line: none; /* 밑줄 제거 */
+}
+
+/* 페이지 번호 스타일링 */
+.pagination .page-number {
+    color: #000; /* 페이지 번호 색상 */
+    cursor: pointer; /* 마우스 커서 포인터로 변경 */
+    text-decoration-line: none; /* 밑줄 제거 */
+}
+
+/* 활성 페이지 번호 스타일 지정 */
+.pagination .page-number.active {
+    color: orange; /* 활성 페이지 색상 */
+    font-weight: bold; /* 굵은 글꼴 */
+}
+
+/* 푸터 */
+.footer {
+    width: 100%; /* 너비 전체 */
+    height: 500px; /* 높이 설정 */
+    position: relative; /* 상대 위치 설정 */
+    display: flex; /* Flexbox 사용 */
+    flex-direction: column; /* 수직 정렬 */
+    justify-content: center; /* 수직 중앙 정렬 */
+    padding-left: 230px; /* 왼쪽 여백 230px 추가 */
+}
+
+/* 푸터 배경색 */
+.footer-background {
+    background-color: rgba(72, 72, 72, 1); /* 배경색 지정 */
+    width: 100%; /* 너비 전체 */
+    height: 100%; /* 높이 전체 */
+    position: absolute; /* 절대 위치 설정 */
+    left: 0; /* 왼쪽에 배치 */
+    margin-top: 50px; /* 위쪽 여백 */
+    z-index: 1; /* 배경의 z-index는 낮게 설정 */
+}
+
+/* 푸터 제목 */
+.footer-title {
+    color: rgba(255, 255, 255, 1); /* 흰색으로 설정 */
+    font-family: 'Pretendard', sans-serif; /* 사용할 폰트 */
+    font-size: 70px; /* 글자 크기 설정 */
+    margin: 0; /* 기본 마진 제거 */
+    margin-top: 51px; /* 위쪽 여백 */
+    z-index: 2; /* 글자들이 배경 위에 표시되도록 설정 */
+}
+
+/* 푸터 부제목 */
+.footer-subtitle {
+    color: rgba(255, 255, 255, 1); /* 흰색으로 설정 */
+    font-family: 'Pretendard', sans-serif; /* 사용할 폰트 */
+    font-size: 17px; /* 글자 크기 설정 */
+    margin: 0; /* 기본 마진 제거 */
+    margin-top: -80px; /* 위쪽 여백 조정 */
+    margin-bottom: 60px; /* 아래쪽 여백 조정 */
+    z-index: 2; /* 글자들이 배경 위에 표시되도록 설정 */
+}
+
+/* 푸터 선 */
+.footer-line {
+    width: calc(100% - 360px); /* 좌우 여백을 제외한 폭 */
+    height: 1px; /* 선의 높이 */
+    background-color: rgba(255, 255, 255, 1); /* 흰색 */
+    margin: 20px 0px; /* 상단 여백 및 좌우 여백 */
+    z-index: 2;
+}
+
+/* 푸터 세부 정보 */
+.footer-details {
+    color: rgba(255, 255, 255, 1); /* 흰색으로 설정 */
+    font-family: 'Pretendard', sans-serif; /* 사용할 폰트 */
+    font-size: 17px; /* 글자 크기 설정 */
+    margin-top: 20px; /* 상단 여백 조정 */
+    z-index: 2; /* 글자들이 배경 위에 표시되도록 설정 */
+}
+
+/* 푸터 링크 */
+.footer-links {
+    color: rgba(255, 255, 255, 1); /* 글자색 흰색 */
+    font-family: 'NanumSquareRound', sans-serif; /* 사용할 폰트 */
+    font-size: 20px; /* 글자 크기 설정 */
+    margin: 0 10px; /* 좌우 간격 조정 */
+    z-index: 2;
+    margin-left: auto; /* 오른쪽 정렬 */
+    margin-right: 360px; /* 오른쪽 여백 */
+}
+
+/* 푸터 약관 */
+.footer-terms {
+    margin: 0 30px; /* 좌우 간격 조정 */
+}
+
+/* 푸터 이름 */
+.footer-name {
+    color: rgba(255, 255, 255, 1); /* 흰색으로 설정 */
+    font-family: 'Pretendard', sans-serif; /* 사용할 폰트 */
+    font-size: 70px; /* 글자 크기 설정 */
+    margin-top: 20px; /* 여백 조정 */
+    z-index: 2; /* 글자들이 배경 위에 표시되도록 설정 */
+}
+
+/* 소셜 아이콘 */
+.social-icons {
+    display: flex; /* 아이콘을 수평으로 배치 */
+    justify-content: flex-end; /* 오른쪽 정렬 */
+    margin-right: 360px; /* 오른쪽 여백 */
+    margin-top: 10px; /* 아이콘 위 여백 조정 */
+    margin-bottom: 30px; /* 아이콘 아래 여백 조정 */
+    z-index: 2;
+    position: relative; /* 푸터 내에서 상대 위치 설정 */
+    top: -30px; /* 위치 조정 */
+}
+
+/* 소셜 아이콘 개별 항목 */
+.social-icon {
+    margin: 0 10px; /* 아이콘 사이의 간격 조정 */
+}
+
+/* 소셜 아이콘 이미지 */
+.social-icon img {
+    width: 48px; /* 아이콘 너비 */
+    height: 48px; /* 아이콘 높이 */
+}
+

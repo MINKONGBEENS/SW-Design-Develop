@@ -1,0 +1,257 @@
+/* 기본 스타일 초기화 */
+* {
+    margin: 0; /* 마진 제거*/
+    padding: 0; /* 패딩 제거*/
+    box-sizing: border-box; /* 요소를 패딩과 보더를 포함한 크기로 설정*/
+}
+body {
+    font-family: Arial, sans-serif; /* 기본 글꼴 설정*/
+    overflow-x: hidden; /* 좌우 스크롤 방지 */
+}
+
+.weekly-books-title {
+    font-size: 26px !important; /* 주간 도서 폰트 크기*/
+}
+
+/* 고정 헤더 스타일 */
+header {
+    position: fixed; /* 스크롤해도 위치 고정 유지*/
+    width: 100%; /* 화면 전체 너비*/
+    top: 0; /* 화면 맨 위에 위치*/
+    left: 0; /* 화면 왼쪽 끝에 위치*/
+    z-index: 10; /* 다른 요소들보다 위에 표시*/
+    color: rgb(0, 0, 0); /* 텍스트 색상: 검정*/
+    background-color: #ffffff00; /* 배경색: 투명*/
+    padding: 1rem 2rem; /* 상하 여백: 1rem, 좌우 여백: 2rem*/
+}
+
+.navbar {
+    display: flex; /*수평 레이아웃*/
+    justify-content: space-between; /*양쪽 끝으로 정렬*/
+    align-items: center; /*수직 가운데 정렬*/
+}
+
+.logo {
+    font-size: 1.8rem; /*로고 폰트 크기*/
+    font-weight: lighter; /*로고 폰트 두께 얅게 설정*/
+}
+
+.nav-links {
+    list-style: none; /*리스트 스타일: 없음*/
+    display: flex; /*리스트: 수평 배치*/
+    gap: 120px; /*리스트 항목 사이 간격:120px*/
+}
+
+.nav-links li a {
+    color: rgb(0, 0, 0); /*링크 텍스트 색상: 검정*/
+    text-decoration: none; /*링크 밑줄: 제거*/
+    font-size: 1.2rem; /*링크 폰트 크기: 1.2rem*/
+}
+
+.auth-links a {
+    color: rgb(0, 0, 0); /*링크 텍스트 색상: 검정*/
+    margin-left: 1rem; /*왼쪽 여백:1rem*/
+    text-decoration: none; /*링크 밑줄: 제거*/
+    font-size: 1rem; /*링크 폰트 크기: 1rem*/
+}
+
+/* 배너 스타일 */
+.banner {
+    position: relative; /*배너 내부 요소 배치 설정*/
+    background-image: url('/img/banner1.png'); /* 배너 이미지 경로 */
+    background-size: flex; /*배경 이미지 크기 조절*/
+    background-position: center; /*배경 이미지: 가운데 정렬*/
+    height: 300px; /*배너 높이:300px*/
+    display: flex; /*배너 내부 요소를 수평 정렬*/
+    justify-content: center; /*배너 내부 요소: 수평 가운데 정렬*/
+    align-items: center; /*배너 내부 요소: 수직 가운데 정렬*/
+    color: rgb(255, 255, 255); /*텍스트 색상: 흰색*/
+    background-color: #f5f5f5; /*배경색: 밝은 회색*/
+    padding: 30px 0; /*상하 여백: 30px*/
+    color: #333; /*텍스트 색상: 어두운 회색*/
+    margin-bottom: 150px; /*아래쪽 여백: 150px*/
+    
+        }
+
+.banner h1 {
+    font-size: 2rem; /*배너 제목 폰트 크기*/
+    padding: 10px 20px; /*상하 여백: 10px, 좌우 여백: 20px*/
+    border-radius: 5px; /*테두리 둥글게 설정*/
+    text-align: center; /*텍스트 가운데 정렬렬*/
+    
+}
+
+/* 스타일 정의 */
+body {
+    font-family: Arial, sans-serif; /*글꼴 설정*/
+    margin: 0; /*마진 제거*/
+    padding: 0; /*패딩 제거*/
+    background-color: #f9f9f9; /*배경색: 밝은 회색*/
+}
+
+/* 문의 폼 컨테이너 */
+.service-center-form {
+    width: 50%; /*너비: 화면의 50%*/
+    margin-left: 26%; /*왼쪽 여백: 26%*/
+    background-color: white; /*배경색: 흰색*/
+    padding: 20px; /*내부 여백: 20px*/
+    border: 1px solid #ddd; /*테두리: 연한 회색*/
+    border-radius: 10px; /*테두리: 둥글게*/
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /*가벼운 그림자 추가*/
+    max-width: 1100px; /*최대 너비: 1100px*/
+}
+
+/* 입력 필드와 라벨 */
+.form-group {
+    margin-bottom: 20px; /*아래쪽 여백: 20px*/
+}
+
+.form-group label {
+    display: block; /*라벨: 블록 형태로 표시*/
+    margin-bottom: 8px; /*아래쪽 여백: 8px*/
+    font-weight: bold; /*글꼴: 굵게*/
+    color: #333; /*텍스트 색상: 어두운 회색*/
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%; /*입력 필드 너비: 100%*/
+    padding: 10px; /*내부 여백: 10px*/
+    border: 1px solid #ddd; /*테두리 색깔: 연한 회색*/
+    border-radius: 5px; /*테두리: 둥글게*/
+    font-size: 14px; /*폰트 크기: 14px*/
+    box-sizing: border-box; /*패딩과 보더를 포함하여 크기 계산*/
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none; /*포커스 하면 아웃라인 제거*/
+    border-color: #333; /*포커스 하면 테두리 색깔: 매우 어두운 회색으로 변경*/
+}
+
+/* 파일 첨부 설명 */
+.form-group small {
+    display: block; /*블록 형태로 표시*/
+    margin-top: 8px; /*위쪽 여백: 8px*/
+    color: #888; /*텍스트 색상: 연한 회색*/
+    font-size: 12px; /*폰트 크기: 12px*/
+    line-height: 1.5; /*줄 간격: 1.5*/
+}
+
+/* 문의하기 버튼 */
+.submit-button {
+    width: 100%; /*버튼 너비: 100%*/
+    padding: 12px; /*내부 여백: 12px*/
+    background-color: #333; /*배경색: 어두운 회색*/
+    color: white; /*텍스트 색상: 흰색*/
+    border: none; /*테두리 없음*/
+    border-radius: 5px; /*테두리 둥근 정도: 5px*/
+    font-size: 16px; /*폰트 크기: 16px*/
+    cursor: pointer; /*마우스 포인터 변경*/
+    transition: background-color 0.3s ease; /*배경색 전환 애니메이션*/
+    
+}
+
+.submit-button:hover {
+    background-color: #555; /*배경색 변경: 어두운 회색*/
+}
+
+
+/* 푸터 */
+.footer {
+    margin-top: 250px; /*상단 여백: 250px*/
+    padding: 20px; /*내부 여백: 20px*/
+    width: 100%; /*전체 너비 사용*/
+    margin-bottom: 20px; /*하단 여백 : 20px*/
+
+    overflow: hidden; /*넘치는 내용 숨기기*/
+    height: 500px; /*푸터 높이: 500px*/
+    position: relative; /*내부 요소의 위치 설정에 사용*/
+    display: flex; /* Flexbox 사용 */
+    flex-direction: column; /*수직 정렬*/
+    justify-content: center; /*수직 가운데 정렬*/
+    padding-left: 230px; /* 왼쪽 여백 230px 추가 */
+}
+
+.footer-background {
+    background-color: rgba(72, 72, 72, 1); /* 배경색: 어두운 회색*/
+    width: 100%; /*전체 너비 사용*/
+    height: 100%; /*푸터 전체 높이 사용*/
+    position: absolute; /*푸터 내부에서 절대 위치 설정*/
+    left: 0; /*왼쪽 정렬*/
+    margin-top: 50px; /*상단 여백: 50px*/
+    z-index: 1; /* 배경의 z-index는 낮게 설정 */
+}
+
+.footer-title {
+    color: rgba(255, 255, 255, 1); /* 흰색으로 설정 */
+    font-family: 'Pretendard', sans-serif; /* 사용할 폰트 */
+    font-size: 70px; /* 적절한 크기로 조정 */
+    margin: 0; /* 기본 마진 제거 */
+    margin-top:51px; /*상단 여백: 51px*/
+    z-index: 2; /* 글자들이 배경 위에 표시되도록 설정 */
+}
+.footer-subtitle {
+    color: rgba(255, 255, 255, 1); /* 흰색으로 설정 */
+    font-family: 'Pretendard', sans-serif; /* 사용할 폰트 */
+    font-size: 17px; /* 적절한 크기로 조정 */
+    margin: 0; /* 기본 마진 제거 */
+    margin-top: -80px; /*위쪽 마진: -80px*/
+    margin-bottom: 60px; /*아래쪽 마진: 60px*/
+    z-index: 2; /* 글자들이 배경 위에 표시되도록 설정 */
+}
+.footer-line {
+    width: calc(100% - 360px); /* 좌우 여백 210px을 제외한 폭 */
+    height: 1px; /* 선의 높이 */
+    background-color: rgba(255, 255, 255, 1); /* 흰색 */
+    margin: 20px 0px; /* 상단 여백 및 좌우 여백 */
+    z-index: 2; /*선이 배경 위에 표시*/
+}
+.footer-details {
+    color: rgba(255, 255, 255, 1); /* 흰색으로 설정 */
+    font-family: 'Pretendard', sans-serif; /* 사용할 폰트 */
+    font-size: 17px; /* 글자 크기 설정 */
+    margin-top: 20px; /* 상단 여백 조정 */
+    z-index: 2; /* 글자들이 배경 위에 표시되도록 설정 */
+}
+
+
+.footer-links {
+    color: rgba(255, 255, 255, 1); /* 글자색 흰색 */
+    font-family: 'NanumSquareRound', sans-serif; /* 사용할 폰트 */
+    font-size: 20px; /* 글자 크기 설정 */
+    margin: 0 10px; /* 좌우 간격 조정 */
+    z-index: 2; /* 링크가 배경 위에 표시되도록 설정 */
+    margin-left: auto; /* 오른쪽 정렬 */
+    margin-right: 360px; /* 오른쪽 여백 */
+}
+.footer-terms{
+    margin: 0 30px; /* 좌우 간격 조정 */
+}
+.footer-name {
+    color: rgba(255, 255, 255, 1); /* 흰색으로 설정 */
+    font-family: 'Pretendard', sans-serif; /* 사용할 폰트 */
+    font-size: 70px; /* 글자 크기 설정 */
+    margin-top: 20px; /* 여백 조정 */
+    z-index: 2; /* 글자들이 배경 위에 표시되도록 설정 */
+}
+
+.social-icons {
+    display: flex; /* 아이콘을 수평으로 배치 */
+    justify-content: flex-end; /* 오른쪽 정렬 */
+    margin-right: 360px; /* 오른쪽에 360px 여백 추가 */
+    margin-top: 10px; /* 아이콘 위 여백 조정 */
+    margin-bottom: 30px; /* 아이콘 아래 여백 조정 */
+    z-index: 2; /* 아이콘이 배경 위에 표시되도록 설정 */
+    position: relative; /* 푸터 내에서 상대 위치 설정 */
+    top: -30px; /* 위치 조정 */
+}
+
+.social-icon {
+    margin: 0 10px; /* 아이콘 사이의 간격 조정 */
+}
+
+.social-icon img {
+    width: 48px; /* 아이콘 크기 */
+    height: 48px; /* 아이콘 크기 */
+}

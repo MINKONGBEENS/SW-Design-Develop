@@ -1,0 +1,142 @@
+/* 기본 스타일 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  display: flex;
+  height: 100vh;
+}
+
+.container {
+  width: 30%; /* 로그인 컨테이너가 30% 크기 차지 */
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+button.login-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #ff7043;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.login-btn:hover {
+  background-color: #e64a19;
+}
+
+.links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start; /* 왼쪽 정렬 */
+  gap: 10px;
+  align-items: center;
+}
+
+.signup {
+  margin-right: 130px;
+}
+
+.find-id {
+  margin-right: 10px;
+}
+
+.links a {
+  font-size: 14px;
+  color: #868686;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.footer-links {
+  left: 0px;
+  position: absolute;  /* 절대 위치 지정 */
+  bottom: -90px;        /* 화면 하단에서 40px 위로 배치 */
+  width: 100%;         /* 전체 너비에 맞추기 */
+  text-align: center;
+  font-size: 14px;
+  z-index: 1;          /* 다른 요소보다 위에 배치 */
+}
+.footer-links a {
+  margin: 0 35px;
+  color: #555;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.login-banner {
+  width: 70%; /* 배너 이미지가 화면의 70%를 차지 */
+  height: 100%; /* 배너 이미지를 화면 전체 높이에 맞게 설정 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+}
+
+.login-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 배너 이미지가 크기에 맞게 잘림 없이 늘어나도록 설정 */
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin-left: 0; /* 로그인 컨테이너를 왼쪽으로 맞춤 */
+}

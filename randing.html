@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOZE 전자책 서점</title>
+  <link rel="stylesheet" href="styles.css"> <!-- 외부 스타일시트 연결 -->
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- 구글 폰트 연결 -->
+</head>
+<body>
+  <!-- 고정 헤더 -->
+  <header>
+    <nav class="navbar"> <!-- 네비게이션 바 -->
+      <h1 class="logo">SOZE</h1> <!-- 로고 -->
+      <ul class="nav-links"> <!-- 네비게이션 링크 -->
+        <li><a href="#">웹소설</a></li>
+        <li><a href="#">소설</a></li>
+        <li><a href="#">오디오북</a></li>
+        <li><a href="#">서비스</a></li>
+      </ul>
+      <div class="auth-links"> <!-- 로그인/회원가입 링크 -->
+        <a href="#">LOGIN</a>
+        <a href="#">SIGN IN</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 메인 배너 -->
+  <section class="main-banner">
+    <div class="banner-text">
+      <h2 class="title">나만 아는 소박한 제목</h2> <!-- 배너 제목 -->
+      <p class="subtitle">SOZE</p> <!-- 배너 부제목 -->
+    </div>
+  </section>
+
+  <!-- 추천 플레이리스트 섹션 -->
+  <section class="playlist-section">
+    <div class="playlist-text">
+        <h2 class="playlist-title">나에게 딱 맞춘 플레이리스트</h2> <!-- 플레이리스트 제목 -->
+        <p class="playlist-subtitle">자동으로 추가되는 취향저격 플레이리스트를 만나보세요</p> <!-- 플레이리스트 설명 -->
+    </div>
+    <div class="playlist-images">
+        <div class="overlay-text">POSITIVE</div> <!-- 플레이리스트 오버레이 텍스트 -->
+        <div class="image-overlay">
+            <img src="img/image 2.png" alt="Album Cover" class="album-image"> <!-- 앨범 커버 이미지 -->
+        </div>
+    </div>
+    <div class="artist-and-description">
+        <p class="description">수록곡 및 미발매곡과 라이브 공연까지 놓치고 싶지 않다면?</p> <!-- 설명 텍스트 -->
+        <div class="artist-images">
+            <img src="img/image 3.png" alt="Artist 1" class="artist-image"> <!-- 아티스트 1 이미지 -->
+            <img src="img/image 4.png" alt="Artist 2" class="artist-image"> <!-- 아티스트 2 이미지 -->
+        </div>
+    </div>
+  </section>
+
+  <!-- 추천 도서 섹션 -->
+  <section class="recommended-books">
+    <div class="recommended-header">
+      <p class="author-info">한강 작가의 노벨 문학상을 만나보세요</p> <!-- 작가 소개 텍스트 -->
+      <h2>NOVEL COLLECTION</h2> <!-- 추천 도서 제목 -->
+    </div>
+
+    <div class="featured-book">
+      <div class="featured-info">
+        <div class="book-title">Human Acts</div> <!-- 도서 제목 -->
+        <div class="book-author">Write By HanKang</div> <!-- 도서 저자 -->
+        <h3 class="small-title">소년이 온다</h3> <!-- 소설 제목 -->
+        <p class="author">한강 작가</p> <!-- 작가 이름 -->
+      </div>
+      <div class="image-and-button">
+        <img src="img/책 이미지.png" alt="소설 이미지" class="featured-image"> <!-- 도서 이미지 -->
+        <a href="#" class="more-button">추천 도서 보러 가기</a> <!-- 버튼: 추천 도서 페이지로 이동 -->
+      </div>
+    </div>
+    <div class="text-container">
+      <p class="left-desc">투명한 보석들같이 허공에 떠서 반짝이기라도 할 것 처럼 너는 눈을 크게 떠본다.</p> <!-- 도서 설명 -->
+      <p class="right-desc">네모난 밤색 뿔테 안경을 쓴 작은형의 부루퉁한 얼굴이 떠올랐다가...</p> <!-- 도서 설명 -->
+    </div>
+
+    <!-- 다른 추천 도서 이미지 -->
+    <div class="other-books">
+      <img src="img/희랍어시간.png" alt="책1" class="book-thumbnail">
+      <img src="img/작별하지 않는다.png" alt="책2" class="book-thumbnail">
+      <img src="img/채식주의자.png" alt="책3" class="book-thumbnail">
+      <img src="img/흰.png" alt="책4" class="book-thumbnail">
+      <img src="img/바람이 분다, 가라.png" alt="책5" class="book-thumbnail">
+    </div>
+  </section>
+
+  <!-- 풀 사이즈 이미지 섹션 -->
+  <section class="full-width-image">
+    <img src="img/image_5.png" alt="Full Width Image">
+  </section>
+
+  <!-- 신인 작가 섹션 -->
+  <div class="new-author-section">
+    <p class="section-title">
+      올해의 핫한 🔥<br>
+      신인 작가들의 컬렉션도 추천해요!
+    </p>
+    <div class="author-card-container">
+      <div class="author-card">
+        <div class="author-image pink-bg"></div> <!-- 신인 작가 이미지 (배경색) -->
+        <p class="author-title">올해의 신인 작가</p> <!-- 작가 이름 -->
+      </div>
+      <div class="author-card">
+        <div class="author-image green-bg"></div> <!-- 신인 작가 이미지 (배경색) -->
+        <p class="author-title">올해의 신인 작가</p> <!-- 작가 이름 -->
+      </div>
+      <div class="author-card">
+        <div class="author-image blue-bg"></div> <!-- 신인 작가 이미지 (배경색) -->
+        <p class="author-title">올해의 신인 작가</p> <!-- 작가 이름 -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 풀 사이즈 이미지 섹션 -->
+  <section class="featured-full-image">
+    <img src="img/image_8.png" alt="Full Width Image">
+    <div class="overlay-content">
+        <h1 class="event-title">2024 SEOUL</h1> <!-- 이벤트 제목 -->
+        <div class="event-details">
+            <div class="event-item">
+              <div class="icon"></div> <!-- 텍스트 아이콘 -->
+                <span class="event-item-text">world Software</span> <!-- 이벤트 항목 텍스트 -->
+            </div>
+            <div class="event-item">
+              <div class="icon"></div> <!-- 텍스트 아이콘 -->
+                <span class="event-item-text">Development</span> <!-- 이벤트 항목 텍스트 -->
+            </div>
+            <div class="event-item">
+              <div class="icon"></div> <!-- 텍스트 아이콘 -->
+                <span class="event-item-text">Conference</span> <!-- 이벤트 항목 텍스트 -->
+            </div>
+        </div>
+        <span class="event-date-location">2024.12.07 ~ 12. DDP culture Center</span> <!-- 이벤트 날짜와 장소 -->
+    </div>
+  </section>
+
+  <!-- 교체 섹션 -->
+  <section class="replace-section">
+    <span class="replace-title">Replace Conversions</span> <!-- 교체 제목 -->
+    <span class="double-accent">Double Accent</span> <!-- 두 개의 강조 텍스트 -->
+  </section>
+
+  <!-- 푸터 -->
+  <div class="footer">
+    <div class="footer-background"></div> <!-- 푸터 배경 -->
+    <span class="footer-title">S O Z E</span> <!-- 푸터 제목 -->
+
+    <div class="social-icons">
+        <!-- 소셜 미디어 아이콘들 -->
+        <div class="social-icon">
+            <img src="img/Facebook.png" alt="Facebook" />
+        </div>
+        <div class="social-icon">
+            <img src="img/Twitter.png" alt="Twitter" />
+        </div>
+        <div class="social-icon">
+            <img src="img/Instagram.png" alt="Instagram" />
+        </div>
+        <div class="social-icon">
+            <img src="img/Youtube.png" alt="LinkedIn" />
+        </div>
+    </div>
+
+    <span class="footer-subtitle">2024 TEAM SOZE</span> <!-- 푸터 부제목 -->
+
+    <span class="footer-details">
+        TEL. 010-9876-5432 | FAX. 02-3456-9876 | sozeteams@weon.me<br>
+        주소: 서울특별시 강남구 역삼동 98-7 6층 543호 | 사업자 등록번호: 14-725-83690 | 대표자: 김망고<br>
+        업태: 정보통신업 | 업종: 소프트웨어 개발 및 공급업
+    </span>
+    <span class="footer-hosting">Hosting By AWS</span> <!-- 호스팅 정보 -->
+    <div class="footer-line"></div> <!-- 구분선 -->
+    <div class="footer-links">
+        <span class="footer-terms">이용약관</span> <!-- 이용 약관 링크 -->
+        <span class="footer-privacy">개인정보 처리방침</span> <!-- 개인정보 처리방침 링크 -->
+    </div>
+  </div>
+
+  <script src="script.js"></script> <!-- 외부 자바스크립트 파일 연결 -->
+</body>
+</html>

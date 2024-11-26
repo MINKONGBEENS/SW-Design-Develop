@@ -1,0 +1,248 @@
+/* 기본 스타일 초기화 */
+* {
+    margin: 0; /* 모든 요소의 기본 마진 제거 */
+    padding: 0; /* 모든 요소의 기본 패딩 제거 */
+    box-sizing: border-box; /* 모든 요소의 박스 모델을 border-box로 설정 */
+}
+
+body {
+    font-family: Arial, sans-serif; /* 본문 폰트를 Arial로 설정 */
+    overflow-x: hidden; /* 수평 스크롤을 숨김 */
+}
+
+/* 도서 목록 제목 스타일 */
+.weekly-books-title {
+    font-size: 26px !important; /* 도서 목록 제목 크기 설정 */
+}
+
+/* 고정 헤더 스타일 */
+header {
+    position: fixed; /* 헤더를 화면 상단에 고정 */
+    width: 100%; /* 헤더의 너비를 화면 전체로 설정 */
+    top: 0; /* 화면 상단에 위치 */
+    left: 0; /* 화면 왼쪽에 위치 */
+    z-index: 10; /* 헤더의 z-index를 10으로 설정하여 다른 요소들 위에 표시 */
+    color: rgb(0, 0, 0); /* 헤더 글자 색을 검은색으로 설정 */
+    background-color: #ffffff00; /* 배경색 투명하게 설정 */
+    padding: 1rem 2rem; /* 헤더 내부 여백 설정 */
+}
+
+/* 내비게이션 바 스타일 */
+.navbar {
+    display: flex; /* Flexbox 사용 */
+    justify-content: space-between; /* 좌우 공간을 균등 배분 */
+    align-items: center; /* 수직 중앙 정렬 */
+}
+
+/* 로고 스타일 */
+.logo {
+    font-size: 1.8rem; /* 로고 폰트 크기 설정 */
+    font-weight: lighter; /* 로고 글씨 두께를 얇게 설정 */
+}
+
+/* 내비게이션 링크 스타일 */
+.nav-links {
+    list-style: none; /* 목록 스타일 제거 */
+    display: flex; /* Flexbox 사용 */
+    gap: 120px; /* 링크들 간의 간격 설정 */
+}
+
+.nav-links li a {
+    color: rgb(0, 0, 0); /* 링크 색상 검은색으로 설정 */
+    text-decoration: none; /* 링크에 밑줄 제거 */
+    font-size: 1.2rem; /* 링크 폰트 크기 설정 */
+}
+
+/* 인증 링크 스타일 */
+.auth-links a {
+    color: rgb(0, 0, 0); /* 인증 링크 색상 검은색으로 설정 */
+    margin-left: 1rem; /* 인증 링크들 간의 간격 설정 */
+    text-decoration: none; /* 밑줄 제거 */
+    font-size: 1rem; /* 폰트 크기 설정 */
+}
+
+/* 배너 스타일 */
+.banner {
+    position: relative; /* 배너 위치를 상대적으로 설정 */
+    background-image: url('/img/github\ 이미지/오시는길 배너.png'); /* 배너 이미지 경로 설정 */
+    background-size: flex; /* 배경 이미지 크기를 맞춤 */
+    width: 1920px;
+    background-position: center; /* 배경 이미지 중앙 정렬 */
+    height: 400px; /* 배너 높이 설정 */
+    display: flex; /* Flexbox 사용 */
+    justify-content: center; /* 배너 내용 중앙 정렬 */
+    align-items: center; /* 세로로 중앙 정렬 */
+    padding: 30px 0; /* 배너 내부 여백 설정 */
+    margin-bottom: 150px; /* 배너 하단 여백 설정 */
+}
+
+/* 배너 제목 스타일 */
+.banner h1 {
+    font-size: 3rem; /* 제목 폰트 크기 설정 */
+    padding: 10px 20px; /* 제목 여백 설정 */
+    border-radius: 5px; /* 제목 테두리 둥글게 설정 */
+    text-align: center; /* 제목 텍스트 중앙 정렬 */
+    margin-right: 21%;
+    font-weight: lighter;
+    color: rgb(0, 0, 0); /* 텍스트 색상 흰색으로 설정 */
+
+}
+
+/* 헤더 타이틀 스타일 */
+.header-title {
+    margin-left: 44%; /* 헤더 제목 왼쪽 여백 설정 */
+    margin-bottom: 100px; /* 헤더 제목 하단 여백 설정 */
+    font-size: 13px; /* 제목 폰트 크기 설정 */
+}
+
+/* Daum 지도 스타일 */
+.root_daum_roughmap {
+    margin: auto !important; /* 지도 중앙 정렬 */
+}
+
+/* CONTACT SECTION 스타일 */
+.contact-container {
+    display: flex; /* Flexbox 사용 */
+    justify-content: space-around; /* 요소들을 균등 배치 */
+    align-items: flex-start; /* 요소들 상단 정렬 */
+    padding: 40px 20px; /* 여백 설정 */
+    background-color: #fff; /* 배경색 흰색으로 설정 */
+    border-top: 1px solid #ddd; /* 상단 테두리 설정 */
+    border-bottom: 1px solid #ddd; /* 하단 테두리 설정 */
+    margin-top: 200px; /* 상단 여백 설정 */
+}
+
+/* 개별 연락처 항목 스타일 */
+.contact-item {
+    text-align: center; /* 텍스트 중앙 정렬 */
+    flex: 1; /* Flexbox 내에서 항목이 균등하게 분포되도록 설정 */
+    max-width: 1920px; /* 최대 너비 설정 */
+    padding: 0 10px; /* 좌우 여백 설정 */
+}
+
+.contact-item .icon {
+    max-width: 55px; /* 아이콘 크기 설정 */
+    margin-bottom: 10px; /* 아이콘 아래 여백 설정 */
+    color: #333; /* 아이콘 색상 설정 */
+}
+
+.contact-item h3 {
+    font-size: 18px; /* 제목 폰트 크기 설정 */
+    font-weight: bold; /* 제목 글씨 두껍게 설정 */
+    margin-bottom: 8px; /* 제목 아래 여백 설정 */
+    color: #333; /* 제목 색상 설정 */
+}
+
+.contact-item p {
+    font-size: 14px; /* 본문 폰트 크기 설정 */
+    line-height: 1.6; /* 본문 줄 높이 설정 */
+    color: #555; /* 본문 색상 설정 */
+}
+
+/* 푸터 스타일 */
+.footer {
+    margin-top: 250px; /* 푸터 상단 여백 설정 */
+    padding: 20px; /* 푸터 내부 여백 설정 */
+    width: 100%; /* 푸터 너비 설정 */
+    margin-bottom: 20px; /* 푸터 하단 여백 설정 */
+    overflow: hidden; /* 넘치는 콘텐츠 숨김 */
+    height: 500px; /* 푸터 높이 설정 */
+    position: relative; /* 상대 위치 설정 */
+    display: flex; /* Flexbox 사용 */
+    flex-direction: column; /* 푸터 아이템 세로로 배치 */
+    justify-content: center; /* 푸터 아이템 중앙 정렬 */
+    padding-left: 230px; /* 왼쪽 여백 설정 */
+}
+
+/* 푸터 배경 설정 */
+.footer-background {
+    background-color: rgba(72, 72, 72, 1); /* 배경색 어두운 회색으로 설정 */
+    width: 100%; /* 배경 너비 설정 */
+    height: 100%; /* 배경 높이 설정 */
+    position: absolute; /* 절대 위치 설정 */
+    left: 0; /* 왼쪽 정렬 */
+    margin-top: 50px; /* 상단 여백 설정 */
+    z-index: 1; /* 배경이 다른 요소들 아래에 표시되도록 설정 */
+}
+
+/* 푸터 제목 스타일 */
+.footer-title {
+    color: rgba(255, 255, 255, 1); /* 흰색 제목 */
+    font-family: 'Pretendard', sans-serif; /* 폰트 설정 */
+    font-size: 70px; /* 제목 크기 설정 */
+    margin: 0; /* 기본 마진 제거 */
+    margin-top: 51px; /* 제목 상단 여백 설정 */
+    z-index: 2; /* 제목이 배경 위에 표시되도록 설정 */
+}
+
+/* 푸터 서브타이틀 스타일 */
+.footer-subtitle {
+    color: rgba(255, 255, 255, 1); /* 흰색 서브타이틀 */
+    font-family: 'Pretendard', sans-serif; /* 폰트 설정 */
+    font-size: 17px; /* 서브타이틀 크기 설정 */
+    margin: 0; /* 기본 마진 제거 */
+    margin-top: -80px; /* 서브타이틀 상단 위치 조정 */
+    margin-bottom: 60px; /* 서브타이틀 하단 여백 설정 */
+    z-index: 2; /* 서브타이틀이 배경 위에 표시되도록 설정 */
+}
+
+/* 푸터 구분선 스타일 */
+.footer-line {
+    width: calc(100% - 360px); /* 좌우 여백 제외한 너비 설정 */
+    height: 1px; /* 선 높이 설정 */
+    background-color: rgba(255, 255, 255, 1); /* 흰색 선 */
+    margin: 20px 0px; /* 상단, 하단 여백 설정 */
+    z-index: 2; /* 선이 배경 위에 표시되도록 설정 */
+}
+
+/* 푸터 상세 텍스트 */
+.footer-details {
+    color: rgba(255, 255, 255, 1); /* 흰색 텍스트 */
+    font-family: 'Pretendard', sans-serif; /* 폰트 설정 */
+    font-size: 17px; /* 텍스트 크기 설정 */
+    margin-top: 20px; /* 상단 여백 설정 */
+    z-index: 2; /* 텍스트가 배경 위에 표시되도록 설정 */
+}
+
+/* 푸터 링크 스타일 */
+.footer-links {
+    color: rgba(255, 255, 255, 1); /* 흰색 링크 */
+    font-family: 'NanumSquareRound', sans-serif; /* 폰트 설정 */
+    font-size: 20px; /* 링크 크기 설정 */
+    margin: 0 10px; /* 좌우 간격 설정 */
+    z-index: 2; /* 링크가 배경 위에 표시되도록 설정 */
+    margin-left: auto; /* 오른쪽 정렬 */
+    margin-right: 360px; /* 오른쪽 여백 설정 */
+}
+
+/* 푸터 이름 스타일 */
+.footer-name {
+    color: rgba(255, 255, 255, 1); /* 흰색 텍스트 */
+    font-family: 'Pretendard', sans-serif; /* 폰트 설정 */
+    font-size: 70px; /* 이름 크기 설정 */
+    margin-top: 20px; /* 상단 여백 설정 */
+    z-index: 2; /* 이름이 배경 위에 표시되도록 설정 */
+}
+
+/* 소셜 아이콘 스타일 */
+.social-icons {
+    display: flex; /* 아이콘을 수평으로 배치 */
+    justify-content: flex-end; /* 오른쪽 정렬 */
+    margin-right: 360px; /* 오른쪽 여백 설정 */
+    margin-top: 10px; /* 위 여백 설정 */
+    margin-bottom: 30px; /* 아래 여백 설정 */
+    z-index: 2; /* 아이콘이 배경 위에 표시되도록 설정 */
+    position: relative; /* 상대 위치 설정 */
+    top: -30px; /* 위치 조정 */
+}
+
+/* 소셜 아이콘 간격 설정 */
+.social-icon {
+    margin: 0 10px; /* 아이콘 간의 간격 설정 */
+}
+
+/* 소셜 아이콘 크기 설정 */
+.social-icon img {
+    width: 48px; /* 아이콘 너비 설정 */
+    height: 48px; /* 아이콘 높이 설정 */
+}

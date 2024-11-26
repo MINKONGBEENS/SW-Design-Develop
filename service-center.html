@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자료목록 상세페이지</title>
+    <!-- 외부 CSS 파일 연결 -->
+    <link rel="stylesheet" href="styles.service-center.css">
+</head>
+<body>
+    <!-- 헤더 시작 -->
+    <header>
+        <!-- 네비게이션 바 -->
+        <nav class="navbar">
+            <h1 class="logo">SOZE</h1>
+            <!-- 네비게이션 링크들 -->
+            <ul class="nav-links">
+                <li><a href="#">웹소설</a></li>
+                <li><a href="#">소설</a></li>
+                <li><a href="#">오디오북</a></li>
+                <li><a href="#">서비스</a></li>
+            </ul>
+            <!-- 로그인/회원가입 링크 -->
+            <div class="auth-links">
+                <a href="#">LOGIN</a>
+                <a href="#">SIGN IN</a>
+            </div>
+        </nav>
+    </header>
+    <!-- 헤더 끝 -->
+
+    <!-- 배너 섹션 -->
+    <div class="banner">
+        <h1>1대1 문의</h1> <!-- 배너 텍스트 -->
+        <img src="img/1대1문의페이지 베너.png" alt="배너 이미지 1" class="banner-img">
+    </div>
+
+    <!-- 고객센터 문의 폼 시작 -->
+    <div class="service-center-form">
+        <form action="#" method="post" enctype="multipart/form-data">
+            <!-- 이름 입력 필드 -->
+            <div class="form-group">
+                <label for="name">이름</label>
+                <input type="text" id="name" name="name" placeholder="이름을 입력하세요." required>
+            </div>
+            <!-- 이메일 입력 필드 -->
+            <div class="form-group">
+                <label for="email">답변 받을 이메일 주소</label>
+                <input type="email" id="email" name="email" placeholder="이메일을 입력하세요." required>
+            </div>
+            <!-- 전화번호 입력 필드 -->
+            <div class="form-group">
+                <label for="phone">휴대폰 번호</label>
+                <input type="tel" id="phone" name="phone" placeholder="휴대폰 번호를 입력하세요." required>
+            </div>
+            <!-- 첨부 파일 입력 필드 -->
+            <div class="form-group">
+                <label for="attachment">첨부 파일 <span class="icon">📎</span></label>
+                <input type="file" id="attachment" name="attachment" multiple>
+                <small>
+                    • 사진 및 파일은 최대 5개까지 등록 가능해요.<br>
+                    • 10MB 이내의 모든 이미지 및 PDF, TXT, MS Office 문서 및 zip파일을 업로드해주세요.<br>
+                    • 첨부 파일 형식 및 내용이 1:1 문의 내용과 맞지 않는 경우(비방, 음란, 고유식별정보 포함 등) 관리자에 의해 자동 삭제될 수 있습니다.
+                </small>
+            </div>
+            <!-- 문의 내용 입력 필드 -->
+            <div class="form-group">
+                <label for="message">문의 내용</label>
+                <textarea id="message" name="message" rows="5" placeholder="문의 내용을 자세히 입력해주세요." required></textarea>
+            </div>
+            <!-- 제출 버튼 -->
+            <button type="submit" class="submit-button">문의하기</button>
+        </form>
+    </div>
+    <!-- 고객센터 문의 폼 끝 -->
+
+    <!-- 푸터 시작 -->
+    <div class="footer">
+        <div class="footer-background"></div>
+        <!-- 푸터 타이틀 -->
+        <span class="footer-title">S O Z E</span>
+        
+        <!-- 소셜 아이콘들 -->
+        <div class="social-icons">
+            <div class="social-icon">
+                <img src="img/Facebook.png" alt="Facebook" />
+            </div>
+            <div class="social-icon">
+                <img src="img/Twitter.png" alt="Twitter" />
+            </div>
+            <div class="social-icon">
+                <img src="img/Instagram.png" alt="Instagram" />
+            </div>
+            <div class="social-icon">
+                <img src="img/Youtube.png" alt="LinkedIn" />
+            </div>
+        </div>
+        
+        <!-- 푸터 서브타이틀 -->
+        <span class="footer-subtitle">2024 TEAM SOZE</span>
+        
+        <!-- 푸터 상세 정보 -->
+        <span class="footer-details">
+            TEL. 010-9876-5432 | FAX. 02-3456-9876 | sozeteams@weon.me<br>
+            주소: 서울특별시 강남구 역삼동 98-7 6층 543호 | 사업자 등록번호: 14-725-83690 | 대표자: 김망고<br>
+            업태: 정보통신업 | 업종: 소프트웨어 개발 및 공급업
+        </span>
+        
+        <!-- 호스팅 정보 -->
+        <span class="footer-hosting">Hosting By AWS</span>
+        <div class="footer-line"></div>
+        <!-- 푸터 링크들 -->
+        <div class="footer-links">
+            <span class="footer-terms">이용약관</span>
+            <span class="footer-privacy">개인정보 처리방침</span>
+        </div>
+    </div>
+    <!-- 푸터 끝 -->
+
+    <!-- 외부 자바스크립트 파일 연결 -->
+    <script src="script.js"></script>
+</body>
+</html>
