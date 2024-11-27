@@ -66,7 +66,7 @@ header {
 /* 배너 스타일 */
 .banner {
     position: relative; /* 배너의 상대적 위치 설정 */
-    background-image: url('/img/github\ 이미지/게시판페이지 배너.png'); /* 배경 이미지 경로 설정 */
+    background-image: url('img/github 이미지/게시판페이지 배너.png'); /* 배경 이미지 경로 설정 */
     background-size: cover; /* 배경 이미지를 배너 크기에 맞게 조정 */
     background-position: center; /* 배경 이미지를 중앙에 위치시킴 */
     height: 400px; /* 배너의 높이를 400px로 설정 */
@@ -93,13 +93,12 @@ header {
     display: flex; /* 플렉스 레이아웃을 사용 */
     justify-content: center; /* 가로축 중앙 정렬 */
     align-items: center; /* 세로축 중앙 정렬 */
-    margin-top: 250px; /* 좌우 여백을 자동으로 설정하여 중앙 정렬 */
+    margin-top: 120px; /* 좌우 여백을 자동으로 설정하여 중앙 정렬 */
     margin-bottom: 50p;
 }
 
 /* 공지사항 테이블 스타일 */
 .notice-table {
-
     border-collapse: collapse; /* 테이블 테두리를 겹치지 않도록 설정 */
     text-align: center; /* 텍스트를 중앙 정렬 */
     font-size: 16px; /* 폰트 크기를 16px로 설정 */
@@ -109,7 +108,9 @@ header {
 
 /* 테이블 헤더 스타일 */
 .notice-table thead th {
+    font-size: 24px;
     border-bottom: 2px solid #333; /* 테이블 헤더 하단에 2px 두께의 검정색 테두리 추가 */
+    border-top: 2px solid #333;
 }
 
 /* 테이블 바디 스타일 */
@@ -147,10 +148,9 @@ header {
 
 /* 글쓰기 버튼 스타일 */
 .write-button {
-    margin-right: 400px; /* 상단 여백 100px 추가 */
+    margin-right: 210px; /* 상단 여백 100px 추가 */
     text-align: right; /* 버튼을 오른쪽에 정렬 */
-    margin-bottom: 100px; /* 하단 여백 200px 추가 */
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 /* 글쓰기 버튼 내부 스타일 */
@@ -163,119 +163,156 @@ header {
     border-radius: 5px; /* 둥근 모서리 설정 */
     cursor: pointer; /* 커서를 포인터로 설정하여 클릭 가능 표시 */
     text-decoration: none; /* 링크로 설정된 경우 밑줄 제거 */
-    margin-bottom: 80px;
 }
 
-/* 푸터 스타일 */
+/* 전체 페이지 네비게이션 스타일 */
+.pagination {
+    margin-bottom: 70px;
+    display: flex; /* 플렉스 레이아웃으로 배치 */
+    align-items: center; /* 수직 정렬 */
+    justify-content: center; /* 중앙 정렬 */
+    gap: 4.25em; /* 숫자 간격 설정 */
+}
+
+/* 이전 버튼, 다음 버튼 */
+button {
+    background-color: transparent; /* 배경 투명 */
+    border: none; /* 테두리 제거 */
+    font-size: 15px; /* 폰트 크기 15px */
+    color: #999; /* 기본 텍스트 색상 */
+    cursor: pointer; /* 클릭 시 포인터 모양 */
+}
+
+/* 숫자 버튼 */
+.page-number {
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    color: #999;
+    cursor: pointer;
+}
+
+.page-number.active {
+    color: #FF5420; /* 활성화된 페이지는 주황색 */
+}
+
+/* 버튼 호버 효과 */
+button:hover, .page-number:hover {
+    color: #333; /* 호버 시 색상 변경 */
+}
+
+/* 이전, 다음 버튼 */
+.prev, .next {
+    font-size: 15px; /* 화살표 버튼의 폰트 크기 */
+    font-weight: bold;
+}
+
+
+/* 푸터 */
 .footer {
-    margin-top: 40px; /* 상단 여백 40px 추가 */
-    padding: 20px; /* 푸터 내 여백 설정 */
-    width: 100%; /* 푸터 너비를 100%로 설정 */
-    margin-bottom: 20px; /* 하단 여백 20px 추가 */
-    margin: 0 auto; /* 좌우 여백 자동 설정으로 중앙 정렬 */
-    overflow: hidden; /* 내용이 넘칠 경우 숨기기 */
-    height: 500px; /* 푸터 높이 설정 */
-    position: relative; /* 상대적인 위치 설정 */
+    width: 100%; /* 너비 100% */
+    height: 375px; /* 높이 75% 축소 */
+    position: relative; /* 상대 위치 */
     display: flex; /* flexbox 사용 */
-    flex-direction: column; /* 세로 방향으로 정렬 */
-    justify-content: center; /* 세로로 중앙 정렬 */
-    padding-left: 230px; /* 왼쪽 여백을 230px로 설정 */
+    flex-direction: column; /* 세로로 배치 */
+    justify-content: center; /* 세로 중앙 정렬 */
+    padding-left: 172.5px; /* 왼쪽 여백 75% 축소 */
 }
 
-/* 푸터 배경 스타일 */
+/* 푸터 배경 */
 .footer-background {
-    background-color: rgba(72, 72, 72, 1); /* 배경색을 어두운 회색으로 설정 */
-    width: 100%; /* 배경 너비 100% 설정 */
-    height: 100%; /* 배경 높이 100% 설정 */
-    position: absolute; /* 절대적인 위치 설정 */
-    left: 0; /* 화면 왼쪽에 배경 위치 */
-    margin-top: 50px; /* 상단 여백 50px 추가 */
-    z-index: 1; /* 배경을 다른 요소보다 아래로 배치 */
+    background-color: rgba(72, 72, 72, 1); /* 배경색 */
+    width: 100%; /* 너비 100% */
+    height: 100%; /* 높이 100% */
+    position: absolute; /* 절대 위치 */
+    left: 0; /* 왼쪽 정렬 */
+    margin-top: 37.5px; /* 위 여백 */
+    z-index: 1; /* 배경의 z-index */
 }
 
-/* 푸터 제목 스타일 */
+/* 푸터 타이틀 */
 .footer-title {
-    color: rgba(255, 255, 255, 1); /* 제목 색상을 흰색으로 설정 */
+    color: rgba(255, 255, 255, 1); /* 흰색 텍스트 */
     font-family: 'Pretendard', sans-serif; /* 폰트 설정 */
-    font-size: 70px; /* 폰트 크기 70px로 설정 */
-    margin: 0; /* 마진 0으로 설정 */
-    margin-top: 51px; /* 상단 여백 51px 추가 */
-    z-index: 2; /* 배경 위에 텍스트가 보이도록 설정 */
+    font-size: 52.5px; /* 글자 크기 75% 축소 */
+    margin: 0; /* 기본 마진 제거 */
+    margin-top: 38px; /* 위 여백 */
+    z-index: 2; /* 글자 위로 설정 */
 }
 
-/* 푸터 서브타이틀 스타일 */
+/* 푸터 서브타이틀 */
 .footer-subtitle {
-    color: rgba(255, 255, 255, 1); /* 서브타이틀 색상을 흰색으로 설정 */
+    color: rgba(255, 255, 255, 1); /* 흰색 텍스트 */
     font-family: 'Pretendard', sans-serif; /* 폰트 설정 */
-    font-size: 17px; /* 폰트 크기 17px로 설정 */
-    margin: 0; /* 마진 0으로 설정 */
-    margin-top: -80px; /* 위쪽 여백을 -80px로 설정하여 제목과 가까이 위치 */
-    margin-bottom: 60px; /* 하단 여백 60px 추가 */
-    z-index: 2; /* 배경 위에 텍스트가 보이도록 설정 */
+    font-size: 12.75px; /* 글자 크기 75% 축소 */
+    margin: 0; /* 기본 마진 제거 */
+    margin-top: -60px; /* 위 여백 */
+    margin-bottom: 45px; /* 아래 여백 */
+    z-index: 2; /* 글자 위로 설정 */
 }
 
-/* 푸터 구분선 스타일 */
+/* 푸터 선 */
 .footer-line {
-    width: calc(100% - 360px); /* 화면 너비에서 좌우 여백을 제외한 너비 설정 */
-    height: 1px; /* 선의 두께 1px로 설정 */
-    background-color: rgba(255, 255, 255, 1); /* 선 색상 흰색으로 설정 */
-    margin: 20px 0px; /* 상하 여백 설정 */
-    z-index: 2; /* 배경 위에 선이 보이도록 설정 */
+    width: calc(100% - 270px); /* 좌우 여백 270px 제외 */
+    height: 1px; /* 선의 높이 */
+    background-color: rgba(255, 255, 255, 1); /* 흰색 */
+    margin: 15px 0px; /* 상하 여백 75% 축소 */
+    z-index: 2; /* 선을 위로 설정 */
 }
 
-/* 푸터 세부사항 스타일 */
+/* 푸터 세부사항 */
 .footer-details {
-    color: rgba(255, 255, 255, 1); /* 글자 색을 흰색으로 설정 */
+    color: rgba(255, 255, 255, 1); /* 흰색 텍스트 */
     font-family: 'Pretendard', sans-serif; /* 폰트 설정 */
-    font-size: 17px; /* 폰트 크기 17px로 설정 */
-    margin-top: 20px; /* 상단 여백 설정 */
-    z-index: 2; /* 배경 위에 텍스트가 보이도록 설정 */
+    font-size: 12.75px; /* 글자 크기 75% 축소 */
+    margin-top: 15px; /* 상단 여백 */
+    z-index: 2; /* 텍스트 위로 설정 */
 }
 
-/* 푸터 링크 스타일 */
+/* 푸터 링크 */
 .footer-links {
-    color: rgba(255, 255, 255, 1); /* 글자 색 흰색으로 설정 */
+    color: rgba(255, 255, 255, 1); /* 흰색 텍스트 */
     font-family: 'NanumSquareRound', sans-serif; /* 폰트 설정 */
-    font-size: 20px; /* 폰트 크기 20px로 설정 */
-    margin: 0 10px; /* 좌우 여백 설정 */
-    z-index: 2; /* 배경 위에 텍스트가 보이도록 설정 */
+    font-size: 15px; /* 글자 크기 75% 축소 */
+    margin: 0 7.5px; /* 좌우 여백 75% 축소 */
+    z-index: 2;
     margin-left: auto; /* 오른쪽 정렬 */
-    margin-right: 360px; /* 오른쪽 여백 설정 */
+    margin-right: 270px; /* 오른쪽 여백 75% 축소 */
 }
 
-/* 푸터 약관 링크 스타일 */
-.footer-terms {
-    margin: 0 30px; /* 좌우 여백 설정 */
+/* 푸터 이용약관 */
+.footer-terms{
+    margin: 0 22.5px; /* 좌우 여백 75% 축소 */
 }
 
-/* 푸터 이름 스타일 */
+/* 푸터 이름 */
 .footer-name {
-    color: rgba(255, 255, 255, 1); /* 글자 색 흰색으로 설정 */
+    color: rgba(255, 255, 255, 1); /* 흰색 텍스트 */
     font-family: 'Pretendard', sans-serif; /* 폰트 설정 */
-    font-size: 70px; /* 폰트 크기 70px로 설정 */
-    margin-top: 20px; /* 상단 여백 설정 */
-    z-index: 2; /* 배경 위에 텍스트가 보이도록 설정 */
+    font-size: 52.5px; /* 글자 크기 75% 축소 */
+    margin-top: 15px; /* 상단 여백 */
+    z-index: 2; /* 글자 위로 설정 */
 }
 
-/* 소셜 아이콘 스타일 */
+/* 소셜 아이콘 */
 .social-icons {
-    display: flex; /* 아이콘들을 수평으로 배치 */
+    display: flex; /* 수평 배치 */
     justify-content: flex-end; /* 오른쪽 정렬 */
-    margin-right: 360px; /* 오른쪽 여백 설정 */
-    margin-top: 10px; /* 상단 여백 설정 */
-    margin-bottom: 30px; /* 하단 여백 설정 */
-    z-index: 2; /* 배경 위에 아이콘이 보이도록 설정 */
-    position: relative; /* 상대적인 위치 설정 */
-    top: -30px; /* 위로 30px 이동 */
+    margin-right: 270px; /* 오른쪽 여백 75% 축소 */
+    margin-top: 7.5px; /* 위 여백 */
+    margin-bottom: 22.5px; /* 아래 여백 */
+    z-index: 2;
+    position: relative; /* 상대 위치 */
+    top: -22.5px; /* 위치 조정 */
 }
 
-/* 소셜 아이콘 간격 설정 */
+/* 소셜 아이콘 개별 스타일 */
 .social-icon {
-    margin: 0 10px; /* 아이콘 간의 간격을 10px로 설정 */
+    margin: 0 7.5px; /* 아이콘 간격 75% 축소 */
 }
 
-/* 소셜 아이콘 크기 설정 */
+/* 소셜 아이콘 크기 */
 .social-icon img {
-    width: 48px; /* 아이콘 너비 48px */
-    height: 48px; /* 아이콘 높이 48px */
+    width: 36px; /* 크기 75% 축소 */
+    height: 36px; /* 크기 75% 축소 */
 }

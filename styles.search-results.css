@@ -67,7 +67,7 @@ header {
     display: flex; /* 수평 정렬 */
     height: 50px; /* 높이 50px */
     justify-content: center; /* 가운데 정렬 */
-    margin-bottom: 20px; /* 아래쪽 여백 */
+    margin-bottom: 0px; /* 아래쪽 여백 */
 }
 
 /* 검색어 입력칸 */
@@ -353,10 +353,10 @@ header {
 
 /* E북 목록 */
 .ebook-list {
+    margin: 0 auto;
     border-top: 2px solid #ccc; /* 위쪽에 회색 선 */
     max-width: 1200px; /* 최대 너비 설정 */
     margin-top: 150px; /* 위쪽 여백 */
-    margin-left: 18%; /* 왼쪽 여백 */
 }
 
 /* e북 항목 */
