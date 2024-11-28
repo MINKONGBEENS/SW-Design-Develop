@@ -25,6 +25,51 @@ header {
     color: black; /* 글자 색을 검은색으로 설정 */
     padding: 1rem 2rem; /* 헤더 내부 여백 */
 }
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+/* 드롭다운 메뉴 */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* 드롭다운 메뉴 기본 숨기기 */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    z-index: 1;
+}
+
+/* 드롭다운 메뉴 항목 스타일 */
+.dropdown-menu li {
+    padding: 10px;
+    list-style-type: none; /* 점 제거 */
+}
+
+.dropdown-menu li a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+}
+
+/* 호버 시 스타일 */
+.dropdown-menu li a:hover {
+    background-color: #ddd;
+}
 
 .navbar {
     display: flex; /* Flexbox 레이아웃 사용 */
@@ -56,29 +101,59 @@ header {
     font-size: 1rem; /* 글자 크기 설정 */
 }
 
-/* 검색창 및 배너 스타일 */
-.search-banner {
-    position: relative; /* 내부 요소 배치를 위한 상대 위치 */
-    margin-top: 80px; /* 헤더와 배너 간 간격 */
-    margin-bottom: 40px; /* 배너와 다른 요소 간 간격 */
-    padding: 20px; /* 배너 내부 여백 */
-    background-color: #f4f4f400; /* 배경 색상 (투명도 있음) */
-    text-align: center; /* 텍스트 중앙 정렬 */
+.search-container {
+    position: relative;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f4f4f400;
+    text-align: center;
 }
 
-.search-box {
-    display: flex; /* Flexbox로 배치 */
-    justify-content: center; /* 수평 중앙 정렬 */
-    margin-bottom: 20px; /* 아래쪽 여백 */
+.search-field {
+    display: flex;
+    align-items: center; /* 입력창과 버튼을 수평으로 정렬 */
+    justify-content: center;
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.search-box input {
-    width: 50%; /* 검색창 너비를 50%로 설정 */
-    padding: 10px; /* 입력창 내부 여백 */
-    font-size: 1rem; /* 글자 크기 설정 */
-    border-radius: 25px; /* 둥근 모서리 */
+.search-field input {
+    width: 100%; /* 검색창 너비를 100%로 설정 */
+    padding: 10px 40px 10px 20px; /* 오른쪽에 여백을 추가하여 돋보기 버튼 공간 확보 */
+    font-size: 1rem;
+    border-radius: 25px;
     border: 1px solid #ddd; /* 연한 회색 테두리 */
 }
+
+.search-btn {
+    position: absolute;
+    right: 10px; /* 검색창 우측에 배치 */
+    top: 50%; /* 세로 중앙 정렬 */
+    transform: translateY(-50%);
+    background-color: white; /* 회색 배경 */
+    border: none; /* 테두리 제거 */
+    border-radius: 50%; /* 원 형태 */
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.search-btn i {
+    color: #000; /* 아이콘 색상 */
+    font-size: 16px; /* 아이콘 크기 */
+}
+
+.search-btn:hover {
+    background-color: #bbb; /* 호버 시 색상 변경 */
+}
+
+
+
 
 /* 메인 배너 스타일 */
 .main-banner {

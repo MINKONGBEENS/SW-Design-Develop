@@ -2,42 +2,58 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>웹툰 사이트</title>
-    <link rel="stylesheet" href="styles.main.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
 </head>
 <body>
     <!-- 헤더 -->
     <header>
         <nav class="navbar">
-          <h1 class="logo">SOZE</h1>
-          <ul class="nav-links">
-            <li><a href="#">웹소설</a></li>
-            <li><a href="#">소설</a></li>
-            <li><a href="#">오디오북</a></li>
-            <li><a href="#">서비스</a></li>
-          </ul>
-          <div class="auth-links">
-            <a href="#">LOGIN</a>
-            <a href="#">SIGN IN</a>
-          </div>
+            <h1 class="logo">SOZE</h1>
+            <ul class="nav-links">
+                <li><a href="#">웹소설</a></li>
+                <li><a href="#">소설</a></li>
+                <li><a href="#">오디오북</a></li>
+                <li class="dropdown">
+                    <a href="#">서비스</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="community-board.html">자유게시판</a></li>
+                        <li><a href="datalist-board.html">자료실</a></li>
+                        <li><a href="event-board.html">이벤트</a></li>
+                        <li><a href="notice-board.html">공지사항</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="auth-links">
+                <a href="login.html">LOGIN</a>
+                <a href="register.html">SIGN IN</a>
+            </div>
         </nav>
-      </header>
+    </header>
 
 <!-- 검색창 -->
-<div class="search-banner">
-    <div class="search-box">
-        <input type="text" placeholder="검색어를 입력하세요.">
-    </div>
+<div class="search-container">
+    <form action="/search" method="get">
+        <div class="search-field">
+            <input type="text" name="query" placeholder="검색어를 입력하세요." required>
+            <button type="submit" class="search-btn">
+                <i class="fas fa-search"></i> <!-- 돋보기 아이콘 -->
+            </button>
+        </div>
+    </form>
 </div>
 
 <!-- 메인 배너 -->
 <section class="main-banner">
     <div class="banner-container">
         <div class="banner-content">
-            <img src="img/image 2.png" alt="배너 이미지 1" class="banner-img">
-            <img src="img/image 3.png" alt="배너 이미지 2" class="banner-img">
-            <img src="img/image 4.png" alt="배너 이미지 3" class="banner-img">
+            <img src="static/img/image 2.png" alt="배너 이미지 1" class="banner-img">
+            <img src="static/img/image 3.png" alt="배너 이미지 2" class="banner-img">
+            <img src="static/img/image 4.png" alt="배너 이미지 3" class="banner-img">
         </div>
     </div>
     <div class="button-container">
@@ -87,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="webtoon-list" style="position: relative;">
         <!-- 웹툰 항목들 -->
         <div class="webtoon-item">
-            <img src="img/Link_mask-group.png" alt="웹툰 이미지 1" class="webtoon-img">
+            <img src="static/img/Link_mask-group.png" alt="웹툰 이미지 1" class="webtoon-img">
             <p class="webtoon-ranking">1</p>
             <div class="webtoon-info">
                 <p class="webtoon-title">품격을 배반한다</p>
@@ -99,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
         </div>
         <div class="webtoon-item">
-            <img src="img/your-image2.jpg" alt="웹툰 이미지 2" class="webtoon-img">
+            <img src="static/img/your-image2.jpg" alt="웹툰 이미지 2" class="webtoon-img">
             <p class="webtoon-ranking">2</p>
             <div class="webtoon-info">
                 <p class="webtoon-title">교활하지 못한 마녀에게</p>
@@ -111,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
         </div>
         <div class="webtoon-item">
-            <img src="img/your-image3.jpg" alt="웹툰 이미지 3" class="webtoon-img">
+            <img src="static/img/your-image3.jpg" alt="웹툰 이미지 3" class="webtoon-img">
             <p class="webtoon-ranking">3</p>
             <div class="webtoon-info">
                 <p class="webtoon-title">하룻밤은 드레곤 결에서</p>
@@ -123,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
         </div>
         <div class="webtoon-item">
-            <img src="img/your-image4.jpg" alt="웹툰 이미지 4" class="webtoon-img">
+            <img src="static/img/your-image4.jpg" alt="웹툰 이미지 4" class="webtoon-img">
             <p class="webtoon-ranking">4</p>
             <div class="webtoon-info">
                 <p class="webtoon-title">이세계 착차 헌터</p>
@@ -135,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
         </div>
         <div class="webtoon-item">
-            <img src="img/your-image5.jpg" alt="웹툰 이미지 5" class="webtoon-img">
+            <img src="static/img/your-image5.jpg" alt="웹툰 이미지 5" class="webtoon-img">
             <p class="webtoon-ranking">5</p>
             <div class="webtoon-info">
                 <p class="webtoon-title">부석진 저질 것들을 위하여(개정판)</p>
@@ -147,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
         </div>
         <div class="webtoon-item">
-            <img src="img/your-image6.jpg" alt="웹툰 이미지 6" class="webtoon-img">
+            <img src="static/img/your-image6.jpg" alt="웹툰 이미지 6" class="webtoon-img">
             <p class="webtoon-ranking">6</p>
             <div class="webtoon-info">
                 <p class="webtoon-title">교활하지 못한 마녀에게</p>
@@ -159,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
         </div>
         <div class="webtoon-item">
-            <img src="img/your-image7.jpg" alt="웹툰 이미지 7" class="webtoon-img">
+            <img src="static/img/your-image7.jpg" alt="웹툰 이미지 7" class="webtoon-img">
             <p class="webtoon-ranking">7</p>
             <div class="webtoon-info">
                 <p class="webtoon-title">품격을 배반한다</p>
@@ -171,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
         </div>
         <div class="webtoon-item">
-            <img src="img/your-image8.jpg" alt="웹툰 이미지 8" class="webtoon-img">
+            <img src="static/img/your-image8.jpg" alt="웹툰 이미지 8" class="webtoon-img">
             <p class="webtoon-ranking">8</p>
             <div class="webtoon-info">
                 <p class="webtoon-title">미친놈들에게 집착받는 C.T</p>
@@ -183,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
         </div>
         <div class="webtoon-item">
-            <img src="img/your-image9.jpg" alt="웹툰 이미지 9" class="webtoon-img">
+            <img src="static/img/your-image9.jpg" alt="웹툰 이미지 9" class="webtoon-img">
             <p class="webtoon-ranking">9</p>
             <div class="webtoon-info">
                 <p class="webtoon-title">미친놈들에게 집착받는 C.T</p>
@@ -205,7 +221,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="days-of-week">
             <!-- 월요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="월요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="월요일 도서" class="book-img">
                 <p class="book-title">상수리나무 아래</p>
                 <p class="book-author">서만, 나무, P, 김수지</p>
                 <div class="book-rating">
@@ -215,7 +231,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 화요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="화요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="화요일 도서" class="book-img">
                 <p class="book-title">프리즌 러브</p>
                 <p class="book-author">김두유, 황지, Magoin</p>
                 <div class="book-rating">
@@ -225,7 +241,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 수요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="수요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="수요일 도서" class="book-img">
                 <p class="book-title">친구의 친구는 남일까요?</p>
                 <p class="book-author">정혜원 외 3부 - 6회 무료</p>
                 <div class="book-rating">
@@ -235,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 목요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="목요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="목요일 도서" class="book-img">
                 <p class="book-title">우리 집에는 귀가 있다</p>
                 <p class="book-author">다미미케, 카모모, 김수지</p>
                 <div class="book-rating">
@@ -245,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 금요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="금요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="금요일 도서" class="book-img">
                 <p class="book-title">못된 짐승을 길들이는 법</p>
                 <p class="book-author">베리, 라치크</p>
                 <div class="book-rating">
@@ -255,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 토요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="토요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="토요일 도서" class="book-img">
                 <p class="book-title">상수리나무 아래</p>
                 <p class="book-author">서만, 나무, P, 김수지</p>
                 <div class="book-rating">
@@ -275,7 +291,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="days-of-week">
             <!-- 월요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="월요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="월요일 도서" class="book-img">
                 <p class="book-title">상수리나무 아래</p>
                 <p class="book-author">서만, 나무, P, 김수지</p>
                 <div class="book-rating">
@@ -285,7 +301,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 화요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="화요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="화요일 도서" class="book-img">
                 <p class="book-title">프리즌 러브</p>
                 <p class="book-author">김두유, 황지, Magoin</p>
                 <div class="book-rating">
@@ -295,7 +311,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 수요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="수요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="수요일 도서" class="book-img">
                 <p class="book-title">친구의 친구는 남일까요?</p>
                 <p class="book-author">정혜원 외 3부 - 6회 무료</p>
                 <div class="book-rating">
@@ -305,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 목요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="목요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="목요일 도서" class="book-img">
                 <p class="book-title">우리 집에는 귀가 있다</p>
                 <p class="book-author">다미미케, 카모모, 김수지</p>
                 <div class="book-rating">
@@ -315,7 +331,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 금요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="금요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="금요일 도서" class="book-img">
                 <p class="book-title">못된 짐승을 길들이는 법</p>
                 <p class="book-author">베리, 라치크</p>
                 <div class="book-rating">
@@ -325,7 +341,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 토요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="토요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="토요일 도서" class="book-img">
                 <p class="book-title">상수리나무 아래</p>
                 <p class="book-author">서만, 나무, P, 김수지</p>
                 <div class="book-rating">
@@ -344,7 +360,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="days-of-week">
             <!-- 월요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="월요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="월요일 도서" class="book-img">
                 <p class="book-title">상수리나무 아래</p>
                 <p class="book-author">서만, 나무, P, 김수지</p>
                 <div class="book-rating">
@@ -354,7 +370,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 화요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="화요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="화요일 도서" class="book-img">
                 <p class="book-title">프리즌 러브</p>
                 <p class="book-author">김두유, 황지, Magoin</p>
                 <div class="book-rating">
@@ -364,7 +380,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 수요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="수요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="수요일 도서" class="book-img">
                 <p class="book-title">친구의 친구는 남일까요?</p>
                 <p class="book-author">정혜원 외 3부 - 6회 무료</p>
                 <div class="book-rating">
@@ -374,7 +390,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 목요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="목요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="목요일 도서" class="book-img">
                 <p class="book-title">우리 집에는 귀가 있다</p>
                 <p class="book-author">다미미케, 카모모, 김수지</p>
                 <div class="book-rating">
@@ -384,7 +400,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 금요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="금요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="금요일 도서" class="book-img">
                 <p class="book-title">못된 짐승을 길들이는 법</p>
                 <p class="book-author">베리, 라치크</p>
                 <div class="book-rating">
@@ -394,7 +410,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 토요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="토요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="토요일 도서" class="book-img">
                 <p class="book-title">상수리나무 아래</p>
                 <p class="book-author">서만, 나무, P, 김수지</p>
                 <div class="book-rating">
@@ -437,7 +453,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="webtoon-list" style="position: relative;">
             <!-- 웹툰 항목들 -->
             <div class="webtoon-item">
-                <img src="img/Link_mask-group.png" alt="웹툰 이미지 1" class="webtoon-img">
+                <img src="static/img/Link_mask-group.png" alt="웹툰 이미지 1" class="webtoon-img">
                 <p class="webtoon-ranking">1</p>
                 <div class="webtoon-info">
                     <p class="webtoon-title">품격을 배반한다</p>
@@ -449,7 +465,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </div>
             <div class="webtoon-item">
-                <img src="img/your-image2.jpg" alt="웹툰 이미지 2" class="webtoon-img">
+                <img src="static/img/your-image2.jpg" alt="웹툰 이미지 2" class="webtoon-img">
                 <p class="webtoon-ranking">2</p>
                 <div class="webtoon-info">
                     <p class="webtoon-title">교활하지 못한 마녀에게</p>
@@ -461,7 +477,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </div>
             <div class="webtoon-item">
-                <img src="img/your-image3.jpg" alt="웹툰 이미지 3" class="webtoon-img">
+                <img src="static/img/your-image3.jpg" alt="웹툰 이미지 3" class="webtoon-img">
                 <p class="webtoon-ranking">3</p>
                 <div class="webtoon-info">
                     <p class="webtoon-title">하룻밤은 드레곤 결에서</p>
@@ -473,7 +489,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </div>
             <div class="webtoon-item">
-                <img src="img/your-image4.jpg" alt="웹툰 이미지 4" class="webtoon-img">
+                <img src="static/img/your-image4.jpg" alt="웹툰 이미지 4" class="webtoon-img">
                 <p class="webtoon-ranking">4</p>
                 <div class="webtoon-info">
                     <p class="webtoon-title">이세계 착차 헌터</p>
@@ -485,7 +501,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </div>
             <div class="webtoon-item">
-                <img src="img/your-image5.jpg" alt="웹툰 이미지 5" class="webtoon-img">
+                <img src="static/img/your-image5.jpg" alt="웹툰 이미지 5" class="webtoon-img">
                 <p class="webtoon-ranking">5</p>
                 <div class="webtoon-info">
                     <p class="webtoon-title">부석진 저질 것들을 위하여(개정판)</p>
@@ -497,7 +513,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </div>
             <div class="webtoon-item">
-                <img src="img/your-image6.jpg" alt="웹툰 이미지 6" class="webtoon-img">
+                <img src="static/img/your-image6.jpg" alt="웹툰 이미지 6" class="webtoon-img">
                 <p class="webtoon-ranking">6</p>
                 <div class="webtoon-info">
                     <p class="webtoon-title">교활하지 못한 마녀에게</p>
@@ -512,7 +528,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 &gt;
             </div>
             <div class="webtoon-item">
-                <img src="img/your-image7.jpg" alt="웹툰 이미지 7" class="webtoon-img">
+                <img src="static/img/your-image7.jpg" alt="웹툰 이미지 7" class="webtoon-img">
                 <p class="webtoon-ranking">7</p>
                 <div class="webtoon-info">
                     <p class="webtoon-title">품격을 배반한다</p>
@@ -524,7 +540,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </div>
             <div class="webtoon-item">
-                <img src="img/your-image8.jpg" alt="웹툰 이미지 8" class="webtoon-img">
+                <img src="static/img/your-image8.jpg" alt="웹툰 이미지 8" class="webtoon-img">
                 <p class="webtoon-ranking">8</p>
                 <div class="webtoon-info">
                     <p class="webtoon-title">미친놈들에게 집착받는 C.T</p>
@@ -536,7 +552,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </div>
             <div class="webtoon-item">
-                <img src="img/your-image9.jpg" alt="웹툰 이미지 9" class="webtoon-img">
+                <img src="static/img/your-image9.jpg" alt="웹툰 이미지 9" class="webtoon-img">
                 <p class="webtoon-ranking">9</p>
                 <div class="webtoon-info">
                     <p class="webtoon-title">미친놈들에게 집착받는 C.T</p>
@@ -559,9 +575,9 @@ document.addEventListener('DOMContentLoaded', function () {
     <section class="event-section">
         <h3>이벤트 보러가기</h3>
         <div class="event-images">
-            <img src="img/Item → Link.png" alt="이벤트 1" class="event-image">
-            <img src="img/Item → Link.png" alt="이벤트 2" class="event-image">
-            <img src="img/Item → Link.png" alt="이벤트 3" class="event-image">
+            <img src="static/img/Item → Link.png" alt="이벤트 1" class="event-image">
+            <img src="static/img/Item → Link.png" alt="이벤트 2" class="event-image">
+            <img src="static/img/Item → Link.png" alt="이벤트 3" class="event-image">
         </div>
     </section>
 
@@ -573,7 +589,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="days-of-week">
             <!-- 월요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="월요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="월요일 도서" class="book-img">
                 <p class="book-title">상수리나무 아래</p>
                 <p class="book-author">서만, 나무, P, 김수지</p>
                 <div class="book-rating">
@@ -583,7 +599,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 화요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="화요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="화요일 도서" class="book-img">
                 <p class="book-title">프리즌 러브</p>
                 <p class="book-author">김두유, 황지, Magoin</p>
                 <div class="book-rating">
@@ -593,7 +609,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 수요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="수요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="수요일 도서" class="book-img">
                 <p class="book-title">친구의 친구는 남일까요?</p>
                 <p class="book-author">정혜원 외 3부 - 6회 무료</p>
                 <div class="book-rating">
@@ -603,7 +619,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 목요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="목요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="목요일 도서" class="book-img">
                 <p class="book-title">우리 집에는 귀가 있다</p>
                 <p class="book-author">다미미케, 카모모, 김수지</p>
                 <div class="book-rating">
@@ -613,7 +629,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 금요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="금요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="금요일 도서" class="book-img">
                 <p class="book-title">못된 짐승을 길들이는 법</p>
                 <p class="book-author">베리, 라치크</p>
                 <div class="book-rating">
@@ -623,7 +639,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 토요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="토요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="토요일 도서" class="book-img">
                 <p class="book-title">상수리나무 아래</p>
                 <p class="book-author">서만, 나무, P, 김수지</p>
                 <div class="book-rating">
@@ -639,8 +655,8 @@ document.addEventListener('DOMContentLoaded', function () {
             <!-- 카드 1 -->
             <div class="exclusive-card">
                 <div class="image-wrapper">
-                    <img src="img/1730350569884_MjQxMDIz.png.png" alt="배경 이미지 1" class="background-image">
-                    <img src="img/1730350571421_MjQxMDIz.png.png" alt="캐릭터 이미지 1" class="character-image">
+                    <img src="static/img/1730350569884_MjQxMDIz.png.png" alt="배경 이미지 1" class="background-image">
+                    <img src="static/img/1730350571421_MjQxMDIz.png.png" alt="캐릭터 이미지 1" class="character-image">
                 </div>
                 <div class="text-content">
                     <p class="title">마음마저 그를 향하게 된 것처럼, 손길을 갈구했다.</p>
@@ -650,8 +666,8 @@ document.addEventListener('DOMContentLoaded', function () {
             <!-- 카드 2 -->
             <div class="exclusive-card">
                 <div class="image-wrapper">
-                    <img src="img/background2.jpg" alt="배경 이미지 2" class="background-image">
-                    <img src="img/character2.png" alt="캐릭터 이미지 2" class="character-image">
+                    <img src="static/img/background2.jpg" alt="배경 이미지 2" class="background-image">
+                    <img src="static/img/character2.png" alt="캐릭터 이미지 2" class="character-image">
                 </div>
                 <div class="text-content">
                     <p class="title">난 좀 거친 걸 좋아하는데, 감당할 자신 있어?</p>
@@ -661,8 +677,8 @@ document.addEventListener('DOMContentLoaded', function () {
             <!-- 카드 3 -->
             <div class="exclusive-card">
                 <div class="image-wrapper">
-                    <img src="img/1730350569884_MjQxMDIz.png.png" alt="배경 이미지 3" class="background-image">
-                    <img src="img/1730350571421_MjQxMDIz.png.png" alt="캐릭터 이미지 3" class="character-image">
+                    <img src="static/img/1730350569884_MjQxMDIz.png.png" alt="배경 이미지 3" class="background-image">
+                    <img src="static/img/1730350571421_MjQxMDIz.png.png" alt="캐릭터 이미지 3" class="character-image">
                     <div class="arrow-button">&gt;</div>
                 </div>
                 <div class="text-content">
@@ -678,7 +694,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="weekly-books">
             <!-- 도서 항목 1 -->
             <div class="weekly-book-item">
-                <img src="img/바람이 분다, 가라.png" alt="도서 이미지 1" class="weekly-book-img">
+                <img src="static/img/바람이 분다, 가라.png" alt="도서 이미지 1" class="weekly-book-img">
                 <p class="weekly-book-title">콤플렉스 전하</p>
                 <p class="weekly-book-author">이작가</p>
                 <div class="weekly-book-rating">
@@ -689,7 +705,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
             <!-- 도서 항목 2 -->
             <div class="weekly-book-item">
-                <img src="img/흰.png" alt="도서 이미지 2" class="weekly-book-img">
+                <img src="static/img/흰.png" alt="도서 이미지 2" class="weekly-book-img">
                 <p class="weekly-book-title">마지막 황후</p>
                 <p class="weekly-book-author">작가명</p>
                 <div class="weekly-book-rating">
@@ -700,7 +716,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
             <!-- 도서 항목 3 -->
             <div class="weekly-book-item">
-                <img src="img/book3.jpg" alt="도서 이미지 3" class="weekly-book-img">
+                <img src="static/img/book3.jpg" alt="도서 이미지 3" class="weekly-book-img">
                 <p class="weekly-book-title">신의 아이들</p>
                 <p class="weekly-book-author">김작가</p>
                 <div class="weekly-book-rating">
@@ -711,7 +727,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
             <!-- 도서 항목 4 -->
             <div class="weekly-book-item">
-                <img src="img/book4.jpg" alt="도서 이미지 4" class="weekly-book-img">
+                <img src="static/img/book4.jpg" alt="도서 이미지 4" class="weekly-book-img">
                 <p class="weekly-book-title">운명의 검</p>
                 <p class="weekly-book-author">박작가</p>
                 <div class="weekly-book-rating">
@@ -722,7 +738,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
             <!-- 도서 항목 5 -->
             <div class="weekly-book-item">
-                <img src="img/book5.jpg" alt="도서 이미지 5" class="weekly-book-img">
+                <img src="static/img/book5.jpg" alt="도서 이미지 5" class="weekly-book-img">
                 <p class="weekly-book-title">피와 복수</p>
                 <p class="weekly-book-author">황작가</p>
                 <div class="weekly-book-rating">
@@ -733,7 +749,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
             <!-- 도서 항목 6 -->
             <div class="weekly-book-item">
-                <img src="img/book6.jpg" alt="도서 이미지 6" class="weekly-book-img">
+                <img src="static/img/book6.jpg" alt="도서 이미지 6" class="weekly-book-img">
                 <p class="weekly-book-title">사랑의 연대기</p>
                 <p class="weekly-book-author">최작가</p>
                 <div class="weekly-book-rating">
@@ -744,7 +760,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
             <!-- 도서 항목 7 -->
             <div class="weekly-book-item">
-                <img src="img/희랍어시간.png" alt="도서 이미지 7" class="weekly-book-img">
+                <img src="static/img/희랍어시간.png" alt="도서 이미지 7" class="weekly-book-img">
                 <p class="weekly-book-title">무한의 길</p>
                 <p class="weekly-book-author">이정희</p>
                 <div class="weekly-book-rating">
@@ -755,7 +771,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
             <!-- 도서 항목 8 -->
             <div class="weekly-book-item">
-                <img src="img/book8.jpg" alt="도서 이미지 8" class="weekly-book-img">
+                <img src="static/img/book8.jpg" alt="도서 이미지 8" class="weekly-book-img">
                 <p class="weekly-book-title">영원의 사랑</p>
                 <p class="weekly-book-author">정수현</p>
                 <div class="weekly-book-rating">
@@ -766,7 +782,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
             <!-- 도서 항목 9 -->
             <div class="weekly-book-item">
-                <img src="img/book9.jpg" alt="도서 이미지 9" class="weekly-book-img">
+                <img src="static/img/book9.jpg" alt="도서 이미지 9" class="weekly-book-img">
                 <p class="weekly-book-title">전쟁과 평화</p>
                 <p class="weekly-book-author">이호진</p>
                 <div class="weekly-book-rating">
@@ -777,7 +793,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
             <!-- 도서 항목 10 -->
             <div class="weekly-book-item">
-                <img src="img/book10.jpg" alt="도서 이미지 10" class="weekly-book-img">
+                <img src="static/img/book10.jpg" alt="도서 이미지 10" class="weekly-book-img">
                 <p class="weekly-book-title">파멸의 시작</p>
                 <p class="weekly-book-author">강은주</p>
                 <div class="weekly-book-rating">
@@ -788,7 +804,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
             <!-- 도서 항목 11 -->
             <div class="weekly-book-item">
-                <img src="img/book11.jpg" alt="도서 이미지 11" class="weekly-book-img">
+                <img src="static/img/book11.jpg" alt="도서 이미지 11" class="weekly-book-img">
                 <p class="weekly-book-title">빛과 그림자</p>
                 <p class="weekly-book-author">문정환</p>
                 <div class="weekly-book-rating">
@@ -799,7 +815,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
             <!-- 도서 항목 12 -->
             <div class="weekly-book-item">
-                <img src="img/book12.jpg" alt="도서 이미지 12" class="weekly-book-img">
+                <img src="static/img/book12.jpg" alt="도서 이미지 12" class="weekly-book-img">
                 <p class="weekly-book-title">저주받은 왕자</p>
                 <p class="weekly-book-author">신하영</p>
                 <div class="weekly-book-rating">
@@ -810,7 +826,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
             <!-- 도서 항목 13 -->
             <div class="weekly-book-item">
-                <img src="img/작별하지 않는다.png" alt="도서 이미지 13" class="weekly-book-img">
+                <img src="static/img/작별하지 않는다.png" alt="도서 이미지 13" class="weekly-book-img">
                 <p class="weekly-book-title">불멸의 서</p>
                 <p class="weekly-book-author">박미영</p>
                 <div class="weekly-book-rating">
@@ -821,7 +837,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
             <!-- 도서 항목 14 -->
             <div class="weekly-book-item">
-                <img src="img/book14.jpg" alt="도서 이미지 14" class="weekly-book-img">
+                <img src="static/img/book14.jpg" alt="도서 이미지 14" class="weekly-book-img">
                 <p class="weekly-book-title">기억의 조각들</p>
                 <p class="weekly-book-author">이진아</p>
                 <div class="weekly-book-rating">
@@ -832,7 +848,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
             <!-- 도서 항목 15 -->
             <div class="weekly-book-item">
-                <img src="img/book15.jpg" alt="도서 이미지 15" class="weekly-book-img">
+                <img src="static/img/book15.jpg" alt="도서 이미지 15" class="weekly-book-img">
                 <p class="weekly-book-title">별의 심장</p>
                 <p class="weekly-book-author">윤희정</p>
                 <div class="weekly-book-rating">
@@ -843,7 +859,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
             <!-- 도서 항목 16 -->
             <div class="weekly-book-item">
-                <img src="img/book16.jpg" alt="도서 이미지 16" class="weekly-book-img">
+                <img src="static/img/book16.jpg" alt="도서 이미지 16" class="weekly-book-img">
                 <p class="weekly-book-title">황제의 노래</p>
                 <p class="weekly-book-author">홍길동</p>
                 <div class="weekly-book-rating">
@@ -854,7 +870,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
             <!-- 도서 항목 17 -->
             <div class="weekly-book-item">
-                <img src="img/book17.jpg" alt="도서 이미지 17" class="weekly-book-img">
+                <img src="static/img/book17.jpg" alt="도서 이미지 17" class="weekly-book-img">
                 <p class="weekly-book-title">차원의 틈</p>
                 <p class="weekly-book-author">장수진</p>
                 <div class="weekly-book-rating">
@@ -865,7 +881,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
             <!-- 도서 항목 18 -->
             <div class="weekly-book-item">
-                <img src="img/book18.jpg" alt="도서 이미지 18" class="weekly-book-img">
+                <img src="static/img/book18.jpg" alt="도서 이미지 18" class="weekly-book-img">
                 <p class="weekly-book-title">죽음의 날개</p>
                 <p class="weekly-book-author">박시원</p>
                 <div class="weekly-book-rating">
@@ -876,7 +892,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
             <!-- 도서 항목 19 -->
             <div class="weekly-book-item">
-                <img src="img/채식주의자.png" alt="도서 이미지 19" class="weekly-book-img">
+                <img src="static/img/채식주의자.png" alt="도서 이미지 19" class="weekly-book-img">
                 <p class="weekly-book-title">사막의 왕국</p>
                 <p class="weekly-book-author">김하나</p>
                 <div class="weekly-book-rating">
@@ -887,7 +903,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
             <!-- 도서 항목 20 -->
             <div class="weekly-book-item">
-                <img src="img/book20.jpg" alt="도서 이미지 20" class="weekly-book-img">
+                <img src="static/img/book20.jpg" alt="도서 이미지 20" class="weekly-book-img">
                 <p class="weekly-book-title">붉은 달의 전설</p>
                 <p class="weekly-book-author">서윤주</p>
                 <div class="weekly-book-rating">
@@ -898,7 +914,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
             <!-- 도서 항목 21 -->
             <div class="weekly-book-item">
-                <img src="img/book21.jpg" alt="도서 이미지 21" class="weekly-book-img">
+                <img src="static/img/book21.jpg" alt="도서 이미지 21" class="weekly-book-img">
                 <p class="weekly-book-title">황혼의 전사들</p>
                 <p class="weekly-book-author">최민지</p>
                 <div class="weekly-book-rating">
@@ -909,7 +925,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
             <!-- 도서 항목 22 -->
             <div class="weekly-book-item">
-                <img src="img/book22.jpg" alt="도서 이미지 22" class="weekly-book-img">
+                <img src="static/img/book22.jpg" alt="도서 이미지 22" class="weekly-book-img">
                 <p class="weekly-book-title">파괴된 시대</p>
                 <p class="weekly-book-author">류성훈</p>
                 <div class="weekly-book-rating">
@@ -920,7 +936,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
             <!-- 도서 항목 23 -->
             <div class="weekly-book-item">
-                <img src="img/book23.jpg" alt="도서 이미지 23" class="weekly-book-img">
+                <img src="static/img/book23.jpg" alt="도서 이미지 23" class="weekly-book-img">
                 <p class="weekly-book-title">혼돈의 신들</p>
                 <p class="weekly-book-author">정상우</p>
                 <div class="weekly-book-rating">
@@ -931,7 +947,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
             <!-- 도서 항목 24 -->
             <div class="weekly-book-item">
-                <img src="img/book24.jpg" alt="도서 이미지 24" class="weekly-book-img">
+                <img src="static/img/book24.jpg" alt="도서 이미지 24" class="weekly-book-img">
                 <p class="weekly-book-title">영웅의 탄생</p>
                 <p class="weekly-book-author">백지훈</p>
                 <div class="weekly-book-rating">
@@ -950,7 +966,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="days-of-week">
             <!-- 월요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="월요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="월요일 도서" class="book-img">
                 <p class="book-title">상수리나무 아래</p>
                 <p class="book-author">서만, 나무, P, 김수지</p>
                 <div class="book-rating">
@@ -960,7 +976,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 화요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="화요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="화요일 도서" class="book-img">
                 <p class="book-title">프리즌 러브</p>
                 <p class="book-author">김두유, 황지, Magoin</p>
                 <div class="book-rating">
@@ -970,7 +986,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 수요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="수요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="수요일 도서" class="book-img">
                 <p class="book-title">친구의 친구는 남일까요?</p>
                 <p class="book-author">정혜원 외 3부 - 6회 무료</p>
                 <div class="book-rating">
@@ -980,7 +996,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 목요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="목요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="목요일 도서" class="book-img">
                 <p class="book-title">우리 집에는 귀가 있다</p>
                 <p class="book-author">다미미케, 카모모, 김수지</p>
                 <div class="book-rating">
@@ -990,7 +1006,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 금요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="금요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="금요일 도서" class="book-img">
                 <p class="book-title">못된 짐승을 길들이는 법</p>
                 <p class="book-author">베리, 라치크</p>
                 <div class="book-rating">
@@ -1000,7 +1016,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 토요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="토요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="토요일 도서" class="book-img">
                 <p class="book-title">상수리나무 아래</p>
                 <p class="book-author">서만, 나무, P, 김수지</p>
                 <div class="book-rating">
@@ -1013,9 +1029,9 @@ document.addEventListener('DOMContentLoaded', function () {
     <section class="event-section">
         <h3>이벤트 보러가기</h3>
         <div class="event-images">
-            <img src="img/Item → Link.png" alt="이벤트 1" class="event-image">
-            <img src="img/Item → Link.png" alt="이벤트 2" class="event-image">
-            <img src="img/Item → Link.png" alt="이벤트 3" class="event-image">
+            <img src="static/img/Item → Link.png" alt="이벤트 1" class="event-image">
+            <img src="static/img/Item → Link.png" alt="이벤트 2" class="event-image">
+            <img src="static/img/Item → Link.png" alt="이벤트 3" class="event-image">
         </div>
     </section>
     <section class="today-books">
@@ -1026,7 +1042,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="days-of-week">
             <!-- 월요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="월요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="월요일 도서" class="book-img">
                 <p class="book-title">상수리나무 아래</p>
                 <p class="book-author">서만, 나무, P, 김수지</p>
                 <div class="book-rating">
@@ -1036,7 +1052,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 화요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="화요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="화요일 도서" class="book-img">
                 <p class="book-title">프리즌 러브</p>
                 <p class="book-author">김두유, 황지, Magoin</p>
                 <div class="book-rating">
@@ -1046,7 +1062,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 수요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="수요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="수요일 도서" class="book-img">
                 <p class="book-title">친구의 친구는 남일까요?</p>
                 <p class="book-author">정혜원 외 3부 - 6회 무료</p>
                 <div class="book-rating">
@@ -1056,7 +1072,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 목요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="목요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="목요일 도서" class="book-img">
                 <p class="book-title">우리 집에는 귀가 있다</p>
                 <p class="book-author">다미미케, 카모모, 김수지</p>
                 <div class="book-rating">
@@ -1066,7 +1082,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 금요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="금요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="금요일 도서" class="book-img">
                 <p class="book-title">못된 짐승을 길들이는 법</p>
                 <p class="book-author">베리, 라치크</p>
                 <div class="book-rating">
@@ -1076,7 +1092,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <!-- 토요일 도서 -->
             <div class="day-item">
-                <img src="img/Link_mask-group.png" alt="토요일 도서" class="book-img">
+                <img src="static/img/Link_mask-group.png" alt="토요일 도서" class="book-img">
                 <p class="book-title">상수리나무 아래</p>
                 <p class="book-author">서만, 나무, P, 김수지</p>
                 <div class="book-rating">
@@ -1093,16 +1109,16 @@ document.addEventListener('DOMContentLoaded', function () {
   
   <div class="social-icons"> <!-- 소셜 미디어 아이콘들 -->
       <div class="social-icon">
-          <img src="img/Facebook.png" alt="Facebook" /> <!-- Facebook 아이콘 -->
+          <img src="static/img/Facebook.png" alt="Facebook" /> <!-- Facebook 아이콘 -->
       </div>
       <div class="social-icon">
-          <img src="img/Twitter.png" alt="Twitter" /> <!-- Twitter 아이콘 -->
+          <img src="static/img/Twitter.png" alt="Twitter" /> <!-- Twitter 아이콘 -->
       </div>
       <div class="social-icon">
-          <img src="img/Instagram.png" alt="Instagram" /> <!-- Instagram 아이콘 -->
+          <img src="static/img/Instagram.png" alt="Instagram" /> <!-- Instagram 아이콘 -->
       </div>
       <div class="social-icon">
-          <img src="img/Youtube.png" alt="LinkedIn" /> <!-- LinkedIn 아이콘 -->
+          <img src="static/img/Youtube.png" alt="LinkedIn" /> <!-- LinkedIn 아이콘 -->
       </div>
   </div>
   
