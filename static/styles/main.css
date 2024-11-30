@@ -152,113 +152,54 @@ header {
     background-color: #bbb; /* 호버 시 색상 변경 */
 }
 
-
-
-
 /* 메인 배너 스타일 */
 .main-banner {
-    position: relative; /* 배너의 위치 설정 */
-    margin-top: 40px; /* 헤더와 배너 간 간격 */
-    width: 1170px; /* 배너 너비 설정 */
-    height: 400px; /* 배너 높이 설정 */
-    margin: 0 auto; /* 수평 중앙 정렬 */
+    position: relative;
+    margin-top: 40px;
+    width: 1170px;
+    height: 400px;
+    margin: 0 auto;
     overflow: hidden; /* 배너 영역 밖의 콘텐츠 숨기기 */
-    margin-bottom: 40px; /* 메인 배너와 다른 요소 간 간격 */
+    margin-bottom: 40px;
 }
 
+/* 배너 컨테이너 */
 .banner-container {
-    display: flex; /* Flexbox로 배너 내부 요소 배치 */
-    transition: transform 0.5s ease; /* 배너 슬라이드 애니메이션 효과 */
+    display: flex; /* Flexbox로 배너 이미지들을 나란히 배치 */
+    transition: transform 1s ease; /* 슬라이드 애니메이션 효과 */
+    width: 100%; /* 배너 컨테이너의 너비는 100% */
 }
 
-.banner-content {
-    display: flex; /* 배너 이미지를 가로로 배열 */
-    width: 100%; /* 배너 너비 설정 */
-}
-
+/* 배너 이미지 */
 .banner-img {
-    min-width: 1170px; /* 각 배너 이미지의 최소 너비 설정 */
-    height: 400px; /* 이미지의 높이 설정 */
-    object-fit: cover; /* 이미지 비율을 유지하며 영역을 채움 */
+    width: 1170px; /* 각 배너 이미지의 너비 설정 */
+    height: 400px; /* 배너 이미지 높이 설정 */
+    object-fit: cover; /* 비율 유지하며 영역을 채움 */
 }
 
+/* 배너 이동 버튼 */
 .button-container {
-    position: absolute; /* 배너 내에서 버튼 고정 */
-    top: 50%; /* 세로 중앙 정렬 */
-    width: 100%; /* 버튼이 배너 너비를 가득 차게 설정 */
-    display: flex; /* Flexbox로 배치 */
-    justify-content: space-between; /* 좌우 간격 균등 분배 */
-    transform: translateY(-50%); /* 수직 중앙 정렬 */
-    z-index: 20; /* 버튼을 배너보다 위에 배치 */
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
 }
 
 .prev-btn, .next-btn {
-    background-color: rgba(0, 0, 0, 0.5); /* 버튼 배경 색상 반투명 검정 */
-    color: white; /* 버튼 텍스트 색상 흰색 */
-    font-size: 2rem; /* 버튼 글자 크기 설정 */
-    border: none; /* 테두리 제거 */
-    padding: 0.5rem; /* 버튼 내부 여백 */
-    cursor: pointer; /* 클릭 시 포인터 커서 */
-    z-index: 30; /* 버튼을 다른 요소들 위에 위치하도록 설정 */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    font-size: 24px;
+    text-decoration: none;
+    border: none;
 }
 
 .prev-btn:hover, .next-btn:hover {
     background-color: rgba(0, 0, 0, 0.7); /* 버튼 호버 시 배경 색상 어두운 검정 */
 }
 
-/* 슬라이더 배너 스타일 */
-.content {
-    margin-top: 100px; /* 헤더 높이만큼 여백 추가 */
-}
-
-.slider {
-    position: relative; /* 배너 슬라이더의 위치 설정 */
-    width: 100%; /* 슬라이더 너비 100% */
-    overflow: hidden; /* 슬라이더 영역 밖 콘텐츠 숨기기 */
-}
-
-.slider .slider-item {
-    width: 100%; /* 각 슬라이드 아이템의 너비 100% */
-}
-
-.slider .slider-item img {
-    width: 100%; /* 슬라이드 이미지 크기 100%로 설정 */
-    height: 400px; /* 이미지 높이 400px로 설정 */
-    object-fit: cover; /* 이미지 비율 유지하며 크기 조정 */
-}
-
-.slider-control {
-    display: flex; /* Flexbox로 버튼 배치 */
-    justify-content: center; /* 중앙 정렬 */
-    align-items: center; /* 세로 중앙 정렬 */
-}
-
-/* 버튼을 고정시키는 스타일 */
-.button-container {
-    position: absolute; /* 배너 안에서 버튼 고정 */
-    top: 50%; /* 세로 중앙 정렬 */
-    left: 0; /* 좌측에 배치 */
-    right: 0; /* 우측에 배치 */
-    display: flex; /* Flexbox로 배치 */
-    justify-content: space-between; /* 좌우 간격 균등 분배 */
-    transform: translateY(-50%); /* 수직 중앙 정렬 */
-    z-index: 20; /* 버튼을 다른 요소들 위에 배치 */
-    width: 100%; /* 버튼을 배너 너비에 맞게 배치 */
-}
-
-.prev-btn, .next-btn {
-    background-color: rgba(0, 0, 0, 0.5); /* 버튼 배경 색상 반투명 검정 */
-    color: white; /* 버튼 텍스트 색상 흰색 */
-    font-size: 2rem; /* 글자 크기 설정 */
-    border: none; /* 테두리 제거 */
-    padding: 0.5rem; /* 버튼 내부 여백 */
-    cursor: pointer; /* 클릭 시 포인터 커서 */
-    z-index: 30; /* 버튼을 다른 요소들 위에 위치하도록 설정 */
-}
-
-.prev-btn:hover, .next-btn:hover {
-    background-color: rgba(0, 0, 0, 0.7); /* 버튼 호버 시 배경 색상 어두운 검정 */
-}
 
 /* 도서 실시간 랭킹 스타일 */
 .ranking {

@@ -2,12 +2,10 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    </head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>웹툰 사이트</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <!-- 헤더 -->
@@ -35,65 +33,65 @@
         </nav>
     </header>
 
-<!-- 검색창 -->
-<div class="search-container">
-    <form action="/search" method="get">
-        <div class="search-field">
-            <input type="text" name="query" placeholder="검색어를 입력하세요." required>
-            <button type="submit" class="search-btn">
-                <i class="fas fa-search"></i> <!-- 돋보기 아이콘 -->
-            </button>
-        </div>
-    </form>
-</div>
-
-<!-- 메인 배너 -->
-<section class="main-banner">
-    <div class="banner-container">
-        <div class="banner-content">
-            <img src="static/img/image 2.png" alt="배너 이미지 1" class="banner-img">
-            <img src="static/img/image 3.png" alt="배너 이미지 2" class="banner-img">
-            <img src="static/img/image 4.png" alt="배너 이미지 3" class="banner-img">
-        </div>
+    <!-- 검색창 -->
+    <div class="search-container">
+        <form action="/search" method="get">
+            <div class="search-field">
+                <input type="text" name="query" placeholder="검색어를 입력하세요." required>
+                <button type="submit" class="search-btn">
+                    <i class="fas fa-search"></i> <!-- 돋보기 아이콘 -->
+                </button>
+            </div>
+        </form>
     </div>
-    <div class="button-container">
-        <button class="prev-btn">‹</button>
-        <button class="next-btn">›</button>
-    </div>
-</section>
 
-<!-- JavaScript 코드 -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    // 배너 슬라이드
-    let currentIndex = 0;
-    const banners = document.querySelectorAll('.banner-img');  // 모든 배너 이미지 선택
-    const bannerContainer = document.querySelector('.banner-container');  // 배너 컨테이너
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
+    <section class="main-banner">
+        <div class="banner-container" id="banner-container">
+            <div class="banner-content">
+                <img src="{{ url_for('static', filename='img/' + current_banner) }}" alt="현재 배너" class="banner-img">
+                <img src="{{ url_for('static', filename='img/' + prev_banner) }}" alt="이전 배너" class="banner-img">
+                <img src="{{ url_for('static', filename='img/' + next_banner) }}" alt="다음 배너" class="banner-img">
+            </div>
+        </div>
+        <div class="button-container">
+            <a href="#" class="prev-btn" id="prev-btn">‹</a>
+            <a href="#" class="next-btn" id="next-btn">›</a>
+        </div>
+    </section>
 
-    // 배너 변경 함수
-    function changeBanner() {
-        const offset = -currentIndex * 1116;  // 슬라이드 할 거리 계산
-        bannerContainer.style.transform = `translateX(${offset}px)`; // 배너 이동
-    }
+    <script>
+        let currentIndex = 0;  // 현재 배너 인덱스
+        const banners = [
+            '{{ url_for("static", filename="img/" + current_banner) }}',
+            '{{ url_for("static", filename="img/" + prev_banner) }}',
+            '{{ url_for("static", filename="img/" + next_banner) }}'
+        ];  // 배너 이미지 목록
 
-    // 이전 배너로 이동
-    prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex === 0) ? banners.length - 1 : currentIndex - 1;  // 처음에 도달하면 마지막으로 돌아가기
-        changeBanner();
-    });
+        const bannerContainer = document.getElementById('banner-container');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
 
-    // 다음 배너로 이동
-    nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex === banners.length - 1) ? 0 : currentIndex + 1;  // 마지막에 도달하면 첫 번째로 돌아가기
-        changeBanner();
-    });
+        function updateBanner() {
+            const bannerContent = bannerContainer.querySelector('.banner-content');
+            bannerContent.style.transition = 'transform 1s ease';
+            bannerContent.style.transform = `translateX(-${currentIndex * 1170}px)`;  // 배너 이동
+        }
 
-    // 페이지가 로드되면 자동으로 첫 번째 배너로 설정
-    changeBanner();
-});
-</script>
+        prevBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            currentIndex = (currentIndex - 1 + banners.length) % banners.length;  // 이전 배너로 이동
+            updateBanner();
+        });
+
+        nextBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            currentIndex = (currentIndex + 1) % banners.length;  // 다음 배너로 이동
+            updateBanner();
+        });  
+    </script>
+    
+
+
 <section class="webtoon-search">
     <div class="section-header">
         <h2>도서 실시간 랭킹</h2>
@@ -1136,6 +1134,5 @@ document.addEventListener('DOMContentLoaded', function () {
       <span class="footer-privacy">개인정보 처리방침</span> <!-- 개인정보 처리방침 링크 -->
   </div>
 </div>
-  <script src="script.js"></script> <!-- 외부 자바스크립트 파일 연결 -->
 </body>
 </html>
