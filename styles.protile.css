@@ -1,0 +1,281 @@
+/* 기본 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* 좌우 스크롤 방지 */
+}
+
+/* 고정 헤더 스타일 */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    padding: 1rem 2rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 120px;
+}
+
+.nav-links li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.auth-links a {
+    color: black;
+    margin-left: 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* 프로필 섹션 스타일 */
+.profile-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 5rem auto;
+    background-color: #fff;
+    padding: 8rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    margin-left: auto;
+
+}
+
+.profile-logo {
+    font-size: 4rem;
+    font-weight: lighter;
+    letter-spacing: 30px;
+}
+
+.profile-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    margin-top: 10%;
+    margin-bottom: 13%;
+}
+
+.profile-name {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 13%;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-evenly; /* 균등 분배 */
+    margin-bottom: 13%;
+    gap: 40px; /* 간격 조정 */
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5rem; /* 숫자 크기 키움 */
+    font-weight: lighter;
+    color: #333;
+    margin-bottom: 13%; /* 숫자와 라벨 간격 */
+}
+
+.stat-label {
+    font-size: 1rem; /* 라벨 크기 조정 */
+    color: #555;
+    margin-bottom: 20%;
+}
+
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.profile-table th, .profile-table td {
+    text-align: center;
+    padding: 0.8rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.profile-table th {
+    width: 30%;
+    font-weight: bold;
+    color: #555;
+}
+
+.profile-table td {
+    color: #333;
+}
+
+
+/* 2번째 테이블 */
+
+
+.profile-table2 {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30%;
+    max-width: 1100px;
+    justify-content: space-evenly;
+
+}
+
+.profile-table2 th, .profile-table td {
+    text-align: center;
+    padding: 0.8rem;
+    border-bottom: 1px solid #ddd;
+    
+}
+
+.profile-table2 th {
+    width: 30%;
+    font-weight: bold;
+    color: #555;
+    
+
+}
+
+.profile-table2 td {
+    color: #333;
+        margin-top: 30%;
+    justify-content: space-evenly;
+    padding: 0.8rem;
+}
+
+/* 푸터 */
+.footer {
+    width: 100%; /* 너비 100% */
+    height: 375px; /* 높이 75% 축소 */
+    position: relative; /* 상대 위치 */
+    display: flex; /* flexbox 사용 */
+    flex-direction: column; /* 세로로 배치 */
+    justify-content: center; /* 세로 중앙 정렬 */
+    padding-left: 172.5px; /* 왼쪽 여백 75% 축소 */
+}
+
+/* 푸터 배경 */
+.footer-background {
+    background-color: rgba(72, 72, 72, 1); /* 배경색 */
+    width: 100%; /* 너비 100% */
+    height: 100%; /* 높이 100% */
+    position: absolute; /* 절대 위치 */
+    left: 0; /* 왼쪽 정렬 */
+    margin-top: 37.5px; /* 위 여백 */
+    z-index: 1; /* 배경의 z-index */
+}
+
+/* 푸터 타이틀 */
+.footer-title {
+    color: rgba(255, 255, 255, 1); /* 흰색 텍스트 */
+    font-family: 'Pretendard', sans-serif; /* 폰트 설정 */
+    font-size: 52.5px; /* 글자 크기 75% 축소 */
+    margin: 0; /* 기본 마진 제거 */
+    margin-top: 38px; /* 위 여백 */
+    z-index: 2; /* 글자 위로 설정 */
+}
+
+/* 푸터 서브타이틀 */
+.footer-subtitle {
+    color: rgba(255, 255, 255, 1); /* 흰색 텍스트 */
+    font-family: 'Pretendard', sans-serif; /* 폰트 설정 */
+    font-size: 12.75px; /* 글자 크기 75% 축소 */
+    margin: 0; /* 기본 마진 제거 */
+    margin-top: -60px; /* 위 여백 */
+    margin-bottom: 45px; /* 아래 여백 */
+    z-index: 2; /* 글자 위로 설정 */
+}
+
+/* 푸터 선 */
+.footer-line {
+    width: calc(100% - 270px); /* 좌우 여백 270px 제외 */
+    height: 1px; /* 선의 높이 */
+    background-color: rgba(255, 255, 255, 1); /* 흰색 */
+    margin: 15px 0px; /* 상하 여백 75% 축소 */
+    z-index: 2; /* 선을 위로 설정 */
+}
+
+/* 푸터 세부사항 */
+.footer-details {
+    color: rgba(255, 255, 255, 1); /* 흰색 텍스트 */
+    font-family: 'Pretendard', sans-serif; /* 폰트 설정 */
+    font-size: 12.75px; /* 글자 크기 75% 축소 */
+    margin-top: 15px; /* 상단 여백 */
+    z-index: 2; /* 텍스트 위로 설정 */
+}
+
+/* 푸터 링크 */
+.footer-links {
+    color: rgba(255, 255, 255, 1); /* 흰색 텍스트 */
+    font-family: 'NanumSquareRound', sans-serif; /* 폰트 설정 */
+    font-size: 15px; /* 글자 크기 75% 축소 */
+    margin: 0 7.5px; /* 좌우 여백 75% 축소 */
+    z-index: 2;
+    margin-left: auto; /* 오른쪽 정렬 */
+    margin-right: 270px; /* 오른쪽 여백 75% 축소 */
+}
+
+/* 푸터 이용약관 */
+.footer-terms{
+    margin: 0 22.5px; /* 좌우 여백 75% 축소 */
+}
+
+/* 푸터 이름 */
+.footer-name {
+    color: rgba(255, 255, 255, 1); /* 흰색 텍스트 */
+    font-family: 'Pretendard', sans-serif; /* 폰트 설정 */
+    font-size: 52.5px; /* 글자 크기 75% 축소 */
+    margin-top: 15px; /* 상단 여백 */
+    z-index: 2; /* 글자 위로 설정 */
+}
+
+/* 소셜 아이콘 */
+.social-icons {
+    display: flex; /* 수평 배치 */
+    justify-content: flex-end; /* 오른쪽 정렬 */
+    margin-right: 270px; /* 오른쪽 여백 75% 축소 */
+    margin-top: 7.5px; /* 위 여백 */
+    margin-bottom: 22.5px; /* 아래 여백 */
+    z-index: 2;
+    position: relative; /* 상대 위치 */
+    top: -22.5px; /* 위치 조정 */
+}
+
+/* 소셜 아이콘 개별 스타일 */
+.social-icon {
+    margin: 0 7.5px; /* 아이콘 간격 75% 축소 */
+}
+
+/* 소셜 아이콘 크기 */
+.social-icon img {
+    width: 36px; /* 크기 75% 축소 */
+    height: 36px; /* 크기 75% 축소 */
+}
