@@ -1,140 +1,140 @@
 /* 기본 스타일 초기화 */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* 모든 요소의 외부 여백 초기화 */
+    padding: 0; /* 모든 요소의 내부 여백 초기화 */
+    box-sizing: border-box; /* 모든 요소의 크기를 padding과 border를 포함하여 계산 */
   }
   
   body {
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-    display: flex;
-    height: 100vh;
+    font-family: Arial, sans-serif; /* 기본 글꼴 설정 */
+    overflow-x: hidden; /* 수평 스크롤을 숨김 */
+    display: flex; /* flexbox 레이아웃 사용 */
+    height: 100vh; /* 화면 높이를 100%로 설정 */
   }
   .container {
     width: 30%; /* 로그인 컨테이너가 30% 크기 차지 */
-    background-color: white;
-    padding: 40px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
+    background-color: white; /* 배경색을 흰색으로 설정 */
+    padding: 40px; /* 내부 여백 40px */
+    border-radius: 10px; /* 테두리 둥글게 설정 */
+    display: flex; /* flexbox 레이아웃 사용 */
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    justify-content: center; /* 세로 중앙 정렬 */
+    position: relative; /* 상대적인 위치 설정 */
+    z-index: 1; /* 다른 요소보다 위에 배치 */
   }
   
   h1 {
-    font-size: 30px;
-    margin-bottom: 10px;
+    font-size: 30px; /* 제목 크기 30px */
+    margin-bottom: 10px; /* 아래 여백 10px */
   }
   
   p {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 40px;
+    font-size: 16px; /* 설명 글자 크기 16px */
+    color: #555; /* 텍스트 색상 설정 */
+    margin-bottom: 40px; /* 아래 여백 40px */
   }
   
   .input-group {
-    margin-bottom: 20px;
-    font-weight: bold;
+    margin-bottom: 20px; /* 아래 여백 20px */
+    font-weight: bold; /* 글자 두껍게 설정 */
   }
   
   label {
-    font-size: 14px;
-    margin-bottom: 5px;
-    display: block;
+    font-size: 14px; /* 라벨 글자 크기 14px */
+    margin-bottom: 5px; /* 아래 여백 5px */
+    display: block; /* 블록 요소로 표시 */
   }
   
   input {
-    width: 100%;
-    padding: 15px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    width: 100%; /* 입력 필드 너비 100% */
+    padding: 15px; /* 입력 필드 안쪽 여백 15px */
+    font-size: 16px; /* 입력 필드 글자 크기 16px */
+    border: 1px solid #ddd; /* 테두리 색상과 두께 설정 */
+    border-radius: 5px; /* 테두리 둥글게 설정 */
+    margin-bottom: 10px; /* 아래 여백 10px */
   }
   
   button.login-btn {
-    width: 100%;
-    padding: 15px;
-    background-color: #ff7043;
-    color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    width: 100%; /* 버튼 너비 100% */
+    padding: 15px; /* 버튼 안쪽 여백 15px */
+    background-color: #ff7043; /* 버튼 배경색 설정 */
+    color: white; /* 버튼 글자 색상 흰색 */
+    font-size: 16px; /* 버튼 글자 크기 16px */
+    border: none; /* 버튼 테두리 제거 */
+    border-radius: 5px; /* 버튼 테두리 둥글게 설정 */
+    cursor: pointer; /* 커서 모양을 포인터로 변경 */
   }
   
   button.login-btn:hover {
-    background-color: #e64a19;
+    background-color: #e64a19; /* 버튼 hover 시 배경색 변경 */
   }
   
   .links {
-    margin-top: 10px;
-    display: flex;
+    margin-top: 10px; /* 위쪽 여백 10px */
+    display: flex; /* flexbox 레이아웃 사용 */
     justify-content: flex-start; /* 왼쪽 정렬 */
-    gap: 10px;
-    align-items: center;
+    gap: 10px; /* 아이템 간 간격 10px */
+    align-items: center; /* 세로 중앙 정렬 */
   }
   
   .signup {
-    margin-right: 130px;
+    margin-right: 130px; /* 오른쪽 여백 130px */
   }
   
   .find-id {
-    margin-right: 10px;
+    margin-right: 10px; /* 오른쪽 여백 10px */
   }
   
   .links a {
-    font-size: 14px;
-    color: #868686;
-    text-decoration: none;
+    font-size: 14px; /* 링크 글자 크기 14px */
+    color: #868686; /* 링크 색상 설정 */
+    text-decoration: none; /* 링크 밑줄 제거 */
   }
   
   .links a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* 링크 hover 시 밑줄 추가 */
   }
   
   .footer-links {
-    left: 0px;
+    left: 0px; /* 왼쪽 위치 0px */
     position: absolute;  /* 절대 위치 지정 */
     bottom: -90px;        /* 화면 하단에서 40px 위로 배치 */
     width: 100%;         /* 전체 너비에 맞추기 */
-    text-align: center;
-    font-size: 14px;
+    text-align: center; /* 텍스트 중앙 정렬 */
+    font-size: 14px; /* 글자 크기 14px */
     z-index: 1;          /* 다른 요소보다 위에 배치 */
   }
   .footer-links a {
-    margin: 0 35px;
-    color: #555;
-    text-decoration: none;
+    margin: 0 35px; /* 좌우 간격 35px */
+    color: #555; /* 링크 색상 설정 */
+    text-decoration: none; /* 링크 밑줄 제거 */
   }
   
   .footer-links a:hover {
-    text-decoration: underline;
+    text-decoration: underline; * 링크 hover 시 밑줄 추가 */
   }
   
   .login-banner {
     width: 70%; /* 배너 이미지가 화면의 70%를 차지 */
     height: 100%; /* 배너 이미지를 화면 전체 높이에 맞게 설정 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 0;
+    display: flex; /* flexbox 레이아웃 사용 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    position: relative; /* 상대적인 위치 설정 */
+    z-index: 0; /* 배너가 다른 요소들보다 아래에 배치 */
   }
   
   .login-banner img {
-    width: 100%;
-    height: 100%;
+    width: 100%; /* 배너 이미지 너비 100% */
+    height: 100%; /* 배너 이미지 높이 100% */
     object-fit: cover; /* 배너 이미지가 크기에 맞게 잘림 없이 늘어나도록 설정 */
   }
   
-  body {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  body { 
+    display: flex; /* flexbox 레이아웃 사용 */
+    flex-direction: row; /* 가로 방향으로 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
   }
   
   .container {
