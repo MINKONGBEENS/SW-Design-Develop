@@ -2,7 +2,8 @@ soze전자서점
 
 핵심코드:
 ============== 고정 헤더 ====================
-<!-- <header>
+```
+<header>
   <nav class="navbar"> <!-- 네비게이션 바 -->
     <h1 class="logo">SOZE</h1> <!-- 로고 -->
     <ul class="nav-links"> <!-- 네비게이션 링크 -->
@@ -17,14 +18,15 @@ soze전자서점
     </div> 
   </nav>
 </header>
+```
 ============== 설명 ====================
 
 상단에 고정된 헤더로, 로고와 네비게이션 링크(웹소설, 소설, 오디오북 등)를 포함합니다.
 사용자 로그인 및 회원가입 버튼이 포함되어 있으며, 사용자의 인증 상태와 페이지 탐색에 중요한 역할을 합니다.
 
 ============== 푸터 ====================
-
-<!-- <div class="footer">
+```
+<div class="footer">
   <span class="footer-title">S O Z E</span>
   <div class="social-icons">
     <div class="social-icon">
@@ -50,19 +52,22 @@ soze전자서점
     <span class="footer-terms">이용약관</span>
     <span class="footer-privacy">개인정보 처리방침</span>
   </div>
-</div> -->
+</div>
+```
 ============== 설명 ====================
 
 사이트 하단에 위치한 푸터는 주요 정보(회사 정보, 소셜 미디어 링크 등)를 포함합니다.
 이용약관 및 개인정보 처리방침과 같은 법적 문서를 위한 링크도 제공합니다.
 
 ============== 메인 배너 ====================
-<!-- <section class="main-banner">
+```
+<section class="main-banner">
   <div class="banner-text">
     <h2 class="title">나만 아는 소박한 제목</h2> <!-- 배너 제목 -->
     <p class="subtitle">SOZE</p> <!-- 배너 부제목 -->
   </div>
-</section> 
+</section>
+```
 ============== 설명 ====================
 웹사이트 방문 시 가장 먼저 보이는 배너 영역입니다.
 제목과 부제목을 통해 사이트의 브랜드와 목적을 강조하며, 첫인상을 결정하는 핵심 콘텐츠입니다.
