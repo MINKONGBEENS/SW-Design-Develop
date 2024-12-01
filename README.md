@@ -14,9 +14,9 @@ soze전자서점
     <div class="auth-links">
       <a href="login.html">LOGIN</a>
       <a href="register.html">SIGN IN</a>
-    </div>
+    </div> 
   </nav>
-</header> 
+</header>
 ============== 설명 ====================
 
 상단에 고정된 헤더로, 로고와 네비게이션 링크(웹소설, 소설, 오디오북 등)를 포함합니다.
@@ -24,7 +24,7 @@ soze전자서점
 
 ============== 푸터 ====================
 
-<div class="footer">
+<!--<div class="footer">
   <span class="footer-title">S O Z E</span>
   <div class="social-icons">
     <div class="social-icon">
