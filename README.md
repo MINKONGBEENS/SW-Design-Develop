@@ -73,6 +73,36 @@ soze전자서점
 웹사이트 방문 시 가장 먼저 보이는 배너 영역입니다.
 제목과 부제목을 통해 사이트의 브랜드와 목적을 강조하며, 첫인상을 결정하는 핵심 콘텐츠입니다.
 
+============== 추천 도서 섹션 ====================
+```
+<section class="recommended-books">
+  <div class="recommended-header">
+    <p class="author-info">한강 작가의 노벨 문학상을 만나보세요</p>
+    <h2>NOVEL COLLECTION</h2>
+  </div>
+
+  <div class="featured-book">
+    <div class="featured-info">
+      <div class="book-title">Human Acts</div>
+      <div class="book-author">Write By HanKang</div>
+      <h3 class="small-title">소년이 온다</h3>
+      <p class="author">한강 작가</p>
+    </div>
+    <div class="image-and-button">
+      <img src="img/책 이미지.png" alt="소설 이미지" class="featured-image">
+      <a href="#" class="more-button">추천 도서 보러 가기</a>
+    </div>
+  </div>
+  <div class="text-container">
+    <p class="left-desc">투명한 보석들같이 허공에 떠서 반짝이기라도 할 것 처럼 너는 눈을 크게 떠본다.</p>
+    <p class="right-desc">네모난 밤색 뿔테 안경을 쓴 작은형의 부루퉁한 얼굴이 떠올랐다가...</p>
+  </div>
+</section>
+```
+============== 설명 ====================
+도서 추천을 위한 섹션으로, 주요 도서와 작가 정보를 강조합니다.
+사용자가 관심을 가질 만한 도서 이미지를 포함하며, 관련 정보를 더 자세히 볼 수 있는 버튼을 제공합니다.
+
 ![image](https://github.com/user-attachments/assets/25ef06ac-aa4b-44cb-8f27-357f780a6caf)
 
 로그인 시퀀스 다이어그램 시나리오
