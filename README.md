@@ -60,20 +60,6 @@ soze전자서점
 사이트 하단에 위치한 푸터는 주요 정보(회사 정보, 소셜 미디어 링크 등)를 포함합니다.
 이용약관 및 개인정보 처리방침과 같은 법적 문서를 위한 링크도 제공합니다.
 
-============== 메인 배너 ====================
-```
-<section class="main-banner">
-  <div class="banner-text">
-    <h2 class="title">나만 아는 소박한 제목</h2> <!-- 배너 제목 -->
-    <p class="subtitle">SOZE</p> <!-- 배너 부제목 -->
-  </div>
-</section>
-```
-============== 설명 ====================
-
-웹사이트 방문 시 가장 먼저 보이는 배너 영역입니다.
-제목과 부제목을 통해 사이트의 브랜드와 목적을 강조하며, 첫인상을 결정하는 핵심 콘텐츠입니다.
-
 ============== 추천 도서 섹션 ====================
 ```
 <section class="recommended-books">
@@ -104,6 +90,68 @@ soze전자서점
 
 도서 추천을 위한 섹션으로, 주요 도서와 작가 정보를 강조합니다.
 사용자가 관심을 가질 만한 도서 이미지를 포함하며, 관련 정보를 더 자세히 볼 수 있는 버튼을 제공합니다.
+
+============== 검색 ====================
+```
+<div class="search-container">
+    <form action="/search" method="get">
+        <div class="search-field">
+            <input type="text" name="query" placeholder="검색어를 입력하세요." required>
+            <button type="submit" class="search-btn">
+                <i class="fas fa-search"></i> <!-- 돋보기 아이콘 -->
+            </button>
+        </div>
+    </form>
+</div>
+```
+============== 설명 ====================
+
+사용자가 입력한 검색어를 서버로 전송하여 도서, 웹소설, 오디오북 등을 검색하는 데 사용됩니다.
+돋보기 아이콘과 직관적인 입력 필드를 통해 간편한 검색 경험을 제공합니다.
+
+============== 자유 게시판, 자료실, 이벤트, 공지사항 링크 ====================
+```
+<li class="dropdown">
+    <a href="#">서비스</a>
+    <ul class="dropdown-menu">
+        <li><a href="community-board.html">자유게시판</a></li>
+        <li><a href="datalist-board.html">자료실</a></li>
+        <li><a href="event-board.html">이벤트</a></li>
+        <li><a href="notice-board.html">공지사항</a></li>
+    </ul>
+</li>
+```
+============== 설명 ====================
+
+사용자는 "서비스" 메뉴에서 자유 게시판, 자료실, 이벤트, 공지사항 페이지로 이동할 수 있습니다.
+게시판을 통해 사용자 의견을 공유하거나 자료를 업로드하고, 이벤트 참여 및 공지사항을 확인할 수 있습니다.
+
+============== 검색 ====================
+```
+<section class="today-books">
+    <div class="section-header">
+        <h2>오늘의 도서</h2>
+        <a href="#" class="see-more">더보기</a>
+    </div>
+    <div class="days-of-week">
+        <div class="day-item">
+            <img src="static/img/Link_mask-group.png" alt="월요일 도서" class="book-img">
+            <p class="book-title">상수리나무 아래</p>
+            <p class="book-author">서만, 나무, P, 김수지</p>
+            <div class="book-rating">
+                <span class="star">★</span>
+                <span class="rating-text">4.9 <span>(47,742)</span></span>
+            </div>
+        </div>
+        <!-- 추가 도서 항목 생략 -->
+    </div>
+</section>
+```
+============== 설명 ====================
+
+오늘의 도서 섹션은 인기 도서를 추천하여 사용자의 관심을 끌고, 도서 구매 페이지로 연결될 수 있습니다.
+평점과 리뷰 수를 표시하여 사용자가 도서를 선택하는 데 도움을 줍니다.
+
 
 ![image](https://github.com/user-attachments/assets/25ef06ac-aa4b-44cb-8f27-357f780a6caf)
 
