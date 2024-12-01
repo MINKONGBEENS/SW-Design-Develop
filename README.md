@@ -2,7 +2,7 @@ soze전자서점
 
 핵심코드:
 ============== 고정 헤더 ====================
-#<header>
+<!-- <header>
   <nav class="navbar"> <!-- 네비게이션 바 -->
     <h1 class="logo">SOZE</h1> <!-- 로고 -->
     <ul class="nav-links"> <!-- 네비게이션 링크 -->
@@ -16,7 +16,7 @@ soze전자서점
       <a href="register.html">SIGN IN</a>
     </div>
   </nav>
-</header>
+</header> 
 ============== 설명 ====================
 
 상단에 고정된 헤더로, 로고와 네비게이션 링크(웹소설, 소설, 오디오북 등)를 포함합니다.
