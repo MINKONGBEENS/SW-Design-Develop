@@ -13,7 +13,7 @@ soze전자서점
     </ul>
     <div class="auth-links">
       <a href="login.html">LOGIN</a>
-      <a href="register.html">SIGN IN</a>
+      <a href="register.html">SIGN IN</a> -->
     </div> 
   </nav>
 </header>
