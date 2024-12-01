@@ -24,7 +24,7 @@ soze전자서점
 
 ============== 푸터 ====================
 
-<!--<div class="footer">
+<!-- <div class="footer">
   <span class="footer-title">S O Z E</span>
   <div class="social-icons">
     <div class="social-icon">
