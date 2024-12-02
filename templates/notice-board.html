@@ -3,44 +3,36 @@
 <head>
     <meta charset="UTF-8"> <!-- 문자 인코딩 설정 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 반응형 웹을 위한 뷰포트 설정 -->
-    <title>자유게시판</title> <!-- 페이지 제목 설정 -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/community-board.css') }}">
+    <title>공지사항 게시판</title> <!-- 페이지 제목 설정 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/notice-board.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <!-- 헤더 -->
     <header>
-        <nav class="navbar">
-            <h1 class="logo">SOZE</h1>
-            <ul class="nav-links">
+        <nav class="navbar"> <!-- 네비게이션 바 -->
+            <h1 class="logo">SOZE</h1> <!-- 로고 -->
+            <ul class="nav-links"> <!-- 네비게이션 링크 -->
                 <li><a href="#">웹소설</a></li>
                 <li><a href="#">소설</a></li>
                 <li><a href="#">오디오북</a></li>
-                <li class="dropdown">
-                    <a href="#">서비스</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="community-board.html">자유게시판</a></li>
-                        <li><a href="datalist-board.html">자료실</a></li>
-                        <li><a href="event-board.html">이벤트</a></li>
-                        <li><a href="notice-board.html">공지사항</a></li>
-                    </ul>
-                </li>
+                <li><a href="#">서비스</a></li>
             </ul>
             <div class="auth-links">
-                <a href="#">LOGIN</a>
-                <a href="#">SIGN IN</a>
+                <a href="login.html">LOGIN</a>
+                <a href="register.html">SIGN IN</a>
             </div>
         </nav>
     </header>
 
     <!-- 배너 -->
     <div class="banner"> <!-- 배너 영역 -->
-        <h1>자유 게시판</h1> <!-- 배너 제목 -->
+        <h1>공지사항</h1> <!-- 배너 제목 -->
     </div>
 
-    <!-- 자유게시판 테이블 -->
+    <!-- 공지사항 테이블 -->
     <div class="container"> <!-- 테이블을 감싸는 컨테이너 -->
-        <table class="notice-table"> <!-- 자료 목록 테이블 -->
+        <table class="notice-table"> <!-- 공지사항 테이블 -->
             <thead>
                 <tr>
                     <th>번호</th> <!-- 번호 열 -->
@@ -52,68 +44,68 @@
                 <!-- 테이블 내용 (자유게시판 목록) -->
                 <tr>
                     <td>1</td>
-                    <td><a href="#" class="notice-link">자유게시판 글</a></td>
-                    <td>김**</td>
+                    <td><a href="#" class="notice-link">전자도서관 이용안내</a></td>
+                    <td>관리자</td>
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td><a href="#" class="notice-link">자유게시판 글</a></td>
-                    <td>김**</td>
+                    <td><a href="#" class="notice-link">전자도서관 이용안내</a></td>
+                    <td>관리자</td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td><a href="#" class="notice-link">자유게시판 글</a></td>
-                    <td>김**</td>
+                    <td><a href="#" class="notice-link">전자도서관 이용안내</a></td>
+                    <td>관리자</td>
                 </tr>
                 <tr>
                     <td>4</td>
-                    <td><a href="#" class="notice-link">자유게시판 글</a></td>
-                    <td>김**</td>
+                    <td><a href="#" class="notice-link">전자도서관 이용안내</a></td>
+                    <td>관리자</td>
                 </tr>
                 <tr>
                     <td>5</td>
-                    <td><a href="#" class="notice-link">자유게시판 글</a></td>
-                    <td>김**</td>
+                    <td><a href="#" class="notice-link">전자도서관 이용안내</a></td>
+                    <td>관리자</td>
                 </tr>
                 <tr>
                     <td>6</td>
-                    <td><a href="#" class="notice-link">자유게시판 글</a></td>
-                    <td>김**</td>
+                    <td><a href="#" class="notice-link">전자도서관 이용안내</a></td>
+                    <td>관리자</td>
                 </tr>
                 <tr>
                     <td>7</td>
-                    <td><a href="#" class="notice-link">자유게시판 글</a></td>
-                    <td>김**</td>
+                    <td><a href="#" class="notice-link">전자도서관 이용안내</a></td>
+                    <td>관리자</td>
                 </tr>
                 <tr>
                     <td>8</td>
-                    <td><a href="#" class="notice-link">자유게시판 글</a></td>
-                    <td>김**</td>
+                    <td><a href="#" class="notice-link">전자도서관 이용안내</a></td>
+                    <td>관리자</td>
                 </tr>
                 <tr>
                     <td>9</td>
-                    <td><a href="#" class="notice-link">자유게시판 글</a></td>
-                    <td>김**</td>
+                    <td><a href="#" class="notice-link">전자도서관 이용안내</a></td>
+                    <td>관리자</td>
                 </tr>
                 <tr>
                     <td>10</td>
-                    <td><a href="#" class="notice-link">자유게시판 글</a></td>
-                    <td>김**</td>
+                    <td><a href="#" class="notice-link">전자도서관 이용안내</a></td>
+                    <td>관리자</td>
                 </tr>
             </tbody>
         </table>
     </div>
-                <!-- 목록보기 버튼 -->
-                <div class="write-button">
-                    <a href="#"><button>목록보기</button></a> <!-- 목록보기 버튼 (링크) -->
-                </div>
-                <div class="pagination">
-                    <button class="prev">&#10094;</button>
-                    <button class="page-number">1</button>
-                    <button class="page-number active">2</button>
-                    <button class="page-number">3</button>
-                    <button class="next">&#10095;</button>
-                </div>
+        <!-- 목록보기 버튼 -->
+        <div class="write-button">
+            <a href="#"><button>목록보기</button></a> <!-- 목록보기 버튼 (링크) -->
+        </div>
+        <div class="pagination">
+            <button class="prev">&#10094;</button>
+            <button class="page-number">1</button>
+            <button class="page-number active">2</button>
+            <button class="page-number">3</button>
+            <button class="next">&#10095;</button>
+        </div>
 
     <!-- 푸터 -->
     <div class="footer"> <!-- 푸터 영역 -->

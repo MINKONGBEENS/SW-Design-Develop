@@ -19,16 +19,17 @@
                 <li class="dropdown">
                     <a href="#">서비스</a>
                     <ul class="dropdown-menu">
-                        <li><a href="community-board.html">자유게시판</a></li>
-                        <li><a href="datalist-board.html">자료실</a></li>
-                        <li><a href="event-board.html">이벤트</a></li>
-                        <li><a href="notice-board.html">공지사항</a></li>
+                        <!-- 'url_for' 사용하여 라우트에 맞게 수정 -->
+                        <li><a href="{{ url_for('community_board') }}">자유게시판</a></li>
+                        <li><a href="{{ url_for('datalist_board') }}">자료실</a></li>
+                        <li><a href="{{ url_for('event_board') }}">이벤트</a></li>
+                        <li><a href="{{ url_for('notice_board') }}">공지사항</a></li>
                     </ul>
                 </li>
             </ul>
             <div class="auth-links">
-                <a href="login.html">LOGIN</a>
-                <a href="register.html">SIGN IN</a>
+                <a href="{{ url_for('login') }}">LOGIN</a>
+                <a href="{{ url_for('register') }}">SIGN IN</a>                
             </div>
         </nav>
     </header>
@@ -74,7 +75,7 @@
         function updateBanner() {
             const bannerContent = bannerContainer.querySelector('.banner-content');
             bannerContent.style.transition = 'transform 1s ease';
-            bannerContent.style.transform = `translateX(-${currentIndex * 1170}px)`;  // 배너 이동
+            bannerContent.style.transform = 'translateX(-' + (currentIndex * 1170) + 'px)';  // 배너 이동
         }
 
         prevBtn.addEventListener('click', function (e) {
@@ -89,365 +90,13 @@
             updateBanner();
         });  
     </script>
-    
-
-
-<section class="webtoon-search">
-    <div class="section-header">
-        <h2>도서 실시간 랭킹</h2>
-        <div class="header-right">
-            </div>
-        </div>
-    <div class="webtoon-list" style="position: relative;">
-        <!-- 웹툰 항목들 -->
-        <div class="webtoon-item">
-            <img src="static/img/Link_mask-group.png" alt="웹툰 이미지 1" class="webtoon-img">
-            <p class="webtoon-ranking">1</p>
-            <div class="webtoon-info">
-                <p class="webtoon-title">품격을 배반한다</p>
-                <p class="webtoon-author">스크로커시 외 1부 · 3회 무료</p>
-                <div class="webtoon-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(7,300)</span></span>
-                </div>
-            </div>
-        </div>
-        <div class="webtoon-item">
-            <img src="static/img/your-image2.jpg" alt="웹툰 이미지 2" class="webtoon-img">
-            <p class="webtoon-ranking">2</p>
-            <div class="webtoon-info">
-                <p class="webtoon-title">교활하지 못한 마녀에게</p>
-                <p class="webtoon-author">로나 외 29명 · 4회 무료</p>
-                <div class="webtoon-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(820)</span></span>
-                </div>
-            </div>
-        </div>
-        <div class="webtoon-item">
-            <img src="static/img/your-image3.jpg" alt="웹툰 이미지 3" class="webtoon-img">
-            <p class="webtoon-ranking">3</p>
-            <div class="webtoon-info">
-                <p class="webtoon-title">하룻밤은 드레곤 결에서</p>
-                <p class="webtoon-author">글쎄 외 1명 · 3회 무료</p>
-                <div class="webtoon-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(1,799)</span></span>
-                </div>
-            </div>
-        </div>
-        <div class="webtoon-item">
-            <img src="static/img/your-image4.jpg" alt="웹툰 이미지 4" class="webtoon-img">
-            <p class="webtoon-ranking">4</p>
-            <div class="webtoon-info">
-                <p class="webtoon-title">이세계 착차 헌터</p>
-                <p class="webtoon-author">ab Entertainment 외 · 4회 무료</p>
-                <div class="webtoon-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">5.0 <span>(4,039)</span></span>
-                </div>
-            </div>
-        </div>
-        <div class="webtoon-item">
-            <img src="static/img/your-image5.jpg" alt="웹툰 이미지 5" class="webtoon-img">
-            <p class="webtoon-ranking">5</p>
-            <div class="webtoon-info">
-                <p class="webtoon-title">부석진 저질 것들을 위하여(개정판)</p>
-                <p class="webtoon-author">권명희 외 · 3회 무료</p>
-                <div class="webtoon-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.7 <span>(1,197)</span></span>
-                </div>
-            </div>
-        </div>
-        <div class="webtoon-item">
-            <img src="static/img/your-image6.jpg" alt="웹툰 이미지 6" class="webtoon-img">
-            <p class="webtoon-ranking">6</p>
-            <div class="webtoon-info">
-                <p class="webtoon-title">교활하지 못한 마녀에게</p>
-                <p class="webtoon-author">로나 외 29명 · 4회 무료</p>
-                <div class="webtoon-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(820)</span></span>
-                </div>
-            </div>
-        </div>
-        <div class="webtoon-item">
-            <img src="static/img/your-image7.jpg" alt="웹툰 이미지 7" class="webtoon-img">
-            <p class="webtoon-ranking">7</p>
-            <div class="webtoon-info">
-                <p class="webtoon-title">품격을 배반한다</p>
-                <p class="webtoon-author">스크로커시 외 1부 · 3회 무료</p>
-                <div class="webtoon-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(7,300)</span></span>
-                </div>
-            </div>
-        </div>
-        <div class="webtoon-item">
-            <img src="static/img/your-image8.jpg" alt="웹툰 이미지 8" class="webtoon-img">
-            <p class="webtoon-ranking">8</p>
-            <div class="webtoon-info">
-                <p class="webtoon-title">미친놈들에게 집착받는 C.T</p>
-                <p class="webtoon-author">Nilliti (Fujimura Yu)</p>
-                <div class="webtoon-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(2,311)</span></span>
-                </div>
-            </div>
-        </div>
-        <div class="webtoon-item">
-            <img src="static/img/your-image9.jpg" alt="웹툰 이미지 9" class="webtoon-img">
-            <p class="webtoon-ranking">9</p>
-            <div class="webtoon-info">
-                <p class="webtoon-title">미친놈들에게 집착받는 C.T</p>
-                <p class="webtoon-author">Nilliti (Fujimura Yu)</p>
-                <div class="webtoon-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(2,311)</span></span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <section class="today-books">
-        <div class="section-header">
-            <h2>오늘의 도서</h2>
-            <a href="#" class="see-more">더보기</a>
-        </div>
-        <div class="days-of-week">
-            <!-- 월요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="월요일 도서" class="book-img">
-                <p class="book-title">상수리나무 아래</p>
-                <p class="book-author">서만, 나무, P, 김수지</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(47,742)</span></span>
-                </div>
-            </div>
-            <!-- 화요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="화요일 도서" class="book-img">
-                <p class="book-title">프리즌 러브</p>
-                <p class="book-author">김두유, 황지, Magoin</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(47,742)</span></span>
-                </div>
-            </div>
-            <!-- 수요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="수요일 도서" class="book-img">
-                <p class="book-title">친구의 친구는 남일까요?</p>
-                <p class="book-author">정혜원 외 3부 - 6회 무료</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.8 <span>(506)</span></span>
-                </div>
-            </div>
-            <!-- 목요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="목요일 도서" class="book-img">
-                <p class="book-title">우리 집에는 귀가 있다</p>
-                <p class="book-author">다미미케, 카모모, 김수지</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(3,181)</span></span>
-                </div>
-            </div>
-            <!-- 금요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="금요일 도서" class="book-img">
-                <p class="book-title">못된 짐승을 길들이는 법</p>
-                <p class="book-author">베리, 라치크</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.7 <span>(430)</span></span>
-                </div>
-            </div>
-            <!-- 토요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="토요일 도서" class="book-img">
-                <p class="book-title">상수리나무 아래</p>
-                <p class="book-author">서만, 나무, P, 김수지</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(47,742)</span></span>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    
-    <section class="today-books">
-        <div class="section-header">
-            <h2>무료도서</h2>
-            <a href="#" class="see-more">더보기</a>
-        </div>
-        <div class="days-of-week">
-            <!-- 월요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="월요일 도서" class="book-img">
-                <p class="book-title">상수리나무 아래</p>
-                <p class="book-author">서만, 나무, P, 김수지</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(47,742)</span></span>
-                </div>
-            </div>
-            <!-- 화요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="화요일 도서" class="book-img">
-                <p class="book-title">프리즌 러브</p>
-                <p class="book-author">김두유, 황지, Magoin</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(47,742)</span></span>
-                </div>
-            </div>
-            <!-- 수요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="수요일 도서" class="book-img">
-                <p class="book-title">친구의 친구는 남일까요?</p>
-                <p class="book-author">정혜원 외 3부 - 6회 무료</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.8 <span>(506)</span></span>
-                </div>
-            </div>
-            <!-- 목요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="목요일 도서" class="book-img">
-                <p class="book-title">우리 집에는 귀가 있다</p>
-                <p class="book-author">다미미케, 카모모, 김수지</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(3,181)</span></span>
-                </div>
-            </div>
-            <!-- 금요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="금요일 도서" class="book-img">
-                <p class="book-title">못된 짐승을 길들이는 법</p>
-                <p class="book-author">베리, 라치크</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.7 <span>(430)</span></span>
-                </div>
-            </div>
-            <!-- 토요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="토요일 도서" class="book-img">
-                <p class="book-title">상수리나무 아래</p>
-                <p class="book-author">서만, 나무, P, 김수지</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(47,742)</span></span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="today-books">
-        <div class="section-header">
-            <h2>할인 중인 도서</h2>
-            <a href="#" class="see-more">더보기</a>
-        </div>
-        <div class="days-of-week">
-            <!-- 월요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="월요일 도서" class="book-img">
-                <p class="book-title">상수리나무 아래</p>
-                <p class="book-author">서만, 나무, P, 김수지</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(47,742)</span></span>
-                </div>
-            </div>
-            <!-- 화요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="화요일 도서" class="book-img">
-                <p class="book-title">프리즌 러브</p>
-                <p class="book-author">김두유, 황지, Magoin</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(47,742)</span></span>
-                </div>
-            </div>
-            <!-- 수요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="수요일 도서" class="book-img">
-                <p class="book-title">친구의 친구는 남일까요?</p>
-                <p class="book-author">정혜원 외 3부 - 6회 무료</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.8 <span>(506)</span></span>
-                </div>
-            </div>
-            <!-- 목요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="목요일 도서" class="book-img">
-                <p class="book-title">우리 집에는 귀가 있다</p>
-                <p class="book-author">다미미케, 카모모, 김수지</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(3,181)</span></span>
-                </div>
-            </div>
-            <!-- 금요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="금요일 도서" class="book-img">
-                <p class="book-title">못된 짐승을 길들이는 법</p>
-                <p class="book-author">베리, 라치크</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.7 <span>(430)</span></span>
-                </div>
-            </div>
-            <!-- 토요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="토요일 도서" class="book-img">
-                <p class="book-title">상수리나무 아래</p>
-                <p class="book-author">서만, 나무, P, 김수지</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(47,742)</span></span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--키워드검색-->
-    <section class="keyword-search">
-        <div class="section-header">
-            <h3>키워드 검색</h3>
-            <a href="#" class="see-more">더보기</a>
-        </div>
-        <div class="keyword-list">
-            <div class="keyword">#로맨스판타지</div>
-            <div class="keyword">#피폐물</div>
-            <div class="keyword">#빙의/영혼체인지</div>
-            <div class="keyword">#로맨스</div>
-            <div class="keyword">#집착남</div>
-            <div class="keyword">#사내연애</div>
-        </div>
-        <div class="keyword-list">
-            <div class="keyword">#완결</div>
-        </div>
-    </section>
-    
 
     <section class="webtoon-search">
         <div class="section-header">
-            <h2>2024베스트</h2>
+            <h2>도서 실시간 랭킹</h2>
             <div class="header-right">
-                <div class="switch-container">
-                    <span class="toggle-text">19</span>
                 </div>
-                <a href="#" class="see-more">더보기</a>
             </div>
-        </div>
         <div class="webtoon-list" style="position: relative;">
             <!-- 웹툰 항목들 -->
             <div class="webtoon-item">
@@ -522,9 +171,6 @@
                     </div>
                 </div>
             </div>
-            <div class="arrow-button">
-                &gt;
-            </div>
             <div class="webtoon-item">
                 <img src="static/img/your-image7.jpg" alt="웹툰 이미지 7" class="webtoon-img">
                 <p class="webtoon-ranking">7</p>
@@ -564,575 +210,929 @@
         </div>
     </section>
     
-        <script>
-            document.querySelector('.switch-container').addEventListener('click', function() {
-    this.classList.toggle('active');
-});</script>
-</section>
+        <section class="today-books">
+            <div class="section-header">
+                <h2>오늘의 도서</h2>
+                <a href="#" class="see-more">더보기</a>
+            </div>
+            <div class="days-of-week">
+                <!-- 월요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="월요일 도서" class="book-img">
+                    <p class="book-title">상수리나무 아래</p>
+                    <p class="book-author">서만, 나무, P, 김수지</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.9 <span>(47,742)</span></span>
+                    </div>
+                </div>
+                <!-- 화요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="화요일 도서" class="book-img">
+                    <p class="book-title">프리즌 러브</p>
+                    <p class="book-author">김두유, 황지, Magoin</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.9 <span>(47,742)</span></span>
+                    </div>
+                </div>
+                <!-- 수요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="수요일 도서" class="book-img">
+                    <p class="book-title">친구의 친구는 남일까요?</p>
+                    <p class="book-author">정혜원 외 3부 - 6회 무료</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.8 <span>(506)</span></span>
+                    </div>
+                </div>
+                <!-- 목요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="목요일 도서" class="book-img">
+                    <p class="book-title">우리 집에는 귀가 있다</p>
+                    <p class="book-author">다미미케, 카모모, 김수지</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.9 <span>(3,181)</span></span>
+                    </div>
+                </div>
+                <!-- 금요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="금요일 도서" class="book-img">
+                    <p class="book-title">못된 짐승을 길들이는 법</p>
+                    <p class="book-author">베리, 라치크</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.7 <span>(430)</span></span>
+                    </div>
+                </div>
+                <!-- 토요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="토요일 도서" class="book-img">
+                    <p class="book-title">상수리나무 아래</p>
+                    <p class="book-author">서만, 나무, P, 김수지</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.9 <span>(47,742)</span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section class="today-books">
+            <div class="section-header">
+                <h2>무료도서</h2>
+                <a href="#" class="see-more">더보기</a>
+            </div>
+            <div class="days-of-week">
+                <!-- 월요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="월요일 도서" class="book-img">
+                    <p class="book-title">상수리나무 아래</p>
+                    <p class="book-author">서만, 나무, P, 김수지</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.9 <span>(47,742)</span></span>
+                    </div>
+                </div>
+                <!-- 화요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="화요일 도서" class="book-img">
+                    <p class="book-title">프리즌 러브</p>
+                    <p class="book-author">김두유, 황지, Magoin</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.9 <span>(47,742)</span></span>
+                    </div>
+                </div>
+                <!-- 수요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="수요일 도서" class="book-img">
+                    <p class="book-title">친구의 친구는 남일까요?</p>
+                    <p class="book-author">정혜원 외 3부 - 6회 무료</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.8 <span>(506)</span></span>
+                    </div>
+                </div>
+                <!-- 목요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="목요일 도서" class="book-img">
+                    <p class="book-title">우리 집에는 귀가 있다</p>
+                    <p class="book-author">다미미케, 카모모, 김수지</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.9 <span>(3,181)</span></span>
+                    </div>
+                </div>
+                <!-- 금요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="금요일 도서" class="book-img">
+                    <p class="book-title">못된 짐승을 길들이는 법</p>
+                    <p class="book-author">베리, 라치크</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.7 <span>(430)</span></span>
+                    </div>
+                </div>
+                <!-- 토요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="토요일 도서" class="book-img">
+                    <p class="book-title">상수리나무 아래</p>
+                    <p class="book-author">서만, 나무, P, 김수지</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.9 <span>(47,742)</span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
     
-    <section class="event-section">
-        <h3>이벤트 보러가기</h3>
-        <div class="event-images">
-            <img src="static/img/Item → Link.png" alt="이벤트 1" class="event-image">
-            <img src="static/img/Item → Link.png" alt="이벤트 2" class="event-image">
-            <img src="static/img/Item → Link.png" alt="이벤트 3" class="event-image">
-        </div>
+        <section class="today-books">
+            <div class="section-header">
+                <h2>할인 중인 도서</h2>
+                <a href="#" class="see-more">더보기</a>
+            </div>
+            <div class="days-of-week">
+                <!-- 월요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="월요일 도서" class="book-img">
+                    <p class="book-title">상수리나무 아래</p>
+                    <p class="book-author">서만, 나무, P, 김수지</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.9 <span>(47,742)</span></span>
+                    </div>
+                </div>
+                <!-- 화요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="화요일 도서" class="book-img">
+                    <p class="book-title">프리즌 러브</p>
+                    <p class="book-author">김두유, 황지, Magoin</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.9 <span>(47,742)</span></span>
+                    </div>
+                </div>
+                <!-- 수요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="수요일 도서" class="book-img">
+                    <p class="book-title">친구의 친구는 남일까요?</p>
+                    <p class="book-author">정혜원 외 3부 - 6회 무료</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.8 <span>(506)</span></span>
+                    </div>
+                </div>
+                <!-- 목요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="목요일 도서" class="book-img">
+                    <p class="book-title">우리 집에는 귀가 있다</p>
+                    <p class="book-author">다미미케, 카모모, 김수지</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.9 <span>(3,181)</span></span>
+                    </div>
+                </div>
+                <!-- 금요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="금요일 도서" class="book-img">
+                    <p class="book-title">못된 짐승을 길들이는 법</p>
+                    <p class="book-author">베리, 라치크</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.7 <span>(430)</span></span>
+                    </div>
+                </div>
+                <!-- 토요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="토요일 도서" class="book-img">
+                    <p class="book-title">상수리나무 아래</p>
+                    <p class="book-author">서만, 나무, P, 김수지</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.9 <span>(47,742)</span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--키워드검색-->
+        <section class="keyword-search">
+            <div class="section-header">
+                <h3>키워드 검색</h3>
+                <a href="#" class="see-more">더보기</a>
+            </div>
+            <div class="keyword-list">
+                <div class="keyword">#로맨스판타지</div>
+                <div class="keyword">#피폐물</div>
+                <div class="keyword">#빙의/영혼체인지</div>
+                <div class="keyword">#로맨스</div>
+                <div class="keyword">#집착남</div>
+                <div class="keyword">#사내연애</div>
+            </div>
+            <div class="keyword-list">
+                <div class="keyword">#완결</div>
+            </div>
+        </section>
+        
+    
+        <section class="webtoon-search">
+            <div class="section-header">
+                <h2>2024베스트</h2>
+                <div class="header-right">
+                    <div class="switch-container">
+                        <span class="toggle-text">19</span>
+                    </div>
+                    <a href="#" class="see-more">더보기</a>
+                </div>
+            </div>
+            <div class="webtoon-list" style="position: relative;">
+                <!-- 웹툰 항목들 -->
+                <div class="webtoon-item">
+                    <img src="static/img/Link_mask-group.png" alt="웹툰 이미지 1" class="webtoon-img">
+                    <p class="webtoon-ranking">1</p>
+                    <div class="webtoon-info">
+                        <p class="webtoon-title">품격을 배반한다</p>
+                        <p class="webtoon-author">스크로커시 외 1부 · 3회 무료</p>
+                        <div class="webtoon-rating">
+                            <span class="star">★</span>
+                            <span class="rating-text">4.9 <span>(7,300)</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="webtoon-item">
+                    <img src="static/img/your-image2.jpg" alt="웹툰 이미지 2" class="webtoon-img">
+                    <p class="webtoon-ranking">2</p>
+                    <div class="webtoon-info">
+                        <p class="webtoon-title">교활하지 못한 마녀에게</p>
+                        <p class="webtoon-author">로나 외 29명 · 4회 무료</p>
+                        <div class="webtoon-rating">
+                            <span class="star">★</span>
+                            <span class="rating-text">4.9 <span>(820)</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="webtoon-item">
+                    <img src="static/img/your-image3.jpg" alt="웹툰 이미지 3" class="webtoon-img">
+                    <p class="webtoon-ranking">3</p>
+                    <div class="webtoon-info">
+                        <p class="webtoon-title">하룻밤은 드레곤 결에서</p>
+                        <p class="webtoon-author">글쎄 외 1명 · 3회 무료</p>
+                        <div class="webtoon-rating">
+                            <span class="star">★</span>
+                            <span class="rating-text">4.9 <span>(1,799)</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="webtoon-item">
+                    <img src="static/img/your-image4.jpg" alt="웹툰 이미지 4" class="webtoon-img">
+                    <p class="webtoon-ranking">4</p>
+                    <div class="webtoon-info">
+                        <p class="webtoon-title">이세계 착차 헌터</p>
+                        <p class="webtoon-author">ab Entertainment 외 · 4회 무료</p>
+                        <div class="webtoon-rating">
+                            <span class="star">★</span>
+                            <span class="rating-text">5.0 <span>(4,039)</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="webtoon-item">
+                    <img src="static/img/your-image5.jpg" alt="웹툰 이미지 5" class="webtoon-img">
+                    <p class="webtoon-ranking">5</p>
+                    <div class="webtoon-info">
+                        <p class="webtoon-title">부석진 저질 것들을 위하여(개정판)</p>
+                        <p class="webtoon-author">권명희 외 · 3회 무료</p>
+                        <div class="webtoon-rating">
+                            <span class="star">★</span>
+                            <span class="rating-text">4.7 <span>(1,197)</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="webtoon-item">
+                    <img src="static/img/your-image6.jpg" alt="웹툰 이미지 6" class="webtoon-img">
+                    <p class="webtoon-ranking">6</p>
+                    <div class="webtoon-info">
+                        <p class="webtoon-title">교활하지 못한 마녀에게</p>
+                        <p class="webtoon-author">로나 외 29명 · 4회 무료</p>
+                        <div class="webtoon-rating">
+                            <span class="star">★</span>
+                            <span class="rating-text">4.9 <span>(820)</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="arrow-button">
+                    &gt;
+                </div>
+                <div class="webtoon-item">
+                    <img src="static/img/your-image7.jpg" alt="웹툰 이미지 7" class="webtoon-img">
+                    <p class="webtoon-ranking">7</p>
+                    <div class="webtoon-info">
+                        <p class="webtoon-title">품격을 배반한다</p>
+                        <p class="webtoon-author">스크로커시 외 1부 · 3회 무료</p>
+                        <div class="webtoon-rating">
+                            <span class="star">★</span>
+                            <span class="rating-text">4.9 <span>(7,300)</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="webtoon-item">
+                    <img src="static/img/your-image8.jpg" alt="웹툰 이미지 8" class="webtoon-img">
+                    <p class="webtoon-ranking">8</p>
+                    <div class="webtoon-info">
+                        <p class="webtoon-title">미친놈들에게 집착받는 C.T</p>
+                        <p class="webtoon-author">Nilliti (Fujimura Yu)</p>
+                        <div class="webtoon-rating">
+                            <span class="star">★</span>
+                            <span class="rating-text">4.9 <span>(2,311)</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="webtoon-item">
+                    <img src="static/img/your-image9.jpg" alt="웹툰 이미지 9" class="webtoon-img">
+                    <p class="webtoon-ranking">9</p>
+                    <div class="webtoon-info">
+                        <p class="webtoon-title">미친놈들에게 집착받는 C.T</p>
+                        <p class="webtoon-author">Nilliti (Fujimura Yu)</p>
+                        <div class="webtoon-rating">
+                            <span class="star">★</span>
+                            <span class="rating-text">4.9 <span>(2,311)</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+            <script>
+                document.querySelector('.switch-container').addEventListener('click', function() {
+        this.classList.toggle('active');
+    });</script>
     </section>
+        
+        <section class="event-section">
+            <h3>이벤트 보러가기</h3>
+            <div class="event-images">
+                <img src="static/img/Item → Link.png" alt="이벤트 1" class="event-image">
+                <img src="static/img/Item → Link.png" alt="이벤트 2" class="event-image">
+                <img src="static/img/Item → Link.png" alt="이벤트 3" class="event-image">
+            </div>
+        </section>
+    
+        <section class="today-books">
+            <div class="section-header">
+                <h2>요즘 뜨는 판타지 장르</h2>
+                <a href="#" class="see-more">더보기</a>
+            </div>
+            <div class="days-of-week">
+                <!-- 월요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="월요일 도서" class="book-img">
+                    <p class="book-title">상수리나무 아래</p>
+                    <p class="book-author">서만, 나무, P, 김수지</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.9 <span>(47,742)</span></span>
+                    </div>
+                </div>
+                <!-- 화요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="화요일 도서" class="book-img">
+                    <p class="book-title">프리즌 러브</p>
+                    <p class="book-author">김두유, 황지, Magoin</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.9 <span>(47,742)</span></span>
+                    </div>
+                </div>
+                <!-- 수요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="수요일 도서" class="book-img">
+                    <p class="book-title">친구의 친구는 남일까요?</p>
+                    <p class="book-author">정혜원 외 3부 - 6회 무료</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.8 <span>(506)</span></span>
+                    </div>
+                </div>
+                <!-- 목요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="목요일 도서" class="book-img">
+                    <p class="book-title">우리 집에는 귀가 있다</p>
+                    <p class="book-author">다미미케, 카모모, 김수지</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.9 <span>(3,181)</span></span>
+                    </div>
+                </div>
+                <!-- 금요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="금요일 도서" class="book-img">
+                    <p class="book-title">못된 짐승을 길들이는 법</p>
+                    <p class="book-author">베리, 라치크</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.7 <span>(430)</span></span>
+                    </div>
+                </div>
+                <!-- 토요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="토요일 도서" class="book-img">
+                    <p class="book-title">상수리나무 아래</p>
+                    <p class="book-author">서만, 나무, P, 김수지</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.9 <span>(47,742)</span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="exclusive-soze-section">
+            <h3>오직 SOZE에서만!</h3>
+            <div class="exclusive-cards">
+                <!-- 카드 1 -->
+                <div class="exclusive-card">
+                    <div class="image-wrapper">
+                        <img src="static/img/1730350569884_MjQxMDIz.png.png" alt="배경 이미지 1" class="background-image">
+                        <img src="static/img/1730350571421_MjQxMDIz.png.png" alt="캐릭터 이미지 1" class="character-image">
+                    </div>
+                    <div class="text-content">
+                        <p class="title">마음마저 그를 향하게 된 것처럼, 손길을 갈구했다.</p>
+                        <p class="subtitle">절대역</p>
+                    </div>
+                </div>
+                <!-- 카드 2 -->
+                <div class="exclusive-card">
+                    <div class="image-wrapper">
+                        <img src="static/img/background2.jpg" alt="배경 이미지 2" class="background-image">
+                        <img src="static/img/character2.png" alt="캐릭터 이미지 2" class="character-image">
+                    </div>
+                    <div class="text-content">
+                        <p class="title">난 좀 거친 걸 좋아하는데, 감당할 자신 있어?</p>
+                        <p class="subtitle">배덕한 타인에게</p>
+                    </div>
+                </div>
+                <!-- 카드 3 -->
+                <div class="exclusive-card">
+                    <div class="image-wrapper">
+                        <img src="static/img/1730350569884_MjQxMDIz.png.png" alt="배경 이미지 3" class="background-image">
+                        <img src="static/img/1730350571421_MjQxMDIz.png.png" alt="캐릭터 이미지 3" class="character-image">
+                        <div class="arrow-button">&gt;</div>
+                    </div>
+                    <div class="text-content">
+                        <p class="title">목숨을 잃어도 상관없어, 너를 지킬 수만 있다면.</p>
+                        <p class="subtitle">마녀의 이름을 지키는 이유</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="weekly-books-section">
+            <h3 class="weekly-books-title">이 도서는 어때요?</h3>
+            <div class="weekly-books">
+                <!-- 도서 항목 1 -->
+                <div class="weekly-book-item">
+                    <img src="static/img/바람이 분다, 가라.png" alt="도서 이미지 1" class="weekly-book-img">
+                    <p class="weekly-book-title">콤플렉스 전하</p>
+                    <p class="weekly-book-author">이작가</p>
+                    <div class="weekly-book-rating">
+                        <span class="weekly-star">★</span>
+                        <span class="weekly-rating-text">4.9 <span>(7,300)</span></span>
+                    </div>
+                </div>
+        
+                <!-- 도서 항목 2 -->
+                <div class="weekly-book-item">
+                    <img src="static/img/흰.png" alt="도서 이미지 2" class="weekly-book-img">
+                    <p class="weekly-book-title">마지막 황후</p>
+                    <p class="weekly-book-author">작가명</p>
+                    <div class="weekly-book-rating">
+                        <span class="weekly-star">★</span>
+                        <span class="weekly-rating-text">4.7 <span>(5,600)</span></span>
+                    </div>
+                </div>
+        
+                <!-- 도서 항목 3 -->
+                <div class="weekly-book-item">
+                    <img src="static/img/book3.jpg" alt="도서 이미지 3" class="weekly-book-img">
+                    <p class="weekly-book-title">신의 아이들</p>
+                    <p class="weekly-book-author">김작가</p>
+                    <div class="weekly-book-rating">
+                        <span class="weekly-star">★</span>
+                        <span class="weekly-rating-text">4.8 <span>(8,200)</span></span>
+                    </div>
+                </div>
+        
+                <!-- 도서 항목 4 -->
+                <div class="weekly-book-item">
+                    <img src="static/img/book4.jpg" alt="도서 이미지 4" class="weekly-book-img">
+                    <p class="weekly-book-title">운명의 검</p>
+                    <p class="weekly-book-author">박작가</p>
+                    <div class="weekly-book-rating">
+                        <span class="weekly-star">★</span>
+                        <span class="weekly-rating-text">4.5 <span>(2,300)</span></span>
+                    </div>
+                </div>
+        
+                <!-- 도서 항목 5 -->
+                <div class="weekly-book-item">
+                    <img src="static/img/book5.jpg" alt="도서 이미지 5" class="weekly-book-img">
+                    <p class="weekly-book-title">피와 복수</p>
+                    <p class="weekly-book-author">황작가</p>
+                    <div class="weekly-book-rating">
+                        <span class="weekly-star">★</span>
+                        <span class="weekly-rating-text">4.6 <span>(3,100)</span></span>
+                    </div>
+                </div>
+        
+                <!-- 도서 항목 6 -->
+                <div class="weekly-book-item">
+                    <img src="static/img/book6.jpg" alt="도서 이미지 6" class="weekly-book-img">
+                    <p class="weekly-book-title">사랑의 연대기</p>
+                    <p class="weekly-book-author">최작가</p>
+                    <div class="weekly-book-rating">
+                        <span class="weekly-star">★</span>
+                        <span class="weekly-rating-text">4.9 <span>(9,500)</span></span>
+                    </div>
+                </div>
+        
+                <!-- 도서 항목 7 -->
+                <div class="weekly-book-item">
+                    <img src="static/img/희랍어시간.png" alt="도서 이미지 7" class="weekly-book-img">
+                    <p class="weekly-book-title">무한의 길</p>
+                    <p class="weekly-book-author">이정희</p>
+                    <div class="weekly-book-rating">
+                        <span class="weekly-star">★</span>
+                        <span class="weekly-rating-text">4.4 <span>(4,700)</span></span>
+                    </div>
+                </div>
+        
+                <!-- 도서 항목 8 -->
+                <div class="weekly-book-item">
+                    <img src="static/img/book8.jpg" alt="도서 이미지 8" class="weekly-book-img">
+                    <p class="weekly-book-title">영원의 사랑</p>
+                    <p class="weekly-book-author">정수현</p>
+                    <div class="weekly-book-rating">
+                        <span class="weekly-star">★</span>
+                        <span class="weekly-rating-text">4.8 <span>(6,300)</span></span>
+                    </div>
+                </div>
+        
+                <!-- 도서 항목 9 -->
+                <div class="weekly-book-item">
+                    <img src="static/img/book9.jpg" alt="도서 이미지 9" class="weekly-book-img">
+                    <p class="weekly-book-title">전쟁과 평화</p>
+                    <p class="weekly-book-author">이호진</p>
+                    <div class="weekly-book-rating">
+                        <span class="weekly-star">★</span>
+                        <span class="weekly-rating-text">4.7 <span>(5,200)</span></span>
+                    </div>
+                </div>
+        
+                <!-- 도서 항목 10 -->
+                <div class="weekly-book-item">
+                    <img src="static/img/book10.jpg" alt="도서 이미지 10" class="weekly-book-img">
+                    <p class="weekly-book-title">파멸의 시작</p>
+                    <p class="weekly-book-author">강은주</p>
+                    <div class="weekly-book-rating">
+                        <span class="weekly-star">★</span>
+                        <span class="weekly-rating-text">4.5 <span>(4,800)</span></span>
+                    </div>
+                </div>
+        
+                <!-- 도서 항목 11 -->
+                <div class="weekly-book-item">
+                    <img src="static/img/book11.jpg" alt="도서 이미지 11" class="weekly-book-img">
+                    <p class="weekly-book-title">빛과 그림자</p>
+                    <p class="weekly-book-author">문정환</p>
+                    <div class="weekly-book-rating">
+                        <span class="weekly-star">★</span>
+                        <span class="weekly-rating-text">4.9 <span>(9,100)</span></span>
+                    </div>
+                </div>
+        
+                <!-- 도서 항목 12 -->
+                <div class="weekly-book-item">
+                    <img src="static/img/book12.jpg" alt="도서 이미지 12" class="weekly-book-img">
+                    <p class="weekly-book-title">저주받은 왕자</p>
+                    <p class="weekly-book-author">신하영</p>
+                    <div class="weekly-book-rating">
+                        <span class="weekly-star">★</span>
+                        <span class="weekly-rating-text">4.6 <span>(7,200)</span></span>
+                    </div>
+                </div>
+        
+                <!-- 도서 항목 13 -->
+                <div class="weekly-book-item">
+                    <img src="static/img/작별하지 않는다.png" alt="도서 이미지 13" class="weekly-book-img">
+                    <p class="weekly-book-title">불멸의 서</p>
+                    <p class="weekly-book-author">박미영</p>
+                    <div class="weekly-book-rating">
+                        <span class="weekly-star">★</span>
+                        <span class="weekly-rating-text">4.8 <span>(3,900)</span></span>
+                    </div>
+                </div>
+        
+                <!-- 도서 항목 14 -->
+                <div class="weekly-book-item">
+                    <img src="static/img/book14.jpg" alt="도서 이미지 14" class="weekly-book-img">
+                    <p class="weekly-book-title">기억의 조각들</p>
+                    <p class="weekly-book-author">이진아</p>
+                    <div class="weekly-book-rating">
+                        <span class="weekly-star">★</span>
+                        <span class="weekly-rating-text">4.7 <span>(8,300)</span></span>
+                    </div>
+                </div>
+        
+                <!-- 도서 항목 15 -->
+                <div class="weekly-book-item">
+                    <img src="static/img/book15.jpg" alt="도서 이미지 15" class="weekly-book-img">
+                    <p class="weekly-book-title">별의 심장</p>
+                    <p class="weekly-book-author">윤희정</p>
+                    <div class="weekly-book-rating">
+                        <span class="weekly-star">★</span>
+                        <span class="weekly-rating-text">4.9 <span>(4,200)</span></span>
+                    </div>
+                </div>
+        
+                <!-- 도서 항목 16 -->
+                <div class="weekly-book-item">
+                    <img src="static/img/book16.jpg" alt="도서 이미지 16" class="weekly-book-img">
+                    <p class="weekly-book-title">황제의 노래</p>
+                    <p class="weekly-book-author">홍길동</p>
+                    <div class="weekly-book-rating">
+                        <span class="weekly-star">★</span>
+                        <span class="weekly-rating-text">4.3 <span>(2,100)</span></span>
+                    </div>
+                </div>
+        
+                <!-- 도서 항목 17 -->
+                <div class="weekly-book-item">
+                    <img src="static/img/book17.jpg" alt="도서 이미지 17" class="weekly-book-img">
+                    <p class="weekly-book-title">차원의 틈</p>
+                    <p class="weekly-book-author">장수진</p>
+                    <div class="weekly-book-rating">
+                        <span class="weekly-star">★</span>
+                        <span class="weekly-rating-text">4.4 <span>(3,800)</span></span>
+                    </div>
+                </div>
+        
+                <!-- 도서 항목 18 -->
+                <div class="weekly-book-item">
+                    <img src="static/img/book18.jpg" alt="도서 이미지 18" class="weekly-book-img">
+                    <p class="weekly-book-title">죽음의 날개</p>
+                    <p class="weekly-book-author">박시원</p>
+                    <div class="weekly-book-rating">
+                        <span class="weekly-star">★</span>
+                        <span class="weekly-rating-text">4.6 <span>(7,500)</span></span>
+                    </div>
+                </div>
+        
+                <!-- 도서 항목 19 -->
+                <div class="weekly-book-item">
+                    <img src="static/img/채식주의자.png" alt="도서 이미지 19" class="weekly-book-img">
+                    <p class="weekly-book-title">사막의 왕국</p>
+                    <p class="weekly-book-author">김하나</p>
+                    <div class="weekly-book-rating">
+                        <span class="weekly-star">★</span>
+                        <span class="weekly-rating-text">4.2 <span>(2,300)</span></span>
+                    </div>
+                </div>
+        
+                <!-- 도서 항목 20 -->
+                <div class="weekly-book-item">
+                    <img src="static/img/book20.jpg" alt="도서 이미지 20" class="weekly-book-img">
+                    <p class="weekly-book-title">붉은 달의 전설</p>
+                    <p class="weekly-book-author">서윤주</p>
+                    <div class="weekly-book-rating">
+                        <span class="weekly-star">★</span>
+                        <span class="weekly-rating-text">4.8 <span>(6,400)</span></span>
+                    </div>
+                </div>
+        
+                <!-- 도서 항목 21 -->
+                <div class="weekly-book-item">
+                    <img src="static/img/book21.jpg" alt="도서 이미지 21" class="weekly-book-img">
+                    <p class="weekly-book-title">황혼의 전사들</p>
+                    <p class="weekly-book-author">최민지</p>
+                    <div class="weekly-book-rating">
+                        <span class="weekly-star">★</span>
+                        <span class="weekly-rating-text">4.9 <span>(8,800)</span></span>
+                    </div>
+                </div>
+        
+                <!-- 도서 항목 22 -->
+                <div class="weekly-book-item">
+                    <img src="static/img/book22.jpg" alt="도서 이미지 22" class="weekly-book-img">
+                    <p class="weekly-book-title">파괴된 시대</p>
+                    <p class="weekly-book-author">류성훈</p>
+                    <div class="weekly-book-rating">
+                        <span class="weekly-star">★</span>
+                        <span class="weekly-rating-text">4.4 <span>(3,500)</span></span>
+                    </div>
+                </div>
+        
+                <!-- 도서 항목 23 -->
+                <div class="weekly-book-item">
+                    <img src="static/img/book23.jpg" alt="도서 이미지 23" class="weekly-book-img">
+                    <p class="weekly-book-title">혼돈의 신들</p>
+                    <p class="weekly-book-author">정상우</p>
+                    <div class="weekly-book-rating">
+                        <span class="weekly-star">★</span>
+                        <span class="weekly-rating-text">4.5 <span>(2,900)</span></span>
+                    </div>
+                </div>
+        
+                <!-- 도서 항목 24 -->
+                <div class="weekly-book-item">
+                    <img src="static/img/book24.jpg" alt="도서 이미지 24" class="weekly-book-img">
+                    <p class="weekly-book-title">영웅의 탄생</p>
+                    <p class="weekly-book-author">백지훈</p>
+                    <div class="weekly-book-rating">
+                        <span class="weekly-star">★</span>
+                        <span class="weekly-rating-text">4.7 <span>(5,600)</span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="today-books">
+            <div class="section-header">
+                <h2>새로 나온 작품</h2>
+                <a href="#" class="see-more">더보기</a>
+            </div>
+            <div class="days-of-week">
+                <!-- 월요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="월요일 도서" class="book-img">
+                    <p class="book-title">상수리나무 아래</p>
+                    <p class="book-author">서만, 나무, P, 김수지</p>
+                    <div class="book-rating">
+                        <span class="star"></span>
+                        <span class="rating-text"> <span></span></span>
+                    </div>
+                </div>
+                <!-- 화요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="화요일 도서" class="book-img">
+                    <p class="book-title">프리즌 러브</p>
+                    <p class="book-author">김두유, 황지, Magoin</p>
+                    <div class="book-rating">
+                        <span class="star"></span>
+                        <span class="rating-text"><span></span></span>
+                    </div>
+                </div>
+                <!-- 수요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="수요일 도서" class="book-img">
+                    <p class="book-title">친구의 친구는 남일까요?</p>
+                    <p class="book-author">정혜원 외 3부 - 6회 무료</p>
+                    <div class="book-rating">
+                        <span class="star"></span>
+                        <span class="rating-text"><span></span></span>
+                    </div>
+                </div>
+                <!-- 목요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="목요일 도서" class="book-img">
+                    <p class="book-title">우리 집에는 귀가 있다</p>
+                    <p class="book-author">다미미케, 카모모, 김수지</p>
+                    <div class="book-rating">
+                        <span class="star"></span>
+                        <span class="rating-text"><span></span></span>
+                    </div>
+                </div>
+                <!-- 금요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="금요일 도서" class="book-img">
+                    <p class="book-title">못된 짐승을 길들이는 법</p>
+                    <p class="book-author">베리, 라치크</p>
+                    <div class="book-rating">
+                        <span class="star"></span>
+                        <span class="rating-text"></span> <span></span></span>
+                    </div>
+                </div>
+                <!-- 토요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="토요일 도서" class="book-img">
+                    <p class="book-title">상수리나무 아래</p>
+                    <p class="book-author">서만, 나무, P, 김수지</p>
+                    <div class="book-rating">
+                        <span class="star"></span>
+                        <span class="rating-text"><span></span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="event-section">
+            <h3>이벤트 보러가기</h3>
+            <div class="event-images">
+                <img src="static/img/Item → Link.png" alt="이벤트 1" class="event-image">
+                <img src="static/img/Item → Link.png" alt="이벤트 2" class="event-image">
+                <img src="static/img/Item → Link.png" alt="이벤트 3" class="event-image">
+            </div>
+        </section>
+        <section class="today-books">
+            <div class="section-header">
+                <h2>오컬트 컬렉션</h2>
+                <a href="#" class="see-more">더보기</a>
+            </div>
+            <div class="days-of-week">
+                <!-- 월요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="월요일 도서" class="book-img">
+                    <p class="book-title">상수리나무 아래</p>
+                    <p class="book-author">서만, 나무, P, 김수지</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.9 <span>(47,742)</span></span>
+                    </div>
+                </div>
+                <!-- 화요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="화요일 도서" class="book-img">
+                    <p class="book-title">프리즌 러브</p>
+                    <p class="book-author">김두유, 황지, Magoin</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.9 <span>(47,742)</span></span>
+                    </div>
+                </div>
+                <!-- 수요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="수요일 도서" class="book-img">
+                    <p class="book-title">친구의 친구는 남일까요?</p>
+                    <p class="book-author">정혜원 외 3부 - 6회 무료</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.8 <span>(506)</span></span>
+                    </div>
+                </div>
+                <!-- 목요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="목요일 도서" class="book-img">
+                    <p class="book-title">우리 집에는 귀가 있다</p>
+                    <p class="book-author">다미미케, 카모모, 김수지</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.9 <span>(3,181)</span></span>
+                    </div>
+                </div>
+                <!-- 금요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="금요일 도서" class="book-img">
+                    <p class="book-title">못된 짐승을 길들이는 법</p>
+                    <p class="book-author">베리, 라치크</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.7 <span>(430)</span></span>
+                    </div>
+                </div>
+                <!-- 토요일 도서 -->
+                <div class="day-item">
+                    <img src="static/img/Link_mask-group.png" alt="토요일 도서" class="book-img">
+                    <p class="book-title">상수리나무 아래</p>
+                    <p class="book-author">서만, 나무, P, 김수지</p>
+                    <div class="book-rating">
+                        <span class="star">★</span>
+                        <span class="rating-text">4.9 <span>(47,742)</span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section class="today-books">
-        <div class="section-header">
-            <h2>요즘 뜨는 판타지 장르</h2>
-            <a href="#" class="see-more">더보기</a>
-        </div>
-        <div class="days-of-week">
-            <!-- 월요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="월요일 도서" class="book-img">
-                <p class="book-title">상수리나무 아래</p>
-                <p class="book-author">서만, 나무, P, 김수지</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(47,742)</span></span>
+        <div class="footer">  <!-- 푸터 영역 -->
+            <div class="footer-background"></div> <!-- 푸터 배경 -->
+            <span class="footer-title">S O Z E</span> <!-- 푸터 제목 -->
+          
+            
+            <div class="social-icons"> <!-- 소셜 미디어 아이콘들 -->
+                <div class="social-icon">
+                    <img src="static/img/Facebook.png" alt="Facebook" /> <!-- Facebook 아이콘 -->
+                </div>
+                <div class="social-icon">
+                    <img src="static/img/Twitter.png" alt="Twitter" /> <!-- Twitter 아이콘 -->
+                </div>
+                <div class="social-icon">
+                    <img src="static/img/Instagram.png" alt="Instagram" /> <!-- Instagram 아이콘 -->
+                </div>
+                <div class="social-icon">
+                    <img src="static/img/Youtube.png" alt="LinkedIn" /> <!-- LinkedIn 아이콘 -->
                 </div>
             </div>
-            <!-- 화요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="화요일 도서" class="book-img">
-                <p class="book-title">프리즌 러브</p>
-                <p class="book-author">김두유, 황지, Magoin</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(47,742)</span></span>
-                </div>
+            
+            <span class="footer-subtitle">2024 TEAM SOZE</span> <!-- 푸터 서브타이틀 -->
+            
+            <span class="footer-details">
+                TEL. 010-9876-5432 | FAX. 02-3456-9876 | sozeteams@weon.me<br>
+                주소: 서울특별시 강남구 역삼동 98-7 6층 543호 | 사업자 등록번호: 14-725-83690 | 대표자: 김망고<br>
+                업태: 정보통신업 | 업종: 소프트웨어 개발 및 공급업
+            </span>
+            <span class="footer-hosting">Hosting By AWS</span> <!-- 호스팅 정보 -->
+            <div class="footer-line"></div> <!-- 구분선 -->
+            <div class="footer-links"> <!-- 푸터 링크 -->
+                <span class="footer-terms">이용약관</span> <!-- 이용약관 링크 -->
+                <span class="footer-privacy">개인정보 처리방침</span> <!-- 개인정보 처리방침 링크 -->
             </div>
-            <!-- 수요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="수요일 도서" class="book-img">
-                <p class="book-title">친구의 친구는 남일까요?</p>
-                <p class="book-author">정혜원 외 3부 - 6회 무료</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.8 <span>(506)</span></span>
-                </div>
-            </div>
-            <!-- 목요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="목요일 도서" class="book-img">
-                <p class="book-title">우리 집에는 귀가 있다</p>
-                <p class="book-author">다미미케, 카모모, 김수지</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(3,181)</span></span>
-                </div>
-            </div>
-            <!-- 금요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="금요일 도서" class="book-img">
-                <p class="book-title">못된 짐승을 길들이는 법</p>
-                <p class="book-author">베리, 라치크</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.7 <span>(430)</span></span>
-                </div>
-            </div>
-            <!-- 토요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="토요일 도서" class="book-img">
-                <p class="book-title">상수리나무 아래</p>
-                <p class="book-author">서만, 나무, P, 김수지</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(47,742)</span></span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="exclusive-soze-section">
-        <h3>오직 SOZE에서만!</h3>
-        <div class="exclusive-cards">
-            <!-- 카드 1 -->
-            <div class="exclusive-card">
-                <div class="image-wrapper">
-                    <img src="static/img/1730350569884_MjQxMDIz.png.png" alt="배경 이미지 1" class="background-image">
-                    <img src="static/img/1730350571421_MjQxMDIz.png.png" alt="캐릭터 이미지 1" class="character-image">
-                </div>
-                <div class="text-content">
-                    <p class="title">마음마저 그를 향하게 된 것처럼, 손길을 갈구했다.</p>
-                    <p class="subtitle">절대역</p>
-                </div>
-            </div>
-            <!-- 카드 2 -->
-            <div class="exclusive-card">
-                <div class="image-wrapper">
-                    <img src="static/img/background2.jpg" alt="배경 이미지 2" class="background-image">
-                    <img src="static/img/character2.png" alt="캐릭터 이미지 2" class="character-image">
-                </div>
-                <div class="text-content">
-                    <p class="title">난 좀 거친 걸 좋아하는데, 감당할 자신 있어?</p>
-                    <p class="subtitle">배덕한 타인에게</p>
-                </div>
-            </div>
-            <!-- 카드 3 -->
-            <div class="exclusive-card">
-                <div class="image-wrapper">
-                    <img src="static/img/1730350569884_MjQxMDIz.png.png" alt="배경 이미지 3" class="background-image">
-                    <img src="static/img/1730350571421_MjQxMDIz.png.png" alt="캐릭터 이미지 3" class="character-image">
-                    <div class="arrow-button">&gt;</div>
-                </div>
-                <div class="text-content">
-                    <p class="title">목숨을 잃어도 상관없어, 너를 지킬 수만 있다면.</p>
-                    <p class="subtitle">마녀의 이름을 지키는 이유</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="weekly-books-section">
-        <h3 class="weekly-books-title">이 도서는 어때요?</h3>
-        <div class="weekly-books">
-            <!-- 도서 항목 1 -->
-            <div class="weekly-book-item">
-                <img src="static/img/바람이 분다, 가라.png" alt="도서 이미지 1" class="weekly-book-img">
-                <p class="weekly-book-title">콤플렉스 전하</p>
-                <p class="weekly-book-author">이작가</p>
-                <div class="weekly-book-rating">
-                    <span class="weekly-star">★</span>
-                    <span class="weekly-rating-text">4.9 <span>(7,300)</span></span>
-                </div>
-            </div>
-    
-            <!-- 도서 항목 2 -->
-            <div class="weekly-book-item">
-                <img src="static/img/흰.png" alt="도서 이미지 2" class="weekly-book-img">
-                <p class="weekly-book-title">마지막 황후</p>
-                <p class="weekly-book-author">작가명</p>
-                <div class="weekly-book-rating">
-                    <span class="weekly-star">★</span>
-                    <span class="weekly-rating-text">4.7 <span>(5,600)</span></span>
-                </div>
-            </div>
-    
-            <!-- 도서 항목 3 -->
-            <div class="weekly-book-item">
-                <img src="static/img/book3.jpg" alt="도서 이미지 3" class="weekly-book-img">
-                <p class="weekly-book-title">신의 아이들</p>
-                <p class="weekly-book-author">김작가</p>
-                <div class="weekly-book-rating">
-                    <span class="weekly-star">★</span>
-                    <span class="weekly-rating-text">4.8 <span>(8,200)</span></span>
-                </div>
-            </div>
-    
-            <!-- 도서 항목 4 -->
-            <div class="weekly-book-item">
-                <img src="static/img/book4.jpg" alt="도서 이미지 4" class="weekly-book-img">
-                <p class="weekly-book-title">운명의 검</p>
-                <p class="weekly-book-author">박작가</p>
-                <div class="weekly-book-rating">
-                    <span class="weekly-star">★</span>
-                    <span class="weekly-rating-text">4.5 <span>(2,300)</span></span>
-                </div>
-            </div>
-    
-            <!-- 도서 항목 5 -->
-            <div class="weekly-book-item">
-                <img src="static/img/book5.jpg" alt="도서 이미지 5" class="weekly-book-img">
-                <p class="weekly-book-title">피와 복수</p>
-                <p class="weekly-book-author">황작가</p>
-                <div class="weekly-book-rating">
-                    <span class="weekly-star">★</span>
-                    <span class="weekly-rating-text">4.6 <span>(3,100)</span></span>
-                </div>
-            </div>
-    
-            <!-- 도서 항목 6 -->
-            <div class="weekly-book-item">
-                <img src="static/img/book6.jpg" alt="도서 이미지 6" class="weekly-book-img">
-                <p class="weekly-book-title">사랑의 연대기</p>
-                <p class="weekly-book-author">최작가</p>
-                <div class="weekly-book-rating">
-                    <span class="weekly-star">★</span>
-                    <span class="weekly-rating-text">4.9 <span>(9,500)</span></span>
-                </div>
-            </div>
-    
-            <!-- 도서 항목 7 -->
-            <div class="weekly-book-item">
-                <img src="static/img/희랍어시간.png" alt="도서 이미지 7" class="weekly-book-img">
-                <p class="weekly-book-title">무한의 길</p>
-                <p class="weekly-book-author">이정희</p>
-                <div class="weekly-book-rating">
-                    <span class="weekly-star">★</span>
-                    <span class="weekly-rating-text">4.4 <span>(4,700)</span></span>
-                </div>
-            </div>
-    
-            <!-- 도서 항목 8 -->
-            <div class="weekly-book-item">
-                <img src="static/img/book8.jpg" alt="도서 이미지 8" class="weekly-book-img">
-                <p class="weekly-book-title">영원의 사랑</p>
-                <p class="weekly-book-author">정수현</p>
-                <div class="weekly-book-rating">
-                    <span class="weekly-star">★</span>
-                    <span class="weekly-rating-text">4.8 <span>(6,300)</span></span>
-                </div>
-            </div>
-    
-            <!-- 도서 항목 9 -->
-            <div class="weekly-book-item">
-                <img src="static/img/book9.jpg" alt="도서 이미지 9" class="weekly-book-img">
-                <p class="weekly-book-title">전쟁과 평화</p>
-                <p class="weekly-book-author">이호진</p>
-                <div class="weekly-book-rating">
-                    <span class="weekly-star">★</span>
-                    <span class="weekly-rating-text">4.7 <span>(5,200)</span></span>
-                </div>
-            </div>
-    
-            <!-- 도서 항목 10 -->
-            <div class="weekly-book-item">
-                <img src="static/img/book10.jpg" alt="도서 이미지 10" class="weekly-book-img">
-                <p class="weekly-book-title">파멸의 시작</p>
-                <p class="weekly-book-author">강은주</p>
-                <div class="weekly-book-rating">
-                    <span class="weekly-star">★</span>
-                    <span class="weekly-rating-text">4.5 <span>(4,800)</span></span>
-                </div>
-            </div>
-    
-            <!-- 도서 항목 11 -->
-            <div class="weekly-book-item">
-                <img src="static/img/book11.jpg" alt="도서 이미지 11" class="weekly-book-img">
-                <p class="weekly-book-title">빛과 그림자</p>
-                <p class="weekly-book-author">문정환</p>
-                <div class="weekly-book-rating">
-                    <span class="weekly-star">★</span>
-                    <span class="weekly-rating-text">4.9 <span>(9,100)</span></span>
-                </div>
-            </div>
-    
-            <!-- 도서 항목 12 -->
-            <div class="weekly-book-item">
-                <img src="static/img/book12.jpg" alt="도서 이미지 12" class="weekly-book-img">
-                <p class="weekly-book-title">저주받은 왕자</p>
-                <p class="weekly-book-author">신하영</p>
-                <div class="weekly-book-rating">
-                    <span class="weekly-star">★</span>
-                    <span class="weekly-rating-text">4.6 <span>(7,200)</span></span>
-                </div>
-            </div>
-    
-            <!-- 도서 항목 13 -->
-            <div class="weekly-book-item">
-                <img src="static/img/작별하지 않는다.png" alt="도서 이미지 13" class="weekly-book-img">
-                <p class="weekly-book-title">불멸의 서</p>
-                <p class="weekly-book-author">박미영</p>
-                <div class="weekly-book-rating">
-                    <span class="weekly-star">★</span>
-                    <span class="weekly-rating-text">4.8 <span>(3,900)</span></span>
-                </div>
-            </div>
-    
-            <!-- 도서 항목 14 -->
-            <div class="weekly-book-item">
-                <img src="static/img/book14.jpg" alt="도서 이미지 14" class="weekly-book-img">
-                <p class="weekly-book-title">기억의 조각들</p>
-                <p class="weekly-book-author">이진아</p>
-                <div class="weekly-book-rating">
-                    <span class="weekly-star">★</span>
-                    <span class="weekly-rating-text">4.7 <span>(8,300)</span></span>
-                </div>
-            </div>
-    
-            <!-- 도서 항목 15 -->
-            <div class="weekly-book-item">
-                <img src="static/img/book15.jpg" alt="도서 이미지 15" class="weekly-book-img">
-                <p class="weekly-book-title">별의 심장</p>
-                <p class="weekly-book-author">윤희정</p>
-                <div class="weekly-book-rating">
-                    <span class="weekly-star">★</span>
-                    <span class="weekly-rating-text">4.9 <span>(4,200)</span></span>
-                </div>
-            </div>
-    
-            <!-- 도서 항목 16 -->
-            <div class="weekly-book-item">
-                <img src="static/img/book16.jpg" alt="도서 이미지 16" class="weekly-book-img">
-                <p class="weekly-book-title">황제의 노래</p>
-                <p class="weekly-book-author">홍길동</p>
-                <div class="weekly-book-rating">
-                    <span class="weekly-star">★</span>
-                    <span class="weekly-rating-text">4.3 <span>(2,100)</span></span>
-                </div>
-            </div>
-    
-            <!-- 도서 항목 17 -->
-            <div class="weekly-book-item">
-                <img src="static/img/book17.jpg" alt="도서 이미지 17" class="weekly-book-img">
-                <p class="weekly-book-title">차원의 틈</p>
-                <p class="weekly-book-author">장수진</p>
-                <div class="weekly-book-rating">
-                    <span class="weekly-star">★</span>
-                    <span class="weekly-rating-text">4.4 <span>(3,800)</span></span>
-                </div>
-            </div>
-    
-            <!-- 도서 항목 18 -->
-            <div class="weekly-book-item">
-                <img src="static/img/book18.jpg" alt="도서 이미지 18" class="weekly-book-img">
-                <p class="weekly-book-title">죽음의 날개</p>
-                <p class="weekly-book-author">박시원</p>
-                <div class="weekly-book-rating">
-                    <span class="weekly-star">★</span>
-                    <span class="weekly-rating-text">4.6 <span>(7,500)</span></span>
-                </div>
-            </div>
-    
-            <!-- 도서 항목 19 -->
-            <div class="weekly-book-item">
-                <img src="static/img/채식주의자.png" alt="도서 이미지 19" class="weekly-book-img">
-                <p class="weekly-book-title">사막의 왕국</p>
-                <p class="weekly-book-author">김하나</p>
-                <div class="weekly-book-rating">
-                    <span class="weekly-star">★</span>
-                    <span class="weekly-rating-text">4.2 <span>(2,300)</span></span>
-                </div>
-            </div>
-    
-            <!-- 도서 항목 20 -->
-            <div class="weekly-book-item">
-                <img src="static/img/book20.jpg" alt="도서 이미지 20" class="weekly-book-img">
-                <p class="weekly-book-title">붉은 달의 전설</p>
-                <p class="weekly-book-author">서윤주</p>
-                <div class="weekly-book-rating">
-                    <span class="weekly-star">★</span>
-                    <span class="weekly-rating-text">4.8 <span>(6,400)</span></span>
-                </div>
-            </div>
-    
-            <!-- 도서 항목 21 -->
-            <div class="weekly-book-item">
-                <img src="static/img/book21.jpg" alt="도서 이미지 21" class="weekly-book-img">
-                <p class="weekly-book-title">황혼의 전사들</p>
-                <p class="weekly-book-author">최민지</p>
-                <div class="weekly-book-rating">
-                    <span class="weekly-star">★</span>
-                    <span class="weekly-rating-text">4.9 <span>(8,800)</span></span>
-                </div>
-            </div>
-    
-            <!-- 도서 항목 22 -->
-            <div class="weekly-book-item">
-                <img src="static/img/book22.jpg" alt="도서 이미지 22" class="weekly-book-img">
-                <p class="weekly-book-title">파괴된 시대</p>
-                <p class="weekly-book-author">류성훈</p>
-                <div class="weekly-book-rating">
-                    <span class="weekly-star">★</span>
-                    <span class="weekly-rating-text">4.4 <span>(3,500)</span></span>
-                </div>
-            </div>
-    
-            <!-- 도서 항목 23 -->
-            <div class="weekly-book-item">
-                <img src="static/img/book23.jpg" alt="도서 이미지 23" class="weekly-book-img">
-                <p class="weekly-book-title">혼돈의 신들</p>
-                <p class="weekly-book-author">정상우</p>
-                <div class="weekly-book-rating">
-                    <span class="weekly-star">★</span>
-                    <span class="weekly-rating-text">4.5 <span>(2,900)</span></span>
-                </div>
-            </div>
-    
-            <!-- 도서 항목 24 -->
-            <div class="weekly-book-item">
-                <img src="static/img/book24.jpg" alt="도서 이미지 24" class="weekly-book-img">
-                <p class="weekly-book-title">영웅의 탄생</p>
-                <p class="weekly-book-author">백지훈</p>
-                <div class="weekly-book-rating">
-                    <span class="weekly-star">★</span>
-                    <span class="weekly-rating-text">4.7 <span>(5,600)</span></span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="today-books">
-        <div class="section-header">
-            <h2>새로 나온 작품</h2>
-            <a href="#" class="see-more">더보기</a>
-        </div>
-        <div class="days-of-week">
-            <!-- 월요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="월요일 도서" class="book-img">
-                <p class="book-title">상수리나무 아래</p>
-                <p class="book-author">서만, 나무, P, 김수지</p>
-                <div class="book-rating">
-                    <span class="star"></span>
-                    <span class="rating-text"> <span></span></span>
-                </div>
-            </div>
-            <!-- 화요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="화요일 도서" class="book-img">
-                <p class="book-title">프리즌 러브</p>
-                <p class="book-author">김두유, 황지, Magoin</p>
-                <div class="book-rating">
-                    <span class="star"></span>
-                    <span class="rating-text"><span></span></span>
-                </div>
-            </div>
-            <!-- 수요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="수요일 도서" class="book-img">
-                <p class="book-title">친구의 친구는 남일까요?</p>
-                <p class="book-author">정혜원 외 3부 - 6회 무료</p>
-                <div class="book-rating">
-                    <span class="star"></span>
-                    <span class="rating-text"><span></span></span>
-                </div>
-            </div>
-            <!-- 목요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="목요일 도서" class="book-img">
-                <p class="book-title">우리 집에는 귀가 있다</p>
-                <p class="book-author">다미미케, 카모모, 김수지</p>
-                <div class="book-rating">
-                    <span class="star"></span>
-                    <span class="rating-text"><span></span></span>
-                </div>
-            </div>
-            <!-- 금요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="금요일 도서" class="book-img">
-                <p class="book-title">못된 짐승을 길들이는 법</p>
-                <p class="book-author">베리, 라치크</p>
-                <div class="book-rating">
-                    <span class="star"></span>
-                    <span class="rating-text"></span> <span></span></span>
-                </div>
-            </div>
-            <!-- 토요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="토요일 도서" class="book-img">
-                <p class="book-title">상수리나무 아래</p>
-                <p class="book-author">서만, 나무, P, 김수지</p>
-                <div class="book-rating">
-                    <span class="star"></span>
-                    <span class="rating-text"><span></span></span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="event-section">
-        <h3>이벤트 보러가기</h3>
-        <div class="event-images">
-            <img src="static/img/Item → Link.png" alt="이벤트 1" class="event-image">
-            <img src="static/img/Item → Link.png" alt="이벤트 2" class="event-image">
-            <img src="static/img/Item → Link.png" alt="이벤트 3" class="event-image">
-        </div>
-    </section>
-    <section class="today-books">
-        <div class="section-header">
-            <h2>오컬트 컬렉션</h2>
-            <a href="#" class="see-more">더보기</a>
-        </div>
-        <div class="days-of-week">
-            <!-- 월요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="월요일 도서" class="book-img">
-                <p class="book-title">상수리나무 아래</p>
-                <p class="book-author">서만, 나무, P, 김수지</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(47,742)</span></span>
-                </div>
-            </div>
-            <!-- 화요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="화요일 도서" class="book-img">
-                <p class="book-title">프리즌 러브</p>
-                <p class="book-author">김두유, 황지, Magoin</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(47,742)</span></span>
-                </div>
-            </div>
-            <!-- 수요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="수요일 도서" class="book-img">
-                <p class="book-title">친구의 친구는 남일까요?</p>
-                <p class="book-author">정혜원 외 3부 - 6회 무료</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.8 <span>(506)</span></span>
-                </div>
-            </div>
-            <!-- 목요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="목요일 도서" class="book-img">
-                <p class="book-title">우리 집에는 귀가 있다</p>
-                <p class="book-author">다미미케, 카모모, 김수지</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(3,181)</span></span>
-                </div>
-            </div>
-            <!-- 금요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="금요일 도서" class="book-img">
-                <p class="book-title">못된 짐승을 길들이는 법</p>
-                <p class="book-author">베리, 라치크</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.7 <span>(430)</span></span>
-                </div>
-            </div>
-            <!-- 토요일 도서 -->
-            <div class="day-item">
-                <img src="static/img/Link_mask-group.png" alt="토요일 도서" class="book-img">
-                <p class="book-title">상수리나무 아래</p>
-                <p class="book-author">서만, 나무, P, 김수지</p>
-                <div class="book-rating">
-                    <span class="star">★</span>
-                    <span class="rating-text">4.9 <span>(47,742)</span></span>
-                </div>
-            </div>
-        </div>
-    </section>
-<div class="footer">  <!-- 푸터 영역 -->
-  <div class="footer-background"></div> <!-- 푸터 배경 -->
-  <span class="footer-title">S O Z E</span> <!-- 푸터 제목 -->
-
-  
-  <div class="social-icons"> <!-- 소셜 미디어 아이콘들 -->
-      <div class="social-icon">
-          <img src="static/img/Facebook.png" alt="Facebook" /> <!-- Facebook 아이콘 -->
-      </div>
-      <div class="social-icon">
-          <img src="static/img/Twitter.png" alt="Twitter" /> <!-- Twitter 아이콘 -->
-      </div>
-      <div class="social-icon">
-          <img src="static/img/Instagram.png" alt="Instagram" /> <!-- Instagram 아이콘 -->
-      </div>
-      <div class="social-icon">
-          <img src="static/img/Youtube.png" alt="LinkedIn" /> <!-- LinkedIn 아이콘 -->
-      </div>
-  </div>
-  
-  <span class="footer-subtitle">2024 TEAM SOZE</span> <!-- 푸터 서브타이틀 -->
-  
-  <span class="footer-details">
-      TEL. 010-9876-5432 | FAX. 02-3456-9876 | sozeteams@weon.me<br>
-      주소: 서울특별시 강남구 역삼동 98-7 6층 543호 | 사업자 등록번호: 14-725-83690 | 대표자: 김망고<br>
-      업태: 정보통신업 | 업종: 소프트웨어 개발 및 공급업
-  </span>
-  <span class="footer-hosting">Hosting By AWS</span> <!-- 호스팅 정보 -->
-  <div class="footer-line"></div> <!-- 구분선 -->
-  <div class="footer-links"> <!-- 푸터 링크 -->
-      <span class="footer-terms">이용약관</span> <!-- 이용약관 링크 -->
-      <span class="footer-privacy">개인정보 처리방침</span> <!-- 개인정보 처리방침 링크 -->
-  </div>
-</div>
-</body>
-</html>
+          </div>
+          </body>
+          </html>
