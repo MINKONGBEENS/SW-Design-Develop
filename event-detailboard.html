@@ -20,8 +20,8 @@
             <li><a href="#">서비스</a></li>
         </ul>
         <div class="auth-links">
-            <a href="login.html">LOGIN</a>
-            <a href="register.html">SIGN IN</a>
+            <a href="{{ url_for('login') }}">LOGIN</a>
+            <a href="{{ url_for('register') }}">SIGN IN</a>
         </div>
     </nav>
 </header>
@@ -57,7 +57,7 @@
 
 <!-- 버튼 -->
 <div class="button-container"> <!-- 목록 보기 버튼 컨테이너 -->
-    <a href="#"><button>목록보기</button></a> <!-- 목록 보기 버튼 -->
+    <a href="{{ url_for('event-board') }}"><button>목록보기</button></a> <!-- 목록 보기 버튼 -->
 </div>
 
 <!-- 푸터 -->
