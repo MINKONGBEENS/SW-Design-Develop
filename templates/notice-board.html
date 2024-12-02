@@ -19,8 +19,8 @@
                 <li><a href="#">서비스</a></li>
             </ul>
             <div class="auth-links">
-                <a href="login.html">LOGIN</a>
-                <a href="register.html">SIGN IN</a>
+                <a href="{{ url_for('login') }}">LOGIN</a>
+                <a href="{{ url_for('register') }}">SIGN IN</a>
             </div>
         </nav>
     </header>
@@ -44,52 +44,52 @@
                 <!-- 테이블 내용 (자유게시판 목록) -->
                 <tr>
                     <td>1</td>
-                    <td><a href="#" class="notice-link">전자도서관 이용안내</a></td>
+                    <td><a href="{{ url_for('notice-detailboard') }}" class="notice-link">전자도서관 이용안내</a></td>
                     <td>관리자</td>
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td><a href="#" class="notice-link">전자도서관 이용안내</a></td>
+                    <td><a href="{{ url_for('notice-detailboard') }}" class="notice-link">전자도서관 이용안내</a></td>
                     <td>관리자</td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td><a href="#" class="notice-link">전자도서관 이용안내</a></td>
+                    <td><a href="{{ url_for('notice-detailboard') }}" class="notice-link">전자도서관 이용안내</a></td>
                     <td>관리자</td>
                 </tr>
                 <tr>
                     <td>4</td>
-                    <td><a href="#" class="notice-link">전자도서관 이용안내</a></td>
+                    <td><a href="{{ url_for('notice-detailboard') }}" class="notice-link">전자도서관 이용안내</a></td>
                     <td>관리자</td>
                 </tr>
                 <tr>
                     <td>5</td>
-                    <td><a href="#" class="notice-link">전자도서관 이용안내</a></td>
+                    <td><a href="{{ url_for('notice-detailboard') }}" class="notice-link">전자도서관 이용안내</a></td>
                     <td>관리자</td>
                 </tr>
                 <tr>
                     <td>6</td>
-                    <td><a href="#" class="notice-link">전자도서관 이용안내</a></td>
+                    <td><a href="{{ url_for('notice-detailboard') }}" class="notice-link">전자도서관 이용안내</a></td>
                     <td>관리자</td>
                 </tr>
                 <tr>
                     <td>7</td>
-                    <td><a href="#" class="notice-link">전자도서관 이용안내</a></td>
+                    <td><a href="{{ url_for('notice-detailboard') }}" class="notice-link">전자도서관 이용안내</a></td>
                     <td>관리자</td>
                 </tr>
                 <tr>
                     <td>8</td>
-                    <td><a href="#" class="notice-link">전자도서관 이용안내</a></td>
+                    <td><a href="{{ url_for('notice-detailboard') }}" class="notice-link">전자도서관 이용안내</a></td>
                     <td>관리자</td>
                 </tr>
                 <tr>
                     <td>9</td>
-                    <td><a href="#" class="notice-link">전자도서관 이용안내</a></td>
+                    <td><a href="{{ url_for('notice-detailboard') }}" class="notice-link">전자도서관 이용안내</a></td>
                     <td>관리자</td>
                 </tr>
                 <tr>
                     <td>10</td>
-                    <td><a href="#" class="notice-link">전자도서관 이용안내</a></td>
+                    <td><a href="{{ url_for('notice-detailboard') }}" class="notice-link">전자도서관 이용안내</a></td>
                     <td>관리자</td>
                 </tr>
             </tbody>
@@ -97,7 +97,7 @@
     </div>
         <!-- 목록보기 버튼 -->
         <div class="write-button">
-            <a href="#"><button>목록보기</button></a> <!-- 목록보기 버튼 (링크) -->
+            <a href="{{ url_for('notice-board') }}"><button>목록보기</button></a> <!-- 목록보기 버튼 (링크) -->
         </div>
         <div class="pagination">
             <button class="prev">&#10094;</button>
