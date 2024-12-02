@@ -6,6 +6,7 @@
     <title>회원가입</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/register.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div class="login-banner">
@@ -14,34 +15,178 @@
     <div class="container">
         <h1>회원가입</h1>
         <p>오래 걸리지 않아요☺️</p>
-        <form action="/register" method="POST">
+        <form id="registerForm" action="/register" method="POST">
+            <!-- 이름 입력 -->
             <div class="input-group">
                 <label for="username">이름</label>
                 <input type="text" name="username" id="username" placeholder="이름을 입력해주세요." required>
             </div>
+
+            <!-- 아이디 입력 -->
             <div class="input-group">
                 <label for="userid">아이디</label>
                 <input type="text" name="userid" id="userid" placeholder="아이디를 입력해주세요." required>
             </div>
+
+            <!-- 이메일 입력 -->
             <div class="input-group">
                 <label for="email">이메일</label>
                 <input type="email" name="email" id="email" placeholder="이메일을 입력해주세요." required>
             </div>
+
+            <!-- 전화번호 입력 및 인증번호 받기 -->
             <div class="input-group">
                 <label for="phone">전화번호</label>
                 <input type="text" name="phone" id="phone" placeholder="전화번호를 입력해주세요." required>
-                <button type="submit">인증번호 받기</button>
+                <button type="button" id="verify_code">인증번호 받기</button>
             </div>
-            <div class="input-group">
-                <label for="address">주소</label>
-                <input type="text" name="address" id="address" placeholder="주소를 입력해주세요." required>
+
+            <!-- 인증번호 입력 -->
+            <div class="input-group" id="verify_code_input" style="display:none;">
+                <label for="code">인증번호</label>
+                <input type="text" name="code" id="code" placeholder="인증번호를 입력해주세요." required>
+                <button type="button" id="verify_number">인증번호 확인</button>
             </div>
-            <div class="input-group">
-                <label for="address_detail">상세주소</label>
-                <input type="text" name="address_detail" id="address_detail" placeholder="상세주소 입력해주세요." required>
-            </div>
+<!-- 비밀번호 입력 -->
+<div class="input-group">
+    <label for="password">비밀번호:</label>
+    <input type="password" id="password" name="password" required>
+    <span id="password_error" class="error_message" style="color: red; display: none; font-size: 12px;">
+        영문자, 숫자, 특수문자가 포함된 최소 8자 이상의 비밀번호
+    </span>
+</div>
+
+<!-- 비밀번호 확인 -->
+<div class="input-group">
+    <label for="confirm_password">비밀번호 확인</label>
+    <input type="password" name="confirm_password" id="confirm_password" placeholder="비밀번호를 입력해주세요." required>
+    <span id="confirm_password_error" class="error_message" style="color: red; display: none; font-size: 12px;">
+        비밀번호가 일치하지 않습니다.
+    </span>
+</div>
+
+            <!-- 회원가입 버튼 -->
             <button type="submit" class="login-btn">회원가입</button>
         </form>
     </div>
+
+    <script>
+        // 인증번호 받기
+        $("#verify_code").on('click', function() {
+            var phone_number = $("#phone").val();
+            if (phone_number) {
+                $.ajax({
+                    url: '/register',
+                    method: 'POST',
+                    data: {
+                        phone: phone_number,
+                        verify_code: true
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            $("#verify_code_input").show();
+                            alert(response.message);  // 서버에서 반환한 메시지를 사용
+                        } else {
+                            alert(response.message);  // 실패 메시지도 서버에서 보낸 메시지를 사용
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        alert("오류가 발생했습니다: " + error);
+                    }
+                });
+            } else {
+                alert("전화번호를 입력해주세요.");
+            }
+        });
+
+        // 인증번호 확인
+        $("#verify_number").on('click', function() {
+            var code = $("#code").val();
+            $.ajax({
+                url: '/register',
+                method: 'POST',
+                data: {
+                    code: code,
+                    verify_number: true
+                },
+                success: function(response) {
+                    if (response.success) {
+                        alert("인증이 완료되었습니다.");
+                    } else {
+                        alert("인증번호가 틀렸습니다. 다시 시도해주세요.");
+                    }
+                }
+            });
+        });
+
+// 비밀번호와 비밀번호 확인 일치 여부 및 유효성 검사
+$("#registerForm").on('submit', function(e) {
+    var password = $("#password").val();
+    var confirm_password = $("#confirm_password").val();
+
+    // 비밀번호 유효성 검사
+    var passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/; // 영문자, 숫자, 특수문자가 포함된 최소 8자 이상의 비밀번호
+
+    if (!passwordRegex.test(password)) {
+        e.preventDefault();  // 폼 전송 방지
+        $("#password_error").show();  // 비밀번호 유효성 오류 메시지 표시
+    } else {
+        $("#password_error").hide();  // 비밀번호 유효성 오류 메시지 숨김
+    }
+
+    // 비밀번호 확인 일치 여부 확인
+    if (password !== confirm_password) {
+        e.preventDefault();  // 폼 전송 방지
+        $("#confirm_password_error").show();  // 비밀번호 불일치 오류 메시지 표시
+    } else {
+        $("#confirm_password_error").hide();  // 비밀번호 불일치 오류 메시지 숨김
+    }
+});
+
+// 비밀번호 입력 시 유효성 체크 실시간 반영
+$("#password").on("input", function() {
+    var password = $(this).val();
+    var passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
+
+    if (passwordRegex.test(password)) {
+        $("#password_error").hide();  // 유효성 검사를 통과하면 오류 메시지 숨김
+    } else {
+        $("#password_error").show();  // 유효성 검사를 통과하지 못하면 오류 메시지 표시
+    }
+});
+
+// 비밀번호 확인 입력 시 일치 여부 체크
+$("#confirm_password").on("input", function() {
+    var password = $("#password").val();
+    var confirmPassword = $(this).val();
+
+    if (password === confirmPassword) {
+        $("#confirm_password_error").hide();  // 비밀번호와 일치하면 오류 메시지 숨김
+    } else {
+        $("#confirm_password_error").show();  // 비밀번호와 일치하지 않으면 오류 메시지 표시
+    }
+});
+// 아이디 유효성 검사 (5자 이상)
+$("#username").on("input", function() {
+    var username = $("#username").val();
+    
+    if (username.length < 5) {
+        $("#username_error").show();
+    } else {
+        $("#username_error").hide();
+    }
+});
+// 폼 제출 전에 유효성 검사
+$("#register_form").on("submit", function(event) {
+    var password = $("#password").val();
+    var confirmPassword = $("#confirm_password").val();
+    var username = $("#username").val();
+
+    if (password !== confirmPassword || password.length < 8 || username.length < 5) {
+        event.preventDefault();  // 폼 제출 방지
+        alert("모든 필드를 올바르게 입력해주세요.");
+    }
+});
+    </script>
 </body>
 </html>

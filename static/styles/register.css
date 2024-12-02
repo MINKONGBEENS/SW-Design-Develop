@@ -60,6 +60,12 @@
     border-radius: 5px; /* 모서리를 둥글게 설정 */
     margin-bottom: 2px; /* 아래쪽 마진을 2px로 설정 */
   }
+  #password-error {
+    color: red;
+    font-size: 12px;
+    display: none; /* 기본적으로 숨기기 */
+}
+
   
   /* 로그인 버튼 스타일 */
   button.login-btn {
